@@ -1,3 +1,9 @@
+/*
+Esercizio 6
+Scrivere il codice in C, di un applicazione Socket CLIENT-SERVER in cui il server riceve in input un
+vettore di numeri interi, dopo aver effettuato gli eventuali ed opportuni controlli (se necessari), rispedisce al
+Client la somma e la media del vettore stesso.
+*/
 #include <stdio.h>      //std in-out
 #include <stdlib.h>     //per utilizzo di certe funzioni:htonl,rand,....
 #include <sys/socket.h> //funz. accept+bind+listen
@@ -10,29 +16,26 @@
 
 #define DIM 40
 #define SERVERPORT 1313
-int ContaChar(char str[], char c)
+int Somma(int arr[],int len)
 {
-    int contatore = 0;
-    for (int i = 0; i < strlen(str); i++)
+    int somma=0;
+    for (int i = 0; i < len; i++)
     {
-        if (str[i] == c)
-        {
-            contatore++;
-        }
+        somma=somma+arr[i];
     }
-    return contatore;
+    return somma;
 }
 int main(int argc, char **argv)
 {
     struct sockaddr_in servizio, addr_remoto; // record con i dati del server e del client
     int socketfd, soa, fromlen = sizeof(servizio);
-    char str[DIM];
-    char c;
+    int len;
+    char stringaRis[DIM];
     servizio.sin_family = AF_INET;
     servizio.sin_addr.s_addr = htonl(INADDR_ANY);
     servizio.sin_port = htons(SERVERPORT);
     socketfd = socket(AF_INET, SOCK_STREAM, 0);
-    bind(socketfd, (struct sockaddr *)&servizio, sizeof(servizio));//se andato male ritorna un numero <0
+    bind(socketfd, (struct sockaddr *)&servizio, sizeof(servizio));
     // poniamo il server in ascolto delle richieste dei client
     listen(socketfd, 10);
     for (;;)
@@ -41,12 +44,13 @@ int main(int argc, char **argv)
         fflush(stdout);
         soa = accept(socketfd, (struct sockaddr *)&addr_remoto, &fromlen);
         // legge dal client
-        read(soa, str, sizeof(str)-1);
-        printf("Stringa ricevuta: %s\n", str);
-        read(soa, &c, sizeof(c));
-        printf("Carattere ricevuto: %c\n", c);
-        int cond = ContaChar(str, c);
-        write(soa, &cond, sizeof(cond));
+        read(soa, &len, sizeof(len));
+        int array[len];
+        read(soa,array,sizeof(array));
+        int somma=Somma(array,len);
+        float media=somma/len;
+        sprintf(stringaRis,"La somma è %d la media è %.1f",somma,media);
+        write(soa, &stringaRis, strlen(stringaRis));
         close(soa);
     }
     return 0;
