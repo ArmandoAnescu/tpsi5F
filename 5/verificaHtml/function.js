@@ -71,6 +71,7 @@ function loadQuestion(data) {
         const textContent = document.getElementById('text-content');
         const titleElement = document.getElementById('title');
         const textElement = document.getElementById('text');
+        
         // Se il testo è trovato
         titleElement.textContent = text.titolo;
         textElement.textContent = text.testo;
@@ -79,8 +80,8 @@ function loadQuestion(data) {
         if (text.domande_multipla && text.domande_multipla.length > 0) {
             let questionsHTML = '';
             text.domande_multipla.forEach((question, index) => {
-                // Recupera la risposta salvata dal localStorage
-                const savedAnswer = localStorage.getItem(`question_${index}`);
+                // Recupera la risposta salvata dal localStorage per il testo e la domanda
+                const savedAnswer = localStorage.getItem(`text_${text.id}_question_${index}`);
                 questionsHTML += `
                     <div>
                         <p><strong>Domanda ${index + 1}:</strong> ${question.domanda}</p>
@@ -89,7 +90,7 @@ function loadQuestion(data) {
                                 const isChecked = savedAnswer === opzione ? 'checked' : ''; // Se la risposta è già stata selezionata
                                 return `
                                     <label>
-                                        <input type="radio" name="question_${index}" value="${opzione}" ${isChecked}>
+                                        <input type="radio" name="text_${text.id}_question_${index}" value="${opzione}" ${isChecked}>
                                         ${opzione}
                                     </label><br>
                                 `;
@@ -103,10 +104,10 @@ function loadQuestion(data) {
 
             // Aggiungi gli event listener per memorizzare la risposta nel localStorage quando l'utente seleziona una risposta
             text.domande_multipla.forEach((_, index) => {
-                const radios = document.getElementsByName(`question_${index}`);
+                const radios = document.getElementsByName(`text_${text.id}_question_${index}`);
                 radios.forEach(radio => {
                     radio.addEventListener('change', function() {
-                        localStorage.setItem(`question_${index}`, this.value);  // Salva la risposta selezionata
+                        localStorage.setItem(`text_${text.id}_question_${index}`, this.value);  // Salva la risposta selezionata
                     });
                 });
             });
