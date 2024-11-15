@@ -1,3 +1,25 @@
+let timer;
+let seconds = localStorage.getItem('timerSeconds') ? parseInt(localStorage.getItem('timerSeconds')) : 60 * 60; // 60 minuti in secondi, se non c'è il valore nel localStorage parte da 60 minuti
+
+// Funzione per avviare il timer
+function startTimer() {
+    timer = setInterval(() => {
+        if (seconds <= 0) {
+            clearInterval(timer); // Ferma il timer quando i secondi arrivano a zero
+            document.getElementById('timer').textContent = "Tempo scaduto!";
+            return; // Esce dalla funzione se il tempo è finito
+        }
+
+        seconds--; // Decrementa ogni secondo
+        let mins = Math.floor(seconds / 60); // Calcola i minuti
+        let secs = seconds % 60; // Calcola i secondi
+        document.getElementById('timer').textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
+
+        // Salva il tempo rimanente nel localStorage
+        localStorage.setItem('timerSeconds', seconds);
+    }, 1000);
+}
+
 // Funzione per ottenere il parametro 'id' dalla query string
 function getParameterByName(name) {
     const urlParams = new URLSearchParams(window.location.search);
@@ -7,7 +29,7 @@ function getParameterByName(name) {
 // Funzione per caricare il file JSON da domande.json
 function loadJSON(callback) {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'domande.json', true);
+    xhr.open('GET', 'domande.json', true);  // Assicurati che il percorso sia corretto
     xhr.onload = function() {
         if (xhr.status === 200) {
             const jsonData = JSON.parse(xhr.responseText);
@@ -46,22 +68,50 @@ function loadQuestion(data) {
     } else if (text) {
         // Se è un testo con domande a risposta multipla
         document.getElementById('title').textContent = text.titolo;
-        questionContent.innerHTML = `
-            <p>${text.testo}</p>
-            ${text.domande_multipla.map((q, index) => `
-                <div>
-                    <p>${q.domanda}</p>
+        const textContent = document.getElementById('text-content');
+        const titleElement = document.getElementById('title');
+        const textElement = document.getElementById('text');
+        // Se il testo è trovato
+        titleElement.textContent = text.titolo;
+        textElement.textContent = text.testo;
+
+        // Carica le domande a risposta multipla, se esistono
+        if (text.domande_multipla && text.domande_multipla.length > 0) {
+            let questionsHTML = '';
+            text.domande_multipla.forEach((question, index) => {
+                // Recupera la risposta salvata dal localStorage
+                const savedAnswer = localStorage.getItem(`question_${index}`);
+                questionsHTML += `
                     <div>
-                        ${q.opzioni.map((opzione, idx) => `
-                            <label>
-                                <input type="radio" name="question_${index}" value="${opzione}">
-                                ${opzione}
-                            </label><br>
-                        `).join('')}
+                        <p><strong>Domanda ${index + 1}:</strong> ${question.domanda}</p>
+                        <div>
+                            ${question.opzioni.map((opzione) => {
+                                const isChecked = savedAnswer === opzione ? 'checked' : ''; // Se la risposta è già stata selezionata
+                                return `
+                                    <label>
+                                        <input type="radio" name="question_${index}" value="${opzione}" ${isChecked}>
+                                        ${opzione}
+                                    </label><br>
+                                `;
+                            }).join('')}
+                        </div>
                     </div>
-                </div>
-            `).join('')}
-        `;
+                `;
+            });
+            // Aggiungi le domande a risposta multipla al contenuto
+            textContent.innerHTML += questionsHTML;
+
+            // Aggiungi gli event listener per memorizzare la risposta nel localStorage quando l'utente seleziona una risposta
+            text.domande_multipla.forEach((_, index) => {
+                const radios = document.getElementsByName(`question_${index}`);
+                radios.forEach(radio => {
+                    radio.addEventListener('change', function() {
+                        localStorage.setItem(`question_${index}`, this.value);  // Salva la risposta selezionata
+                    });
+                });
+            });
+        }
+
     } else {
         // Se la domanda o il testo non esistono, mostra un errore
         document.getElementById('title').textContent = "Domanda non trovata!";
@@ -71,5 +121,6 @@ function loadQuestion(data) {
 
 // Funzione per caricare la pagina
 window.onload = function() {
+    startTimer(); // Avvia il timer
     loadJSON(loadQuestion); // Carica i dati JSON e le domande
 };

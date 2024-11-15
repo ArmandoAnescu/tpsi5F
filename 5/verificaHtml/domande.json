@@ -15,7 +15,7 @@
   ],
   "testi": [
     {
-      "id": 1,
+      "id": 4,
       "titolo": "Cos'è un computer?",
       "testo": "Il computer è una macchina che esegue operazioni e calcoli automaticamente, seguendo le istruzioni che gli vengono date. Esistono diversi tipi di computer, come i computer portatili, i desktop e i server. I computer sono composti da due parti principali: l'hardware e il software. L'hardware include tutte le componenti fisiche, come il processore, la memoria e il disco rigido, mentre il software include i programmi e i sistemi operativi che gestiscono l'hardware e le applicazioni. Il sistema operativo più comune è Windows, ma ci sono anche altri come macOS e Linux.",
       "domande_multipla": [
@@ -67,7 +67,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 5,
       "titolo": "La Rete Internet",
       "testo": "Internet è una rete mondiale di computer che sono connessi tra loro. Grazie a Internet, le persone possono scambiarsi informazioni, comunicare e accedere a contenuti come video, musica, articoli e molto altro. Ogni dispositivo connesso a Internet è identificato da un indirizzo IP, che è un numero unico. I siti web sono accessibili tramite dei nomi di dominio, che corrispondono agli indirizzi IP, ma sono più facili da ricordare. Il browser è il programma che permette di navigare su Internet, e i più popolari sono Google Chrome, Mozilla Firefox e Safari. Oltre alla navigazione, Internet consente anche di utilizzare servizi come la posta elettronica e la messaggistica istantanea.",
       "domande_multipla": [
