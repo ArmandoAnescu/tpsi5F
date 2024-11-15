@@ -1,25 +1,4 @@
-let timer;
-let seconds = localStorage.getItem('timerSeconds') ? parseInt(localStorage.getItem('timerSeconds')) : 60 * 60; // 60 minuti in secondi, se non c'è il valore nel localStorage parte da 60 minuti
-
-function startTimer() {
-    timer = setInterval(() => {
-        if (seconds <= 0) {
-            clearInterval(timer); // Ferma il timer quando i secondi arrivano a zero
-            document.getElementById('timer').textContent = "Tempo scaduto!";
-            return; // Esce dalla funzione se il tempo è finito
-        }
-
-        seconds--; // Decrementa ogni secondo
-        let mins = Math.floor(seconds / 60); // Calcola i minuti
-        let secs = seconds % 60; // Calcola i secondi
-        document.getElementById('timer').textContent = `${String(mins).padStart(2, '0')}:${String(secs).padStart(2, '0')}`;
-
-        // Salva il tempo rimanente nel localStorage
-        localStorage.setItem('timerSeconds', seconds);
-    }, 1000);
-}
-
-// Funzione per ottenere il parametro 'id' dall'URL
+// Funzione per ottenere il parametro 'id' dalla query string
 function getParameterByName(name) {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(name);
@@ -38,11 +17,11 @@ function loadJSON(callback) {
     xhr.send();
 }
 
-// Funzione per caricare la domanda aperta o il testo con domande a risposta multipla
+// Funzione per caricare la domanda aperta
 function loadQuestion(data) {
     const questionId = getParameterByName('id'); // Ottieni l'id dalla query string
     const question = data.domande_aperte.find(q => q.id == questionId); // Trova la domanda aperta
-    const text = data.testi.find(t => t.id == questionId); // Trova il testo
+    const text = data.testi.find(t => t.id == questionId); // Trova il testo con domande a risposta multipla
 
     const questionContent = document.getElementById('question-content');
 
@@ -90,8 +69,7 @@ function loadQuestion(data) {
     }
 }
 
-// Unifica entrambe le funzionalità in una sola funzione window.onload
+// Funzione per caricare la pagina
 window.onload = function() {
-    startTimer(); // Avvia il timer
     loadJSON(loadQuestion); // Carica i dati JSON e le domande
 };
