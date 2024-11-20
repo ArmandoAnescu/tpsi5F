@@ -49,6 +49,7 @@ function loadQuestion(data) {
 
     if (question) {
         // Se è una domanda aperta
+        const charCount = document.getElementById('char-count'); // Recupera l'elemento per il contatore
         document.getElementById('title').textContent = `Domanda ${question.id}`;
         questionContent.innerHTML = `
             <p>${question.domanda}</p>
@@ -64,13 +65,16 @@ function loadQuestion(data) {
         // Salva la risposta nel localStorage quando l'utente scrive
         document.getElementById('answer').addEventListener('input', function() {
             localStorage.setItem(`answer_${questionId}`, this.value);
+            charCount.textContent = `Caratteri scritti: ${this.value.length}`;
         });
+        charCount.textContent = `Caratteri scritti: ${document.getElementById('answer').value.length}`;
     } else if (text) {
         // Se è un testo con domande a risposta multipla
         document.getElementById('title').textContent = text.titolo;
         const textContent = document.getElementById('text-content');
         const titleElement = document.getElementById('title');
         const textElement = document.getElementById('text');
+
         
         // Se il testo è trovato
         titleElement.textContent = text.titolo;
