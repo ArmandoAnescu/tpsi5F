@@ -137,19 +137,19 @@ function salvaRisposteSuFile() {
 
     // Recupera le risposte delle domande aperte (textarea)
     const questionIds = Object.keys(localStorage).filter(key => key.startsWith('answer_'));
-    questionIds.forEach(id => {
+    questionIds.forEach((id, index) => {
         const risposta = localStorage.getItem(id);
         if (risposta) {
-            risposte.push(`Risposta alla domanda aperta ${id.replace('answer_', '')}: ${risposta}\n`);
+            risposte.push(`Risposta alla Domanda ${index + 1}: ${risposta}\n`);
         }
     });
 
     // Recupera le risposte delle domande a risposta multipla
     const textIds = Object.keys(localStorage).filter(key => key.startsWith('text_'));
-    textIds.forEach(id => {
+    textIds.forEach((id, index) => {
         const risposta = localStorage.getItem(id);
         if (risposta) {
-            risposte.push(`Risposta alla domanda multipla ${id}: ${risposta}\n`);
+            risposte.push(`Risposta alla Domanda Multipla testo ${id} ${index + 1}: ${risposta}\n`);
         }
     });
 
@@ -162,6 +162,5 @@ function salvaRisposteSuFile() {
     link.download = 'risposte.txt'; // Nome del file di download
     link.click(); // Avvia il download
 }
-
 // Aggiungi un listener al bottone per salvare le risposte
 document.getElementById('consegna').addEventListener('click', salvaRisposteSuFile);

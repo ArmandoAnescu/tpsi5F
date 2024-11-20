@@ -35,3 +35,8 @@
 .button-container button:hover {
     background-color: #40a857;
 }
+
+textarea{
+    width: 400px;
+    height: 100px;
+}
