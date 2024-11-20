@@ -129,3 +129,39 @@ window.onload = function() {
     startTimer(); // Avvia il timer
     loadJSON(loadQuestion); // Carica i dati JSON e le domande
 };
+
+
+// Funzione per salvare risposte su un file di testo
+function salvaRisposteSuFile() {
+    let risposte = [];
+
+    // Recupera le risposte delle domande aperte (textarea)
+    const questionIds = Object.keys(localStorage).filter(key => key.startsWith('answer_'));
+    questionIds.forEach(id => {
+        const risposta = localStorage.getItem(id);
+        if (risposta) {
+            risposte.push(`Risposta alla domanda aperta ${id.replace('answer_', '')}: ${risposta}\n`);
+        }
+    });
+
+    // Recupera le risposte delle domande a risposta multipla
+    const textIds = Object.keys(localStorage).filter(key => key.startsWith('text_'));
+    textIds.forEach(id => {
+        const risposta = localStorage.getItem(id);
+        if (risposta) {
+            risposte.push(`Risposta alla domanda multipla ${id}: ${risposta}\n`);
+        }
+    });
+
+    // Creare un Blob con il contenuto delle risposte
+    const blob = new Blob(risposte, { type: 'text/plain' });
+
+    // Crea un link per scaricare il file
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'risposte.txt'; // Nome del file di download
+    link.click(); // Avvia il download
+}
+
+// Aggiungi un listener al bottone per salvare le risposte
+document.getElementById('consegna').addEventListener('click', salvaRisposteSuFile);

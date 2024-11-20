@@ -9,17 +9,20 @@
     border-radius: 5px;
 }
 
-/* Pulsanti centrati */
 .button-container {
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Due colonne di larghezza uguale */
+    grid-template-rows: repeat(3, auto); /* Tre righe */
+    gap: 20px; /* Spazio tra i pulsanti */
+    justify-items: center; /* Centra i pulsanti orizzontalmente */
+    align-items: center; /* Centra i pulsanti verticalmente */
     width: 100%;
     max-width: 800px;
     margin-top: 100px;
 }
 
 .button-container button {
-    padding: 15px 30px;
+    padding: 30px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -30,5 +33,5 @@
 }
 
 .button-container button:hover {
-    background-color: #0056b3;
+    background-color: #40a857;
 }
