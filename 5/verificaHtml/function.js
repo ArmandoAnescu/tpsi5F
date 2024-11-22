@@ -20,6 +20,12 @@ function startTimer() {
     }, 1000);
 }
 
+// Reset del timer quando la scheda viene chiusa o ricaricata
+window.addEventListener('beforeunload', () => {
+    localStorage.removeItem('timerSeconds'); // Rimuove il valore dal localStorage
+});
+
+
 // Funzione per ottenere il parametro 'id' dalla query string
 function getParameterByName(name) {
     const urlParams = new URLSearchParams(window.location.search);
