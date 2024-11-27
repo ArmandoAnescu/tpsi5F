@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="it" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.84.0">
+    <title>Socket</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="sticky-footer-navbar.css" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column h-100">
+    
+<header>
+  <!-- Fixed navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="socket.html">Socket</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="sistemi.html">Sistemi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="informatica.html">Informatica</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="glossario.html">Glossario</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- Begin page content -->
+<main class="flex-shrink-0">
+  <div class="container">
+    <h1>HTTP</h1>
+    <h2>Che cos'è</h2>
+    <p>L'HTTP è un protocollo del livello 7 della pila iso/osi, si usa nell'archittetura client/server.Quando il client manda una richiesta per una pagina web, il server risponde.Il suo nome ha origina dal fatto che trasporta immagini,testo,video e audio. Quando le risorse del client vengono soddisfatte il server chiude la connesione col client.</p>
+    <h2>I metodi dell'HTTP</h2>
+    <p>Questi sono i metodi base dell'http per vedere altri metodi puoi andare <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">qui</a></p>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              GET
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Il metodo GET permette di richiedere una pagina web.</strong> Questo serve per ottenere quello che indicato nell'<a href="https://it.wikipedia.org/wiki/Uniform_Resource_Identifier">URL</a>, un esempio:youtube.com.Il metodo GET prendere la risorsa indicata dall'URL, quindi la pagina di youtube.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                POST
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>il metodo POST invece permette di inviare dati al server.</strong>Un esempio molto semplice è quando ci registriamo o facciamo il login su un sito dove mandiamo al server la nostra e-mail e password e altri dati per registrarci/verificarci.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              PUT
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>Il metodo PUT creao o modifica i dati nel server.</strong> Un esempio potrebbe essere quando cambiamo la nostra e-mail per un account,lo username.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                DELETE
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+              <div class="accordion-body">
+                <strong>Il metodo DELETE come dice il noem permette di cancellare delle risorse nel server.</strong> Un esempio può essere cancellare una repo nel nostro account github, i dati e la pagina web per vedere i contenuti della repo non esitono più.
+              </div>
+            </div>
+          </div>
+      </div>
+</div>
+</main>
+
+<footer class="footer mt-auto py-3 bg-light">
+  <div class="container">
+    <span class="text-muted">Anescu Armando 5F</span>
+  </div>
+</footer>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+      
+  </body>
+</html>
