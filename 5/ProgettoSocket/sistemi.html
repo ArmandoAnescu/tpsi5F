@@ -48,13 +48,13 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="socket.html">Socket</a>
+            <a class="nav-link" aria-current="page" href="socket.html">Socket</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="sistemi.html">Sistemi</a>
+            <a class="nav-link active" href="sistemi.html">HTTP</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="informatica.html">Informatica</a>
+            <a class="nav-link" href="informatica.html">Client-Server</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="glossario.html">Glossario</a>
@@ -70,7 +70,9 @@
   <div class="container">
     <h1>HTTP</h1>
     <h2>Che cos'è</h2>
-    <p>L'HTTP è un protocollo del livello 7 della pila iso/osi, si usa nell'archittetura client/server.Quando il client manda una richiesta per una pagina web, il server risponde.Il suo nome ha origina dal fatto che trasporta immagini,testo,video e audio. Quando le risorse del client vengono soddisfatte il server chiude la connesione col client.</p>
+    <p>L'HTTP è un protocollo del livello 7 della pila iso/osi, si usa nell'archittetura client/server.Quando il client manda una richiesta per una pagina web, il server risponde.Il suo nome ha origina dal fatto che trasporta immagini,testo,video e audio. Quando le risorse del client vengono soddisfatte il server chiude la connesione col client.
+    Solitamente quando si manda una richiesta un server troveremo all'inizio, l'URL della pagina web che vogliamo, il metodo usato e una sezione degli header</p>
+    <img src="immagini/esempioRichiesta.png" alt="esempio_richiesta">
     <h2>I metodi dell'HTTP</h2>
     <p>Questi sono i metodi base dell'http per vedere altri metodi puoi andare <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods">qui</a></p>
     <div class="accordion" id="accordionExample">
@@ -82,7 +84,7 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>Il metodo GET permette di richiedere una pagina web.</strong> Questo serve per ottenere quello che indicato nell'<a href="https://it.wikipedia.org/wiki/Uniform_Resource_Identifier">URL</a>, un esempio:youtube.com.Il metodo GET prendere la risorsa indicata dall'URL, quindi la pagina di youtube.
+              <strong>Il metodo GET permette di richiedere una risorsa dal server.</strong> Questo serve per ottenere quello che indicato nell'<a href="https://it.wikipedia.org/wiki/Uniform_Resource_Identifier">URL</a>, un esempio:youtube.com.Il metodo GET prendere la risorsa indicata dall'URL, quindi la pagina di youtube.
             </div>
           </div>
         </div>
@@ -106,7 +108,7 @@
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>Il metodo PUT creao o modifica i dati nel server.</strong> Un esempio potrebbe essere quando cambiamo la nostra e-mail per un account,lo username.
+              <strong>Il metodo PUT crea o modifica i dati nel server.</strong> Un esempio potrebbe essere quando cambiamo la nostra e-mail per un account,lo username.
             </div>
           </div>
         </div>
@@ -118,7 +120,7 @@
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>Il metodo DELETE come dice il noem permette di cancellare delle risorse nel server.</strong> Un esempio può essere cancellare una repo nel nostro account github, i dati e la pagina web per vedere i contenuti della repo non esitono più.
+                <strong>Il metodo DELETE come dice il nome permette di cancellare delle risorse nel server.</strong> Un esempio può essere cancellare una repo nel nostro account github, i dati e la pagina web per vedere i contenuti della repo non esitono più.
               </div>
             </div>
           </div>
@@ -131,10 +133,6 @@
     <span class="text-muted">Anescu Armando 5F</span>
   </div>
 </footer>
-
-
     <script src="js/bootstrap.bundle.min.js"></script>
-
-      
   </body>
 </html>
