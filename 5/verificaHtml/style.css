@@ -48,3 +48,8 @@ textarea{
     width: 400px;
     height: 100px;
 }
+button{
+    padding: 10px;
+    background-color: green;
+    color: white;
+}
