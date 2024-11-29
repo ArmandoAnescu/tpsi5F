@@ -8,6 +8,9 @@
     padding: 10px;
     border-radius: 5px;
 }
+body{
+    font-size: large;
+}
 .main{
         display: flex; /* Imposta il layout come Flexbox */
         justify-content: center; /* Centra orizzontalmente il contenuto */
@@ -45,11 +48,15 @@
 }
 
 textarea{
-    width: 400px;
-    height: 100px;
+    width: 50%;
+    height:20dvw;
 }
 button{
     padding: 10px;
     background-color: green;
     color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+
 }

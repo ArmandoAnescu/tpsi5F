@@ -154,8 +154,17 @@ function salvaRisposteSuFile() {
     const textIds = Object.keys(localStorage).filter(key => key.startsWith('text_'));
     textIds.forEach((id, index) => {
         const risposta = localStorage.getItem(id);
+        
         if (risposta) {
-            risposte.push(`Risposta alla Domanda Multipla testo ${id} ${index + 1}: ${risposta}\n`);
+            // Estrai i numeri da text_5_question_1 (es. 5 e 1)
+            const parts = id.split('_');
+            const numeroDomanda = parts[1]-3; // es. '5'
+            const numeroSpecifico = Number(parts[3])+1; // es. '1'
+
+            // Riformatta il testo in "testo 5 - 3 domanda"
+            const formattedText = `domanda ${numeroSpecifico} - testo ${numeroDomanda}`;
+
+            risposte.push(`Risposta alla ${formattedText}: ${risposta}\n`);
         }
     });
 
@@ -168,5 +177,6 @@ function salvaRisposteSuFile() {
     link.download = 'risposte.txt'; // Nome del file di download
     link.click(); // Avvia il download
 }
+
 // Aggiungi un listener al bottone per salvare le risposte
 document.getElementById('consegna').addEventListener('click', salvaRisposteSuFile);
