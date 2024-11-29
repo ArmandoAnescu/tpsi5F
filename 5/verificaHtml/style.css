@@ -8,12 +8,12 @@
     padding: 10px;
     border-radius: 5px;
 }
-body {
-    display: flex; /* Imposta il layout come Flexbox */
-    justify-content: center; /* Centra orizzontalmente il contenuto */
-    align-items: center; /* Centra verticalmente il contenuto */
-    height: 100vh; /* Imposta l'altezza del body a tutta l'altezza della finestra */
-    margin: 0; /* Rimuove i margini di default */
+.main{
+        display: flex; /* Imposta il layout come Flexbox */
+        justify-content: center; /* Centra orizzontalmente il contenuto */
+        align-items: center; /* Centra verticalmente il contenuto */
+        height: 100vh; /* Imposta l'altezza del body a tutta l'altezza della finestra */
+        margin: 0; /* Rimuove i margini di default */
 }
 .button-container {
     display: grid;
