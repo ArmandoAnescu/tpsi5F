@@ -1,0 +1,160 @@
+{
+   "navbar":[
+    {
+      "nav-link-1":"index.html",
+      "nav-text-1":"X4School"
+    },
+     {
+      "nav-link-2":"socket.html",
+      "nav-text-1":"Socket"
+    },
+     {
+      "nav-link-3":"sistemi.html",
+      "nav-text-1":"HTTP"
+    },
+     {
+      "nav-link-4":"informatica.html",
+      "nav-text-1":"Client-server"
+    },
+     {
+      "nav-link-5":"glossario.html",
+      "nav-text-1":"Glossario"
+    }
+  ],
+  "title": "Glossario",
+  "intro": "Ecco il glossario dei termini tecnici usati nel sito. troveret una breve definizio e un link alla pagine pertinenti all'argomento.",
+  "accordion_items": {
+    "accordion-item-1": [
+      {
+        "term": "Server",
+        "definition": "dispositivo che offre uno o più servizi.",
+        "link": "informatica.html",
+        "link_text": "Clicca qui per vedere di più"
+      }
+    ],
+    "accordion-item-2": [
+      {
+        "term": "Client",
+        "definition": "dispositivo che richiede un servizio da un server.",
+        "link": "informatica.html",
+        "link_text": "Clicca qui per vedere a riguardo"
+      }
+    ],
+    "accordion-item-3": [
+      {
+        "term": "HTTP",
+        "definition": "protocollo di livello 7 iso/osi, serve per inviare pagine web.",
+        "link": "sistemi.html",
+        "link_text": "Clicca qui per vedere a riguardo"
+      }
+    ],
+    "accordion-item-4": [
+      {
+        "term": "Socket",
+        "definition": "Canale di comunicazione tra client e server.",
+        "link": "socket.html",
+        "link_text": "Clicca qui per vedere a riguardo"
+      }
+    ],
+    "accordion-item-5": [
+      {
+        "term": "Database",
+        "definition": "grande collezione di dati organizzate in tabelle",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-6": [
+      {
+        "term": "Porta Logica",
+        "definition": "porta logica che indica la connessione a un server.",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-7": [
+      {
+        "term": "UDP",
+        "definition": "protocollo del livello 4 modello iso/osi, suddivide i dati in pacchetti e li invia non verificando che tutti i pacchetti siano arrivati. Per connessioni in cui la velocità è la priorità.",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-8": [
+      {
+        "term": "TCP",
+        "definition": "protocollo del livello 4 modello iso/osi suddivide i dati in pacchetti e si assicura che arrivino tutti. Per connessioni in cui l'integrità dei dati è importante.",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-9": [
+      {
+        "term": "URL",
+        "definition": "uniform Resource Locator, stringa che indica la risorsa che vuoi ottenere.",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-10": [
+      {
+        "term": "Risorsa",
+        "definition": "Inteso come pagine web, dati, applicazioni ecc. su un server.",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-11": [
+      {
+        "term": "API",
+        "definition": "Insieme di funzioni/variabili/dati che permettono la comunicazione tra diversi software/computer.",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-12": [
+      {
+        "term": "Protocolli",
+        "definition": "Insieme di regolazioni fisse e universali per la comunicazione (es: HTTP, TCP, UDP).",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-13": [
+      {
+        "term": "Pila ISO/OSI",
+        "definition": "Standard per la comunicazione della rete suddiviso in 7 livelli (fisico, datalink, rete, trasporto, sessione, presentazione, applicazione). Da sinistra verso destra e dal basso verso l'alto nella pila.",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-14": [
+      {
+        "term": "Architettura Client-Server",
+        "definition": "Procedure per la comunicazione tra un client ed un server.",
+        "link": "informatica.html",
+        "link_text": "Clicca qui per vedere a riguardo"
+      }
+    ],
+    "accordion-item-15": [
+      {
+        "term": "HEADER",
+        "definition": "Dà informazioni sul protocollo quando si trasportano dati.",
+        "link": "",
+        "link_text": ""
+      }
+    ],
+    "accordion-item-16": [
+      {
+        "term": "GET-PUT-POST-DELETE",
+        "definition": "Metodi principali dell'HTTP che permettono di inviare, modificare, ottenere ed eliminare dati.",
+        "link": "sistemi.html",
+        "link_text": "Clicca qui per vedere a riguardo"
+      }
+    ]
+  },
+  ,
+  "footer": {
+    "text": "Anescu Armando 5F"
+  }
+}
