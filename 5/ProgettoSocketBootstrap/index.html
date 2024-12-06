@@ -8,31 +8,9 @@
     <meta name="generator" content="Hugo 0.84.0">
     <title>X4School</title>
     <link rel="icon" type="image/png" href="immagini/favicon.png">
-
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
-    <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="d-flex flex-column h-100">
     
@@ -40,24 +18,13 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">X4School</a>
+      <a class="navbar-brand" href="index.html"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="socket.html">Socket</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sistemi.html">HTTP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="informatica.html">Client-Server</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="glossario.html">Glossario</a>
-          </li>
+        <ul class="navbar-nav me-auto mb-2 mb-md-0" id="navbarLinks">
+          <!-- I collegamenti della navbar saranno riempiti dinamicamente -->
         </ul>
       </div>
     </div>
@@ -67,25 +34,24 @@
 <!-- Begin page content -->
 <main class="flex-shrink-0">
   <div class="container">
-    <h1 class="mt-5 pt-5">Le socket</h1>
-    <p class="lead">Le socket sono un canale di comunicazione tra client e server.</p>
-    <h2>Premesse</h2>
-     <p> Qui troverete varie informazioni sulle socket e altri argomenti pertinenti pertineti a Sistemi ed Informatica</p>
-    <h2>Quick Jump</h2>
+    <h1 class="mt-5 pt-5" id="pageTitle"></h1>
+    <p class="lead" id="introText"></p>
+    <h2 id="subtitle1"></h2>
+    <p id="paragraph1"></p>
+    <h2 id="subtitle2"></h2>
     <br>
-    <div class="alert alert-secondary" role="alert">
-      <p>Glossario dei termini <a href="glossario.html">qui</a></p>
+    <div class="alert alert-secondary" role="alert" id="alert1">
+      <p><a href=""></a></p>
     </div>
-    <div class="alert alert-secondary" role="alert">
-      <p>Socket spiegazione approfondita <a href="socket.html">qui</a></p>
+    <div class="alert alert-secondary" role="alert" id="alert2">
+      <p> <a href="socket.html"></a></p>
     </div>
     <div class="dropdown">
       <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-        Collegamenti alle altre materie
+       
       </button>
-      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        <li><a class="dropdown-item" href="sistemi.html">Sistemi</a></li>
-        <li><a class="dropdown-item" href="informatica.html">Informatica</a></li>
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1" id="dropdownLinks">
+        <!-- I collegamenti del dropdown saranno riempiti dinamicamente -->
       </ul>
     </div>
   </div>
@@ -93,13 +59,12 @@
 
 <footer class="footer mt-auto py-3 bg-light">
   <div class="container">
-    <span class="text-muted">Anescu Armando 5F</span>
+    <span class="text-muted" id="footerText">Anescu Armando 5F</span>
   </div>
 </footer>
 
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
-
-      
-  </body>
+</body>
 </html>
