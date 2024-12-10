@@ -39,7 +39,8 @@
       }
     ],
     "dropdown": {
-      "btn-dropdown": "Collegamenti alle altre materie",
+      "btndropdown": "Collegamenti alle altre materie",
+
       "links": [
         {
           "name": "Sistemi",
