@@ -1,0 +1,57 @@
+{
+    "navbar":[
+      {
+        "nav-link":"index.html",
+        "nav-text":"X4School"
+      },
+       {
+        "nav-link":"socket.html",
+        "nav-text":"Socket"
+      },
+       {
+        "nav-link":"sistemi.html",
+        "nav-text":"HTTP"
+      },
+       {
+        "nav-link":"informatica.html",
+        "nav-text":"Client-server"
+      },
+       {
+        "nav-link":"glossario.html",
+        "nav-text":"Glossario"
+      }
+    ],
+    "title": "Le socket",
+    "intro": "Le socket sono un canale di comunicazione tra client e server.",
+    "subtitle-1": "Premesse",
+    "paragraph-1": "Qui troverete varie informazioni sulle socket e altri argomenti pertinenti pertineti a Sistemi ed Informatica",
+    "subtitle-2": "Quick Jump",
+    "alerts": [
+      {
+        "type": "alert-secondary-1",
+        "content": "Glossario dei termini",
+        "link": "glossario.html"
+      },
+      {
+        "type": "alert-secondary-2",
+        "content": "Socket spiegazione approfondita",
+        "link": "socket.html"
+      }
+    ],
+    "dropdown": {
+      "btndropdown": "Collegamenti alle altre materie",
+      "links": [
+        {
+          "name": "Sistemi",
+          "link": "sistemi.html"
+        },
+        {
+          "name": "Informatica",
+          "link": "informatica.html"
+        }
+      ]
+    },
+    "footer": {
+      "text": "Anescu Armando 5F"
+    }
+  }
