@@ -78,3 +78,16 @@ function loadJSON() {
     
     // Caricare la pagina
     document.addEventListener('DOMContentLoaded', loadJSON);
+
+  
+  // Funzione per caricare i dati nella pagina
+  function loadPage(data) {
+    updateNavbar(data);
+    updatePageContent(data);
+    updateAlerts(data);
+    updateDropdown(data);
+    updateFooter(data);
+  }
+  
+  // Caricare la pagina
+  document.addEventListener('DOMContentLoaded', loadJSON);

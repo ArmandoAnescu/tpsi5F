@@ -8,12 +8,15 @@
     padding: 10px;
     border-radius: 5px;
 }
-body {
-    display: flex; /* Imposta il layout come Flexbox */
-    justify-content: center; /* Centra orizzontalmente il contenuto */
-    align-items: center; /* Centra verticalmente il contenuto */
-    height: 100vh; /* Imposta l'altezza del body a tutta l'altezza della finestra */
-    margin: 0; /* Rimuove i margini di default */
+body{
+    font-size: large;
+}
+.main{
+        display: flex; /* Imposta il layout come Flexbox */
+        justify-content: center; /* Centra orizzontalmente il contenuto */
+        align-items: center; /* Centra verticalmente il contenuto */
+        height: 100vh; /* Imposta l'altezza del body a tutta l'altezza della finestra */
+        margin: 0; /* Rimuove i margini di default */
 }
 .button-container {
     display: grid;
@@ -45,6 +48,32 @@ body {
 }
 
 textarea{
-    width: 400px;
-    height: 100px;
+    width: 50%;
+    height:20dvw;
+}
+#btn-return{
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+
+}
+#btn-return:hover{
+    background-color: #00ffbf94;
+}
+#btn-reset{
+    padding: 10px;
+    background-color: rgba(128, 0, 0, 0.822);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+
+}
+#btn-reset:hover{
+    background-color: #ff0000;
 }
