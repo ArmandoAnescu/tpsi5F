@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             data.navbar.forEach(item => {
                 const navItem = document.createElement("li");
                 navItem.className = "nav-item";
-                navItem.innerHTML = `<a class="nav-link" href="${item[`nav-link-1`]}">${item[`nav-text-1`]}</a>`;
+                navItem.innerHTML = `<a class="nav-link" href="${item[`nav-link`]}">${item[`nav-text`]}</a>`;
                 navbar.appendChild(navItem);
             });
 
