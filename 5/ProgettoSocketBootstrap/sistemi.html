@@ -1,80 +1,81 @@
 <!doctype html>
 <html lang="it" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>X4School</title>
-    <link rel="icon" type="image/png" href="immagini/favicon.png">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
-    
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title>X4School</title>
+  <link rel="icon" type="image/png" href="immagini/favicon.png">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
-    <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
+</head>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
+<body class="d-flex flex-column h-100">
 
-    
-    <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
-  </head>
-  <body class="d-flex flex-column h-100">
-    
-<header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse" id="navbarLinks">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-        </ul>
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0" id="navbarLinks">
+          </ul>
+        </div>
       </div>
+    </nav>
+  </header>
+
+  <!-- Begin page content -->
+  <main class="flex-shrink-0">
+    <div class="container">
+      <h1 id="title" class="mt-5 pt-5"></h1>
+      <h2 id="sub-title"></h2>
+      <p id="lead-text" class="lead"></p>
+      <img id="image" src="" alt="">
+      <p id="note-image"></p>
+
+      <h2 id="methods-title"></h2>
+      <p id="methods-lead" class="lead"></p>
+
+      <div class="accordion" id="accordionExample"></div>
     </div>
-  </nav>
-</header>
+  </main>
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted" id="footer-text"></span>
+    </div>
+  </footer>
 
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-  <div class="container">
-    <h1 id="title" class="mt-5 pt-5"></h1>
-<h2 id="sub-title"></h2>
-<p id="lead-text" class="lead"></p>
-<img id="image" src="" alt="">
-<p id="note-image"></p>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/scriptSistemi.js"></script>
+</body>
 
-<h2 id="methods-title"></h2>
-<p id="methods-lead" class="lead"></p>
-
-<div class="accordion" id="accordionExample"></div>
-
-<footer class="footer mt-auto py-3 bg-light">
-  <div class="container">
-    <span id="footer-text" class="text-muted"></span>
-  </div>
-</footer>
-
-    <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/scriptSistemi.js"></script>
-  </body>
 </html>
