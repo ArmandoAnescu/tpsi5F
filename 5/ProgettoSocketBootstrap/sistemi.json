@@ -1,0 +1,53 @@
+{
+    "navbar": [
+        {
+            "nav-link": "index.html",
+            "nav-text": "X4School"
+        },
+        {
+            "nav-link": "socket.html",
+            "nav-text": "Socket"
+        },
+        {
+            "nav-link": "sistemi.html",
+            "nav-text": "HTTP"
+        },
+        {
+            "nav-link": "informatica.html",
+            "nav-text-1": "Client-server"
+        },
+        {
+            "nav-link": "glossario.html",
+            "nav-text": "Glossario"
+        }
+    ],
+    "title": "HTTP",
+    "sub-title": "Che cos'è",
+    "lead-text": "L'HTTP è un protocollo del livello 7 della pila iso/osi, si usa nell'<a href='informatica.html'>archittetura client/server</a>.Quando il client manda una richiesta per una pagina web, il server risponde.Il suo nome ha origina dal fatto che trasporta immagini,testo,video e audio. Quando le risorse del client vengono soddisfatte il server chiude la connesione col client. Solitamente quando si manda una richiesta un server troveremo all'inizio, l' <a href='https://it.wikipedia.org/wiki/Uniform_Resource_Locator' target='_blank'>URL</a> della pagina web che vogliamo, il metodo usato e una sezione degli <a href='https://it.wikipedia.org/wiki/Header'>header</a>",
+    "image": {
+        "src": "immagini/esempioRichiesta.png",
+        "alt": "esempio_richiesta"
+    },
+    "note-image": "(immagine presa aprendo uan pagina web)",
+    "methods-title": "I metodi dell'HTTP",
+    "methods-lead": "Questi sono i metodi base dell'http per vedere altri metodi puoi andare <a href='https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods' target='_blank'>qui</a>",
+    "accordion_items": {
+        "accordion-item-1": {
+            "term": "GET",
+            "definition": "<strong>Il metodo GET permette di richiedere una risorsa dal server.</strong> Questo serve per ottenere quello che indicato nell'<a href='https://it.wikipedia.org/wiki/Uniform_Resource_Identifier' target='_blank'>URL</a>, un esempio:youtube.com.Il metodo GET prendere la risorsa indicata dall'URL, quindi la pagina di youtube."
+        },
+        "accordion-item-2": {
+            "term": "POST",
+            "definition": "<strong>Il metodo POST invece permette di inviare dati al server.</strong>Un esempio molto semplice è quando ci registriamo o facciamo il login su un sito dove mandiamo al server la nostra e-mail e password e altri dati per registrarci/verificarci."
+        },
+        "accordion-item-3": {
+            "term": "PUT",
+            "definition": "<strong>Il metodo PUT crea o modifica i dati nel server.</strong> Un esempio potrebbe essere quando cambiamo la nostra e-mail per un account,lo username."
+        },
+        "accordion-item-4": {
+            "term": "DELETE",
+            "definition": "<strong>Il metodo DELETE come dice il nome permette di cancellare delle risorse nel server.</strong> Un esempio può essere cancellare una repo nel nostro account github, i dati e la pagina web per vedere i contenuti della repo non esitono più."
+        }
+    },
+    "footer-text": "Anescu Armando 5F"
+}

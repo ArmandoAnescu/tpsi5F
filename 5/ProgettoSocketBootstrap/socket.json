@@ -1,0 +1,42 @@
+{
+    "navbar":[
+        {
+          "nav-link":"index.html",
+          "nav-text":"X4School"
+        },
+         {
+          "nav-link":"socket.html",
+          "nav-text":"Socket"
+        },
+         {
+          "nav-link":"sistemi.html",
+          "nav-text":"HTTP"
+        },
+         {
+          "nav-link":"informatica.html",
+          "nav-text-1":"Client-server"
+        },
+         {
+          "nav-link":"glossario.html",
+          "nav-text":"Glossario"
+        }
+    ],
+    "title": "Le socket",
+    "sub-title": "Cos'è una socket",
+    "socket-description": "Una socket è un insieme di <a href='https://it.wikipedia.org/wiki/Application_programming_interface' target='_blank'>API</a> standard per trasmettere e ricevere dati tramite la rete. La connessione può avvenire tra 2 processi, o tra un client e un server. Successivamente verranno spiegate le varie tipologie di socket presenti.",
+    "type-socket-title": "Tipologie di socket",
+    "type-socket-description": "Abbiamo tre tipi di socket: <b>Datagram, Stream e Raw;</b>",
+    "datagram-title": "Datagram",
+    "datagram-description": "Questa connessione utilizza il protocollo <a href='https://it.wikipedia.org/wiki/Transmission_Control_Protocol' target='_blank'>UDP</a>. L'arrivo e l'integrità dei dati non sono garantiti.",
+    "stream-title": "Stream",
+    "stream-description": "Al contrario della precedente, questo tipo di socket usa il protocollo <a href='https://it.wikipedia.org/wiki/User_Datagram_Protocol' target='_blank'>TCP</a>, quindi la connessione è più affidabile. Il client quindi indicherà la socket dove, quando il server accetterà la richiesta, verrà creato il canale di comunicazione.",
+    "raw-title": "Raw",
+    "raw-description": "Questo tipo permette lo sviluppo di particolari <a href='https://it.wikipedia.org/wiki/Protocollo_(informatica)' target='_blank'>protocolli</a> di comunicazione.",
+    "comunication-title": "Processo di comunicazione",
+    "comunication-description": "Quando un servizio è attivo, ha una porta e un indirizzo IP per raggiungerlo. Il client deve solo indicare la porta e l'indirizzo IP del server. Al server arriverà poi una richiesta dal client, che soddisferà la richiesta e risponderà con il risultato.",
+    "image-tcp": "immagini/ConnessioneSocketTCP.png",
+    "image-udp": "immagini/ConnessioneSocketUDP.png",
+    "note-immagini": "(immagini prese dal libro di tpsit)",
+    "footer-text": "Anescu Armando 5F"
+  }
+  
