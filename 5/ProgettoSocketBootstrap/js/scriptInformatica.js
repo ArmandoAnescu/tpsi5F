@@ -59,7 +59,7 @@ function loadContent() {
             const imgElement = document.getElementById('image-src');
             imgElement.src = data.image.src;
             imgElement.alt = data.image.alt;
-            const imgSource = document.createElement('p');
+            const imgSource = document.getElementById('image-source');
             imgSource.innerHTML = data.image.source;
 
             // Impostare il footer
