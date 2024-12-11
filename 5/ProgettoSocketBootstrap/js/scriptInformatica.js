@@ -20,11 +20,16 @@ function loadContent() {
             // Impostare l'introduzione
             document.getElementById('introduction-title').textContent = data.introtitle;
             document.getElementById('introduction-content').textContent = data.intro;
-            // Popolare le sezioni
-            document.getElementById('client-title').textContent=data.client;
-            document.getElementById('client-content').textContent=data.clientContent;
-            document.getElementById('server-title').textContent=data.server;
-            document.getElementById('server-content').textContent=data.serverContent;
+            // Assumendo che la struttura del JSON sia quella che hai fornito, devi usare gli indici dell'array per accedere ai dati.
+
+            // Accedi ai dati della sezione client
+            document.getElementById('client-title').textContent = data.sections[0].client;
+            document.getElementById('client-content').innerHTML = data.sections[0].clientContent;
+
+            // Accedi ai dati della sezione server
+            document.getElementById('server-title').textContent = data.sections[1].server;
+            document.getElementById('server-content').innerHTML = data.sections[1].serverContent;
+
 
             // Ottieni il contenitore della lista
             const serverList = document.getElementById('server-list');
@@ -48,16 +53,14 @@ function loadContent() {
                 serverList.appendChild(listItem);
             });
             //link
-            const additonalInfo=document.getElementById('additional-info');
-            additonalInfo.innerHTML=data.sections.additonalInfo;
+            const additonalInfo = document.getElementById('additional-info');
+            additonalInfo.innerHTML = data.sections[3].additionalInfo;
             // Impostare l'immagine
             const imgElement = document.getElementById('image-src');
             imgElement.src = data.image.src;
             imgElement.alt = data.image.alt;
             const imgSource = document.createElement('p');
             imgSource.innerHTML = data.image.source;
-            additonalInfo.appendChild(imgElement);
-            additonalInfo.appendChild(imgSource);
 
             // Impostare il footer
             document.querySelector('.footer span').textContent = data.footer.text;
