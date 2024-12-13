@@ -23,7 +23,7 @@
   ],
   "icon":"<i class=\"bi bi-backpack3-fill\"></i>",
   "title": "Glossario",
-  "intro": "Ecco il glossario dei termini tecnici usati nel sito. troveret una breve definizio e un link alla pagine pertinenti all'argomento.",
+  "intro": "Ecco il glossario dei termini tecnici usati nel sito. Troverete una breve definizione del termine e un link alla pagine pertinenti all'argomento.",
   "accordion_items": {
     "accordion-item-1": [
       {
