@@ -21,6 +21,7 @@
             "nav-text": "Glossario"
         }
     ],
+    "icon":"<i class=\"bi bi-backpack3-fill\"></i>",
     "title": "Archittetura Client-Server",
     "introtitle":"Introduzione",
     "intro": "L'architteura client server si riferisce quando in una rete un computer client si connette ad un server per usufruire di un servizio.",

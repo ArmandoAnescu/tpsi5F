@@ -21,6 +21,7 @@
           "nav-text":"Glossario"
         }
     ],
+    "icon":"<i class=\"bi bi-backpack3-fill\"></i>",
     "title": "Le socket",
     "sub-title": "Cos'è una socket",
     "socket-description": "Una socket è un insieme di <a href='https://it.wikipedia.org/wiki/Application_programming_interface' target='_blank'>API</a> standard per trasmettere e ricevere dati tramite la rete. La connessione può avvenire tra 2 processi, o tra un client e un server. Successivamente verranno spiegate le varie tipologie di socket presenti.",

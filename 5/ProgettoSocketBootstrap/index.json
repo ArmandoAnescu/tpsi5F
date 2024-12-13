@@ -21,6 +21,7 @@
         "nav-text":"Glossario"
       }
     ],
+    "icon":"<i class=\"bi bi-backpack3-fill\"></i>",
     "title": "Le socket",
     "intro": "Le socket sono un canale di comunicazione tra client e server.",
     "subtitle-1": "Premesse",

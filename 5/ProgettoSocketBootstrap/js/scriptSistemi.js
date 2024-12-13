@@ -54,7 +54,7 @@ function loadJSON() {
       
       accordionItem.innerHTML = `
         <h2 class="accordion-header" id="heading${index}">
-          <button class="accordion-button ${index === 0 ? 'show' : ''}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="${index === 0 ? 'true' : 'false'}" aria-controls="collapse${index}">
+          <button class="accordion-button ${index === 0 ? '' : 'collapsed'}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse${index}" aria-expanded="${index === 0 ? 'true' : 'false'}" aria-controls="collapse${index}">
             ${item.term}
           </button>
         </h2>

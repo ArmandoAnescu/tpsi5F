@@ -21,6 +21,7 @@
             "nav-text": "Glossario"
         }
     ],
+    "icon":"<i class=\"bi bi-backpack3-fill\"></i>",
     "title": "HTTP",
     "sub-title": "Che cos'è",
     "lead-text": "L'HTTP è un protocollo del livello 7 della pila iso/osi, si usa nell'<a href='informatica.html'>archittetura client/server</a>.Quando il client manda una richiesta per una pagina web, il server risponde.Il suo nome ha origina dal fatto che trasporta immagini,testo,video e audio. Quando le risorse del client vengono soddisfatte il server chiude la connesione col client. Solitamente quando si manda una richiesta un server troveremo all'inizio, l' <a href='https://it.wikipedia.org/wiki/Uniform_Resource_Locator' target='_blank'>URL</a> della pagina web che vogliamo, il metodo usato e una sezione degli <a href='https://it.wikipedia.org/wiki/Header'>header</a>",
