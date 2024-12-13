@@ -2,6 +2,8 @@ function loadContent() {
     fetch('informatica.json') // Assicurati che il file JSON si trovi nel percorso corretto
         .then(response => response.json())
         .then(data => {
+            const icona=document.getElementById('nav-brand');
+            icona.innerHTML=data.icon;
             const navbarLinks = document.getElementById('navbarLinks');
             data.navbar.forEach(item => {
                 const listItem = document.createElement('li');

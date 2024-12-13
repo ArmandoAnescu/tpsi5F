@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
             // Popola la navbar
+            const icona=document.getElementById('nav-brand');
+            icona.innerHTML=data.icon;
             const navbar = document.getElementById("navbar");
             data.navbar.forEach(item => {
                 const navItem = document.createElement("li");
