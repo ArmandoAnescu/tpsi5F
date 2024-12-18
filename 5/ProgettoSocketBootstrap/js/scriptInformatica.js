@@ -32,7 +32,7 @@ function loadContent() {
             document.getElementById('server-title').textContent = data.sections[1].server;
             document.getElementById('server-content').innerHTML = data.sections[1].serverContent;
 
-
+            document.getElementById('server-type').textContent=data.sections[2].heading;
             // Ottieni il contenitore della lista
             const serverList = document.getElementById('server-list');
             // Ottieni i dati relativi ai tipi di server dalla sezione del JSON
