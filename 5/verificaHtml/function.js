@@ -139,33 +139,6 @@ window.onload = function() {
 };
 
 
-// Funzione per il reset delle risposte
-function resetForm() {
-    // Reset delle domande aperte
-    const questionIds = Object.keys(localStorage).filter(key => key.startsWith('answer_'));
-    questionIds.forEach(id => {
-        localStorage.removeItem(id);  // Rimuovi la risposta dal localStorage
-    });
-
-    // Reset delle domande a risposta multipla
-    const textIds = Object.keys(localStorage).filter(key => key.startsWith('text_'));
-    textIds.forEach(id => {
-        localStorage.removeItem(id);  // Rimuovi la risposta dal localStorage
-    });
-
-    // Reset delle aree di testo (textarea) e radio button
-    const answerTextarea = document.getElementById('answer');
-    if (answerTextarea) {
-        answerTextarea.value = '';  // Svuota la textarea
-    }
-
-    const radios = document.querySelectorAll('input[type="radio"]');
-    radios.forEach(radio => {
-        radio.checked = false;  // Deseleziona i radio button
-    });
-
-    console.log('Domande e risposte reset');
-}
 
 // Funzione per salvare le risposte in un file di testo
 document.getElementById('consegna').addEventListener('click', function() {
@@ -209,5 +182,3 @@ document.getElementById('consegna').addEventListener('click', function() {
     console.log('Risposte salvate');
 });
 
-// Assegna l'evento al tasto di reset
-document.getElementById('btn-reset').addEventListener('click', resetForm);

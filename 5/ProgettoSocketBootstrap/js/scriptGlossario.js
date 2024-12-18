@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             ${item.link ? `<a href="${item.link}" class="btn btn-link">${item.link_text}</a>` : ""}
                         </div>
                     </div>
-                `;
+                `;//controlla se ce un link se c'è aggiunge un a
 
                 accordion.appendChild(accordionItem);
             });
