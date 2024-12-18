@@ -5,12 +5,14 @@ function resetForm() {
     const question = data.domande_aperte.find(q => q.id == questionId); // Trova la domanda aperta
     const text = data.testi.find(t => t.id == questionId); // Trova il testo con domande a risposta multipla
     if (question) {//se è una domanda
+        const charCount = document.getElementById('char-count'); // Recupera l'elemento per il contatore
         localStorage.removeItem(`answer_${questionId}`);  // Rimuovi la risposta dal localStorage
         // Reset delle aree di testo (textarea) e radio button
         const answerTextarea = document.getElementById('answer');
         if (answerTextarea) {
             answerTextarea.value = '';  // Svuota la textarea
         }
+        charCount.textContent= `Caratteri scritti: ${this.value.length}`;
     } else if (text) {
         const textIds = Object.keys(localStorage).filter(key => key.startsWith(questionId));
         textIds.forEach(id => {

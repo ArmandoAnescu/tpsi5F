@@ -1,3 +1,22 @@
+/* Stili generali */
+body {
+    font-size: large;
+    margin: 0;
+}
+
+/* Flexbox per centrare il contenuto */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#title {
+    font-size: 32px;
+    text-align: center;
+    margin-top: 80px; /* Spazio sopra il titolo per distanziarlo dal timer */
+}
+/* Timer */
 #timer {
     position: absolute;
     top: 20px;
@@ -8,30 +27,23 @@
     padding: 10px;
     border-radius: 5px;
 }
-body{
-    font-size: large;
-}
-.main{
-        display: flex; /* Imposta il layout come Flexbox */
-        justify-content: center; /* Centra orizzontalmente il contenuto */
-        align-items: center; /* Centra verticalmente il contenuto */
-        height: 100vh; /* Imposta l'altezza del body a tutta l'altezza della finestra */
-        margin: 0; /* Rimuove i margini di default */
-}
+
+/* Container dei pulsanti */
 .button-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Due colonne di larghezza uguale */
-    grid-template-rows: repeat(3, auto); /* Tre righe */
-    gap: 20px; /* Spazio tra i pulsanti */
+    grid-template-columns: repeat(2, 1fr); /* 2 colonne uguali */
+    grid-template-rows: repeat(3, auto); /* 3 righe */
+    gap: 20px; /* Distanza tra i pulsanti */
     justify-items: center; /* Centra i pulsanti orizzontalmente */
     align-items: center; /* Centra i pulsanti verticalmente */
     width: 100%;
-    max-width: 800px;
-    margin-top: 0px;
+    max-width: 600px; /* Larghezza massima per evitare che diventino troppo larghi */
+    padding: 20px;
 }
 
+/* Pulsanti */
 .button-container button {
-    padding: 30px;
+    padding: 15px; /* Riduzione del padding per farli meno larghi */
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -39,19 +51,48 @@ body{
     background-color: #20538a;
     color: white;
     transition: background-color 0.3s;
-    width: 200px;
+    width: 100%; /* I pulsanti occupano tutta la larghezza della cella */
     height: 100px;
+    box-sizing: border-box; /* Garantisce che il padding non influisca sulla larghezza */
 }
 
 .button-container button:hover {
     background-color: #40a857;
 }
 
-textarea{
-    width: 50%;
-    height:20dvw;
+/* Responsive per dispositivi più piccoli */
+@media (max-width: 768px) {
+    .button-container {
+        grid-template-columns: repeat(2, 1fr); /* Rimane sempre con 2 colonne */
+    }
+
+    .button-container button {
+        padding: 12px; /* Riduce ulteriormente il padding per schermi più piccoli */
+        font-size: 14px; /* Riduce la dimensione del font */
+    }
+
+    #timer {
+        font-size: 18px; /* Riduce la dimensione del timer */
+    }
 }
-#btn-return{
+
+@media (max-width: 480px) {
+    .button-container {
+        grid-template-columns: repeat(2, 1fr); /* Rimane sempre 2 colonne */
+    }
+
+    .button-container button {
+        padding: 10px; /* Riduce ulteriormente il padding per schermi ancora più piccoli */
+        font-size: 12px; /* Riduce ulteriormente la dimensione del font */
+    }
+
+    #timer {
+        font-size: 16px; /* Riduce ulteriormente la dimensione del timer */
+    }
+}
+
+/* Pulsante ritorno */
+#btn-return {
     padding: 10px;
     background-color: green;
     color: white;
@@ -59,12 +100,14 @@ textarea{
     border: none;
     font-size: 14px;
     transition: background-color 0.3s;
-
 }
-#btn-return:hover{
+
+#btn-return:hover {
     background-color: #00ffbf94;
 }
-#btn-reset{
+
+/* Pulsante reset */
+#btn-reset {
     padding: 10px;
     background-color: rgba(128, 0, 0, 0.822);
     color: white;
@@ -72,8 +115,8 @@ textarea{
     border: none;
     font-size: 14px;
     transition: background-color 0.3s;
-
 }
-#btn-reset:hover{
+
+#btn-reset:hover {
     background-color: #ff0000;
 }
