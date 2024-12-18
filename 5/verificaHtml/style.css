@@ -3,7 +3,9 @@ body {
     font-size: large;
     margin: 0;
 }
-
+#consegna{
+    background-color: #20308a;
+}
 /* Flexbox per centrare il contenuto */
 .main {
     display: flex;
@@ -108,6 +110,9 @@ body {
 
 #btn-return:hover {
     background-color: #00ffbf94;
+}
+#consegna:hover{
+    background-color: #00ff37;
 }
 /*btn reset*/
 #btn-reset {
