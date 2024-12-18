@@ -91,7 +91,7 @@ body {
     }
 }
 
-/* Pulsante ritorno */
+/* Pulsante Torna alla Home */
 #btn-return {
     padding: 10px;
     background-color: green;
@@ -100,13 +100,16 @@ body {
     border: none;
     font-size: 14px;
     transition: background-color 0.3s;
+    cursor: pointer;
+    margin-top: 20px; /* Spazio sopra il pulsante */
+    margin-left: 20px; /* Distanza a sinistra dal bordo */
 }
+
 
 #btn-return:hover {
     background-color: #00ffbf94;
 }
-
-/* Pulsante reset */
+/*btn reset*/
 #btn-reset {
     padding: 10px;
     background-color: rgba(128, 0, 0, 0.822);
@@ -115,8 +118,39 @@ body {
     border: none;
     font-size: 14px;
     transition: background-color 0.3s;
+    cursor: pointer;
+    margin-top: 10px; /* Spazio sopra il pulsante */
+    margin-left: 20px; /* Distanza a sinistra dal bordo */
 }
-
+#question-content {
+    padding: 20px;
+    margin-left: 20px; /* Distanza a sinistra dal bordo */
+    margin-right: 20px; /* Distanza a destra dal bordo */
+}/* Conteggio dei caratteri */
+#char-count {
+    font-size: 18px;
+    margin-left: 20px; /* Distanza a sinistra dal bordo */
+    margin-right: 20px; /* Distanza a destra dal bordo */
+}
 #btn-reset:hover {
     background-color: #ff0000;
+}
+#text {
+    text-align: justify;
+    padding: 20px;
+    font-size: 18px;
+    margin-left: 20px; /* Distanza a sinistra dal bordo */
+    margin-right: 20px; /* Distanza a destra dal bordo */
+    line-height: 1.6; /* Aumenta l'interlinea per una lettura migliore */
+}
+
+/* Contenuto delle Domande */
+#text-content {
+    padding: 20px;
+    margin-left: 20px; /* Distanza a sinistra dal bordo */
+    margin-right: 20px; /* Distanza a destra dal bordo */
+}
+textarea{
+    width: 50%;
+    height:20dvw;
 }
