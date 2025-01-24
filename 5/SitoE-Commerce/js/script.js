@@ -22,12 +22,10 @@ function loadJSON() {
     // Loop attraverso l'array di prodotti
     prodotti.forEach(prodotto => {
       // Creiamo una card per ogni prodotto
-      const card = document.createElement("div");
-      card.classList.add("col-md-4", "mb-4"); // Layout a 3 colonne con Bootstrap
-  
+      const card = document.createElement("div");  
       // Aggiungi un'immagine di default (se non disponibile nel JSON)
       card.innerHTML = `
-        <div class="card">
+        <div class="card style="width: 18rem;"">
           <img src="${prodotto.immagine}" class="card-img-top" alt="${prodotto.nome}">
           <div class="card-body">
             <h5 class="card-title">${prodotto.nome}</h5>
