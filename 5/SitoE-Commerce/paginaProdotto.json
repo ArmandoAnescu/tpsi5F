@@ -1,74 +1,125 @@
 {
-    "navbar":[
-      {
-        "nav-link":"index.html",
-        "nav-text":"NomeSito"
-      },
-       {
-        "nav-link":"archivio.html",
-        "nav-text":"Archivio"
-      },
-       {
-        "nav-link":"carrello.html",
-        "nav-text":"Carrello"
-      }
+    "navbar": [
+        {
+            "nav-link": "index.html",
+            "nav-text": "NomeSito"
+        },
+        {
+            "nav-link": "archivio.html",
+            "nav-text": "Archivio"
+        },
+        {
+            "nav-link": "carrello.html",
+            "nav-text": "Carrello"
+        }
     ],
     "title": "NomeSito",
-    "prodotti":[
+    "prodotti": [
         {
-            "nome":"Felpa",
-            "descrizione":"Super felpa cotonosa molto comoda.",
-            "id":"0001",
-            "immagine":"immagini_prodotti/felpe/felpa_rosso.jpg",
-            "prezzo":"19,99",
-            "colori":[
+            "nome": "Nintendo 3DS",
+            "id": "0001",
+            "immagine": "immagini_prodotti/nintendo_3ds/nintendo3ds_nero.jpg",
+            "colori": [
                 "rosso",
                 "blu",
-                "verde",
-                "giallo"
-            ]
+                "nero"
+            ],
+            "prezzo": "199,99",
+            "descrizione": "Console portatile Nintendo 3DS con schermo 3D senza occhiali e ampio catalogo di giochi."
         },
         {
-            "nome":"Maglia",
-            "id":"0002",
-            "descrizione":"Super felpa cotonosa molto comoda.",
-            "immagine":"immagini_prodotti/maglie/maglia_rossa.jpg",
-            "prezzo":"19,99",
-            "colori":[
+            "nome": "New Nintendo 3DS",
+            "id": "0002",
+            "immagine": "immagini_prodotti/new_nintendo_3ds/newnintendo3ds_nero.jpg",
+            "colori": [
                 "rosso",
                 "blu",
-                "verde",
-                "giallo"
-            ]
+                "nero"
+            ],
+            "prezzo": "249,99",
+            "descrizione": "La versione migliorata della console Nintendo 3DS, con maggiore potenza e nuove funzionalità."
         },
         {
-            "nome":"Pantaloni",
-            "id":"0004",
-            "descrizione":"Super felpa cotonosa molto comoda.",
-            "immagine":"immagini_prodotti/pantaloni/pantaloni_rossi.jpg",
-            "prezzo":"19,99",
-            "colori":[
+            "nome": "Nintendo DS",
+            "id": "0004",
+            "immagine": "immagini_prodotti/nintendo_ds/nintendods_nero.jpg",
+            "colori": [
                 "rosso",
                 "blu",
-                "verde",
-                "giallo"
-            ]
+                "nero"
+            ],
+            "prezzo": "149,99",
+            "descrizione": "Console portatile classica della Nintendo, con doppio schermo e un ampio catalogo di giochi."
         },
         {
-            "nome":"Pantaloncini",
-            "id":"0005",
-            "descrizione":"Super felpa cotonosa molto comoda.",
-            "immagine":"immagini_prodotti/pantaloncini/pantaloncini_rossi.jpg",
-            "prezzo":"19,99",
-            "colori":[
+            "nome": "Playstation 2",
+            "id": "0005",
+            "immagine": "immagini_prodotti/playstation_2/play2_nero.jpg",
+            "colori": [
+                "nero"
+            ],
+            "prezzo": "99,99",
+            "descrizione": "Console di gioco Sony, famosa per la sua vasta libreria di titoli e la retrocompatibilità con i giochi PS1."
+        },
+        {
+            "nome": "Gameboy Color",
+            "id": "0006",
+            "immagine": "immagini_prodotti/gameboy_color/gameboycolor_giallo.jpg",
+            "colori": [
+                "giallo",
+                "blu",
+                "nero"
+            ],
+            "prezzo": "79,99",
+            "descrizione": "Console portatile classica Nintendo con schermo a colori, disponibile in vari colori e giochi iconici."
+        },
+        {
+            "nome": "Gameboy SP",
+            "id": "0007",
+            "immagine": "immagini_prodotti/gameboy_sp/gameboysp_rosso.jpg",
+            "colori": [
                 "rosso",
                 "blu",
                 "verde",
                 "giallo"
-            ]
+            ],
+            "prezzo": "119,99",
+            "descrizione": "Una versione compatta del Game Boy, con schermo retroilluminato e design pieghevole."
+        },
+        {
+            "nome": "Playstation 3",
+            "id": "0008",
+            "immagine": "immagini_prodotti/playstation_3/play3_nero.jpg",
+            "colori": [
+                "nero"
+            ],
+            "prezzo": "299,99",
+            "descrizione": "Console di gioco Sony della generazione PS3, con giochi in HD e supporto per il Blu-ray."
+        },
+        {
+            "nome": "Xbox 360",
+            "id": "0009",
+            "immagine": "immagini_prodotti/xbox_360/xbox360_bianco.jpg",
+            "colori": [
+                "bianco",
+                "nero"
+            ],
+            "prezzo": "249,99",
+            "descrizione": "Console Microsoft con un catalogo ricco di giochi e accessori, e supporto per giochi online tramite Xbox Live."
+        },
+        {
+            "nome": "Wii",
+            "id": "00010",
+            "immagine": "immagini_prodotti/wii/wii_bianco.jpg",
+            "colori": [
+                "bianco",
+                "nero"
+            ],
+            "prezzo": "199,99",
+            "descrizione": "Console innovativa di Nintendo che utilizza il controllo motion-sensing, con giochi come Wii Sports."
         }
     ],
     "footer": {
-      "text": "Anescu Armando 5F"
+        "text": "Anescu Armando 5F"
     }
 }
