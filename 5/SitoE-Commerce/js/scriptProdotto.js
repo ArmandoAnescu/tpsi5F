@@ -49,7 +49,7 @@ function caricaProdotto(prodotto) {
 
     // Carica la descrizione (puoi aggiungere una descrizione nel JSON, ad esempio)
     const descrizioneProdotto = document.getElementById('descrizione');
-    descrizioneProdotto.textContent = `<bold>Descrizione</bold> :${prodotto.descrizione}`; // Aggiungi una descrizione appropriata
+    descrizioneProdotto.innerHTML = `<strong>Descrizione</strong> : ${prodotto.descrizione}`;
 
     // Carica il prezzo
     const prezzoProdotto = document.getElementById('price');

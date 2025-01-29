@@ -98,7 +98,7 @@ body {
     height: auto;
     border-radius: 8px; /* Angoli arrotondati */
     object-fit: cover; /* Adatta l'immagine senza deformarla */
-    margin-right: 20px; /* Aggiunge margine tra l'immagine e la descrizione */
+    margin: 20px; /* Aggiunge margine tra l'immagine e la descrizione */
 }
 
 /* Dettagli del prodotto (a destra dell'immagine) */
@@ -106,10 +106,12 @@ body {
     flex: 1; /* Permette di espandersi per occupare lo spazio rimanente */
     padding-left: 20px; /* Aggiunge spazio tra i dettagli e il bordo sinistro */
     padding-right: 20px; /* Aggiunge spazio tra i dettagli e il bordo destro */
+    margin: 20px;
 }
 
 /* Titolo del prodotto */
 #nome-prodotto {
+    text-align: left;
     font-size: 2rem;
     font-weight: bold;
     color: #333;
