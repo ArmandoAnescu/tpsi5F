@@ -16,18 +16,17 @@
     "title": "NomeSito",
     "prodotti":[
         {
-            "nome":"felpa",
+            "nome":"Nintendo 3DS",
             "id":"0001",
-            "immagine":"immagini_prodotti/felpe/felpa_rosso.jpg",
+            "immagine":"immagini_prodotti/nintendo_3ds/nintendo3ds_rosso.jpg",
             "colori":[
                 "rosso",
                 "blu",
-                "verde",
-                "giallo"
+                "nero"
             ]
         },
         {
-            "nome":"maglia",
+            "nome":"New Nintendo 3DS",
             "id":"0002",
             "immagine":"immagini_prodotti/maglie/maglia_rossa.jpg",
             "colori":[
@@ -38,7 +37,7 @@
             ]
         },
         {
-            "nome":"pantaloni",
+            "nome":"Nintendo DS",
             "id":"0004",
             "immagine":"immagini_prodotti/pantaloni/pantaloni_rossi.jpg",
             "colori":[
@@ -49,9 +48,63 @@
             ]
         },
         {
-            "nome":"pantaloncini",
+            "nome":"Playstation 2",
             "id":"0005",
             "immagine":"immagini_prodotti/pantaloncini/pantaloncini_rossi.jpg",
+            "colori":[
+                "rosso",
+                "blu",
+                "verde",
+                "giallo"
+            ]
+        },
+        {
+            "nome":"Gameboy Color",
+            "id":"0006",
+            "immagine":"immagini_prodotti/calzini/calzini_bianco.jpg",
+            "colori":[
+                "bianco",
+                "blu",
+                "nero"
+            ]
+        },
+        {
+            "nome":"Gameboy SP",
+            "id":"0007",
+            "immagine":"immagini_prodotti/pantaloncini/pantaloncini_rossi.jpg",
+            "colori":[
+                "rosso",
+                "blu",
+                "verde",
+                "giallo"
+            ]
+        },
+        {
+            "nome":"Playstation 3",
+            "id":"0008",
+            "immagine":"immagini_prodotti/pantaloncini/pantaloncini_rossi.jpg",
+            "colori":[
+                "rosso",
+                "blu",
+                "verde",
+                "giallo"
+            ]
+        },
+        {
+            "nome":"Xbox 360",
+            "id":"0009",
+            "immagine":"immagini_prodotti/pantaloncini/pantaloncini_rossi.jpg",
+            "colori":[
+                "rosso",
+                "blu",
+                "verde",
+                "giallo"
+            ]
+        },
+        {
+            "nome":"Wii",
+            "id":"00010",
+            "immagine":"immagini_prodotti/wii/wii_rossi.jpg",
             "colori":[
                 "rosso",
                 "blu",
