@@ -94,8 +94,9 @@ body {
 
 /* Immagine del prodotto */
 #immagine-prodotto {
-    width: 300px; /* Imposta una larghezza fissa per l'immagine */
-    height: auto;
+    max-width: 350px; /* Imposta una larghezza massima */
+    width: 100%; /* Permette l'adattamento automatico */
+    height: auto; /* Mantiene le proporzioni originali */
     border-radius: 8px; /* Angoli arrotondati */
     object-fit: cover; /* Adatta l'immagine senza deformarla */
     margin: 20px; /* Aggiunge margine tra l'immagine e la descrizione */
