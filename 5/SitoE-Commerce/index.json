@@ -59,5 +59,8 @@
                 "giallo"
             ]
         }
-    ]
+    ],
+    "footer": {
+      "text": "Anescu Armando 5F"
+    }
 }

@@ -1,0 +1,64 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+  
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 30px;
+    color: #000000;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container per le cards */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* Aggiungiamo un po' di margine tra le cards */
+.card {
+    width: 30%;  /* 3 card per riga */
+    min-width: 250px;  /* Imposta una larghezza minima */
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+
+
+
+/* Aggiungiamo un effetto hover per le cards */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Aggiungiamo padding e margine al corpo della pagina */
+body {
+    background-color: #ffffff;
+    color: black; /* Cambiato da white a black per miglior visibilità con background chiaro */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Aggiungere padding e margine per le immagini */
+.card-img-top {
+    max-width: 100%;
+    max-height: 200px;  /* Imposta un'altezza massima per l'immagine */
+    object-fit: cover;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #28a745; /* Verde per indicare il prezzo */
+}
