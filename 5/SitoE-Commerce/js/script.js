@@ -29,6 +29,7 @@ function LoadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
+  document.getElementById('footerText').textContent = jsonData.footer.text;
 }
 // Funzione per caricare dinamicamente i prodotti
 function caricaProdotti(prodotti) {

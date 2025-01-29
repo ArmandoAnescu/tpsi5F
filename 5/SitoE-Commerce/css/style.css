@@ -62,3 +62,135 @@ body {
     font-weight: bold;
     color: #28a745; /* Verde per indicare il prezzo */
 }
+
+/*CSS PAGINA PRODOTTO*/
+/* Impostazioni generali per il body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principale */
+.container-product {
+    max-width: 1200px; /* Limita la larghezza */
+    margin: 20px auto; /* Centra il contenuto */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Layout per la sezione del prodotto */
+.product-details {
+    display: flex;
+    align-items: flex-start; /* Allineamento in alto */
+    justify-content: flex-start;
+    gap: 30px; /* Aggiunge più spazio tra l'immagine e i dettagli */
+    margin-top: 20px; /* Aggiungi un po' di margine sopra */
+}
+
+/* Immagine del prodotto */
+#immagine-prodotto {
+    width: 300px; /* Imposta una larghezza fissa per l'immagine */
+    height: auto;
+    border-radius: 8px; /* Angoli arrotondati */
+    object-fit: cover; /* Adatta l'immagine senza deformarla */
+    margin-right: 20px; /* Aggiunge margine tra l'immagine e la descrizione */
+}
+
+/* Dettagli del prodotto (a destra dell'immagine) */
+.product-info {
+    flex: 1; /* Permette di espandersi per occupare lo spazio rimanente */
+    padding-left: 20px; /* Aggiunge spazio tra i dettagli e il bordo sinistro */
+    padding-right: 20px; /* Aggiunge spazio tra i dettagli e il bordo destro */
+}
+
+/* Titolo del prodotto */
+#nome-prodotto {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+/* Descrizione breve del prodotto */
+#descrizione {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Prezzo del prodotto */
+#price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #28a745; /* Verde per il prezzo */
+    margin-bottom: 20px;
+}
+
+/* Pulsanti */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff; /* Blu per i pulsanti */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Distanza tra i pulsanti */
+    margin-top: 20px; /* Distanza dal contenuto sopra */
+}
+
+/* Cambia il colore dei pulsanti al passaggio del mouse */
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Selezione taglia e colore */
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+select {
+    width: 25%; /* Larghezza del selettore */
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    border-color: #007bff; /* Cambia colore del bordo al focus */
+}
+
+/* Responsive per schermi più piccoli */
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column; /* Metti l'immagine sopra i dettagli sui dispositivi più piccoli */
+        align-items: center;
+    }
+
+    #immagine-prodotto {
+        width: 250px; /* Riduci la dimensione dell'immagine sui dispositivi più piccoli */
+    }
+
+    .product-info {
+        text-align: center;
+    }
+
+    select {
+        width: 80%; /* Rende i selettori più larghi su schermi piccoli */
+    }
+}

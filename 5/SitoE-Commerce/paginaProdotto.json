@@ -1,0 +1,74 @@
+{
+    "navbar":[
+      {
+        "nav-link":"index.html",
+        "nav-text":"NomeSito"
+      },
+       {
+        "nav-link":"archivio.html",
+        "nav-text":"Archivio"
+      },
+       {
+        "nav-link":"carrello.html",
+        "nav-text":"Carrello"
+      }
+    ],
+    "title": "NomeSito",
+    "prodotti":[
+        {
+            "nome":"Felpa",
+            "descrizione":"Super felpa cotonosa molto comoda.",
+            "id":"0001",
+            "immagine":"immagini_prodotti/felpe/felpa_rossa.jpg",
+            "prezzo":"19,99",
+            "colori":[
+                "rosso",
+                "blu",
+                "verde",
+                "giallo"
+            ]
+        },
+        {
+            "nome":"Maglia",
+            "id":"0002",
+            "descrizione":"Super felpa cotonosa molto comoda.",
+            "immagine":"immagini_prodotti/maglie/maglia_rossa.jpg",
+            "prezzo":"19,99",
+            "colori":[
+                "rosso",
+                "blu",
+                "verde",
+                "giallo"
+            ]
+        },
+        {
+            "nome":"Pantaloni",
+            "id":"0004",
+            "descrizione":"Super felpa cotonosa molto comoda.",
+            "immagine":"immagini_prodotti/pantaloni/pantaloni_rossi.jpg",
+            "prezzo":"19,99",
+            "colori":[
+                "rosso",
+                "blu",
+                "verde",
+                "giallo"
+            ]
+        },
+        {
+            "nome":"Pantaloncini",
+            "id":"0005",
+            "descrizione":"Super felpa cotonosa molto comoda.",
+            "immagine":"immagini_prodotti/pantaloncini/pantaloncini_rossi.jpg",
+            "prezzo":"19,99",
+            "colori":[
+                "rosso",
+                "blu",
+                "verde",
+                "giallo"
+            ]
+        }
+    ],
+    "footer": {
+      "text": "Anescu Armando 5F"
+    }
+}
