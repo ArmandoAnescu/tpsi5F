@@ -78,7 +78,7 @@ body {
 /* Container principale */
 .container-prodotto {
     max-width: 1200px; /* Limita la larghezza */
-    margin: 20px auto; /* Centra il contenuto */
+    margin: 120px auto; /* Centra il contenuto */
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
