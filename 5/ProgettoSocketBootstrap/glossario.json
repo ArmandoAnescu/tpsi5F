@@ -1,24 +1,24 @@
 {
     "navbar":[
      {
-       "nav-link-1":"index.html",
-       "nav-text-1":"X4School"
+       "nav-link":"index.html",
+       "nav-text":"X4School"
      },
       {
-       "nav-link-2":"socket.html",
-       "nav-text-1":"Socket"
+       "nav-link":"socket.html",
+       "nav-text":"Socket"
      },
       {
-       "nav-link-3":"sistemi.html",
-       "nav-text-1":"HTTP"
+       "nav-link":"sistemi.html",
+       "nav-text":"HTTP"
      },
       {
-       "nav-link-4":"informatica.html",
-       "nav-text-1":"Client-server"
+       "nav-link":"informatica.html",
+       "nav-text":"Client-server"
      },
       {
-       "nav-link-5":"glossario.html",
-       "nav-text-1":"Glossario"
+       "nav-link":"glossario.html",
+       "nav-text":"Glossario"
      }
    ],
    "title": "Glossario",

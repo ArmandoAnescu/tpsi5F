@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // Popola la navbar
             const navbar = document.getElementById("navbar");
             data.navbar.forEach(item => {
+                if(item.index==0){
+                    const navHome=`<a class="navbar-brand" href="${item[`nav-link`]}">${item[`nav-text`]}</a>`;
+                    navbar.appendChild();
+                }
                 const navItem = document.createElement("li");
                 navItem.className = "nav-item";
                 navItem.innerHTML = `<a class="nav-link" href="${item[`nav-link`]}">${item[`nav-text`]}</a>`;
