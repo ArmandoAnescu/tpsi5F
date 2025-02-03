@@ -1,111 +1,94 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it" class="h-100">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.84.0">
-    <title>X4School</title>
-    <link rel="icon" type="image/png" href="immagini/favicon.png">
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
-    
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Hugo 0.84.0">
+  <title id="page-title">X4School</title>
+  <link rel="icon" type="image/png" href="immagini/favicon.png">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
 
-    <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
+  <style>
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
       }
+    }
+  </style>
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-    </style>
+  <!-- Custom styles for this template -->
+  <link href="sticky-footer-navbar.css" rel="stylesheet">
+</head>
 
-    
-    <!-- Custom styles for this template -->
-    <link href="sticky-footer-navbar.css" rel="stylesheet">
-  </head>
-  <body class="d-flex flex-column h-100">
-    
-<header>
-  <!-- Fixed navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">X4School</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="socket.html">Socket</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sistemi.html">HTTP</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="informatica.html">Client-Server</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="glossario.html">Glossario</a>
-          </li>
-        </ul>
+<body class="d-flex flex-column h-100">
+
+  <header>
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" id="nav-brand"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+          aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav me-auto mb-2 mb-md-0" id="navbarLinks">
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-</header>
+    </nav>
+  </header>
 
-<!-- Begin page content -->
-<main class="flex-shrink-0">
-  <div class="container">
-    <h1 class="mt-5 pt-5">Archittetura Client-Server</h1>
-    <h2>Introduzione</h2>
-    <p class="lead">L'architteura client server si riferisce quando in una rete un computer client si connette ad un server per usufruire di un servizio.</p>
-    <h2>Client</h2>
-    <p class="lead">Con il client, ci riferiamo al dispositivo Hardware o Software che <strong>manda una o più richieste a un server per usufruire di certi servizi.</strong> Quando usi gmail il tuo browser è il client mentre il server sono i sever di google che ti danno i dati su tutte le e-mail che hai ricevuto.
-    Le tue email inviate e ricevute sono nel client localmente, tutto il resto delle email delle altre persone sono sul server.
-    </p>
-    <h2>Server</h2>
-    <p class="lead">il server invece è un dispositivo che <strong>si occupa di gestire gli accessi dei client,allocare,rilasciare le risorse</strong>.A un server web molte volte è anche associato un DB dove vengono salvati i dati riguardo al servizio, come i dati d'accesso di ogni account,i dati degli account,reperti medici ecc.
-        Ogni server ha una porta e un indirizzo ip che il client poi userà per stabilire una connesione.
-        Per approfondimenti puoi recarti <a href="https://it.wikipedia.org/wiki/Sistema_client/server"  target="_blank">qui.</a>
-        Se vuoi sapere come il collegamento tramite socket puoi andare direttamente alla pagina da <a href="socket.html">qui</a>, per l'http <a href="informatica.html">qui</a>
-    </p>
-    <h2>Tipi di server</h2>
-    <ul class="list-group">
-        <li class="list-group-item"><strong>Database(DB)</strong>: grande collezioni di dati</li>
-        <li class="list-group-item"><strong>Mail</strong>: gestire e visualizzare le proprie e-mail</li>
-        <li class="list-group-item"><strong>File</strong>: Permette di accedere a dei file(es:google drive)</li>
-        <li class="list-group-item"><strong>Web</strong>: usato per ospitre pagine web</li>
-        <li class="list-group-item"><strong>Applicazioni</strong>: applicazioni utilizzzabili nel web</li>
+  <!-- Begin page content -->
+  <main class="flex-shrink-0">
+    <div class="container">
+      <h1 class="mt-5 pt-5" id="main-title"></h1>
+      <h2 id="introduction-title"></h2>
+      <p class="lead" id="introduction-content"></p>
+
+      <h2 id="client-title"></h2>
+      <p class="lead" id="client-content"></p>
+
+      <h2 id="server-title"></h2>
+      <p class="lead" id="server-content"></p>
+
+      <h2 id="server-type"></h2>
+      <ul id="server-list" class="list-group">
+        <!-- Gli elementi della lista saranno inseriti qui dinamicamente -->
       </ul>
-    <p>Ce ne sono molti altri, se ne vuoi vedere di più <a href="https://it.wikipedia.org/wiki/Server#:~:text=Servizi%20e%20tipi%20di%20server%5B,quello%20che%20presiede%20al%20backup."  target="_blank">vai qui</a></p>
-    <br>
-    <img src="immagini/architetturaClientServer.jpeg" alt="architetturaClientServer">
-    <p>fonte: <a href="https://codegym.cc/it/groups/posts/it.288.parte-2-parliamo-un-po-dellarchitettura-del-software"  target="_blank">CodeGYM</a></p>
-</div>
-</main>
 
-<footer class="footer mt-auto py-3 bg-light">
-  <div class="container">
-    <span class="text-muted">Anescu Armando 5F</span>
-  </div>
-</footer>
+      <p id="additional-info"></p>
+      <br>
+      <img src="" alt="architetturaClientServer" id="image-src">
+      <p id="image-source"></p>
+    </div>
+  </main>
+  <!--Foooter-->
 
+  <footer class="footer mt-auto py-3 bg-light">
+    <div class="container">
+      <span class="text-muted" id="footer-text"></span>
+    </div>
+  </footer>
 
-    <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/scriptInformatica.js"></script>
+</body>
 
-      
-  </body>
 </html>

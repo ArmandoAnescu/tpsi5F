@@ -14,13 +14,14 @@
       },
        {
         "nav-link":"informatica.html",
-        "nav-text":"Client-server"
+        "nav-text":"Client-Server"
       },
        {
         "nav-link":"glossario.html",
         "nav-text":"Glossario"
       }
     ],
+    "icon":"<i class=\"bi bi-backpack3-fill\"></i>",
     "title": "Le socket",
     "intro": "Le socket sono un canale di comunicazione tra client e server.",
     "subtitle-1": "Premesse",
@@ -40,6 +41,7 @@
     ],
     "dropdown": {
       "btndropdown": "Collegamenti alle altre materie",
+
       "links": [
         {
           "name": "Sistemi",

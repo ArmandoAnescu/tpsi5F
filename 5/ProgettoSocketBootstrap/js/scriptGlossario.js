@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         })
         .then(data => {
             // Popola la navbar
+            const icona=document.getElementById('nav-brand');
+            icona.innerHTML=data.icon;
             const navbar = document.getElementById("navbar");
             data.navbar.forEach(item => {
                 if(item.index==0){
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             ${item.link ? `<a href="${item.link}" class="btn btn-link">${item.link_text}</a>` : ""}
                         </div>
                     </div>
-                `;
+                `;//controlla se ce un link se c'è aggiunge un a
 
                 accordion.appendChild(accordionItem);
             });

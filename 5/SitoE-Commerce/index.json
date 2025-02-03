@@ -1,0 +1,22 @@
+{
+    "logo":"<img src='PixelHaven_Logo_Transparent.png' id='logo'>",
+
+    "navbar": [
+        {
+            "nav-link": "index.html",
+            "nav-text": "Home"
+        },
+        {
+            "nav-link": "archivio.html",
+            "nav-text": "Archivio"
+        },
+        {
+            "nav-link": "carrello.html",
+            "nav-text": "Carrello"
+        }
+    ],
+    "title": "PixalHaven",
+    "footer": {
+        "text": "Anescu Armando 5F"
+    }
+}

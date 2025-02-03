@@ -1,0 +1,75 @@
+{
+    "navbar": [
+        {
+            "nav-link": "index.html",
+            "nav-text": "X4School"
+        },
+        {
+            "nav-link": "socket.html",
+            "nav-text": "Socket"
+        },
+        {
+            "nav-link": "sistemi.html",
+            "nav-text": "HTTP"
+        },
+        {
+            "nav-link": "informatica.html",
+            "nav-text": "Client-Server"
+        },
+        {
+            "nav-link": "glossario.html",
+            "nav-text": "Glossario"
+        }
+    ],
+    "icon":"<i class=\"bi bi-backpack3-fill bi-5x \"></i>",
+    "title": "Archittetura Client-Server",
+    "introtitle":"Introduzione",
+    "intro": "L'architteura client server si riferisce quando in una rete un computer client si connette ad un server per usufruire di un servizio.",
+    "sections": [
+      {
+        "client": "Client",
+        "clientContent": "Con il client, ci riferiamo al dispositivo Hardware o Software che <strong>manda una o più richieste a un server per usufruire di certi servizi.</strong> Quando usi gmail il tuo browser è il client mentre il server sono i sever di google che ti danno i dati su tutte le e-mail che hai ricevuto. Le tue email inviate e ricevute sono nel client localmente, tutto il resto delle email delle altre persone sono sul server."
+      },
+      {
+        "server": "Server",
+        "serverContent": "il server invece è un dispositivo che <strong>si occupa di gestire gli accessi dei client, allocare, rilasciare le risorse</strong>.A un server web molte volte è anche associato un DB dove vengono salvati i dati riguardo al servizio, come i dati d'accesso di ogni account, i dati degli account, reperti medici ecc. Ogni server ha una porta e un indirizzo ip che il client poi userà per stabilire una connessione. Per approfondimenti puoi recarti <a href=\"https://it.wikipedia.org/wiki/Sistema_client/server\" target=\"_blank\">qui.</a> Se vuoi sapere come il collegamento tramite socket puoi andare direttamente alla pagina da <a href=\"socket.html\">qui</a>, per l'http <a href=\"informatica.html\">qui</a>"
+      },
+      {
+        "heading": "Tipi di server",
+        "content": [
+            {
+              "server_type": "Database (DB)",
+              "description": "Grande collezione di dati."
+            },
+            {
+              "server_type": "Mail",
+              "description": "Gestire e visualizzare le proprie e-mail."
+            },
+            {
+              "server_type": "File",
+              "description": "Permette di accedere a dei file (es: Google Drive)."
+            },
+            {
+              "server_type": "Web",
+              "description": "Usato per ospitare pagine web."
+            },
+            {
+              "server_type": "Applicazioni",
+              "description": "Applicazioni utilizzabili nel web."
+            }
+          ]
+    },
+      {
+        "additionalInfo": "Ce ne sono molti altri, se ne vuoi vedere di più <a href=\"https://it.wikipedia.org/wiki/Server#:~:text=Servizi%20e%20tipi%20di%20server%5B,quello%20che%20presiede%20al%20backup.\" target=\"_blank\">vai qui</a>"
+      }
+    ],
+    "image": {
+      "src": "immagini/architetturaClientServer.jpeg",
+      "alt": "architetturaClientServer",
+      "source": "<a href=\"https://codegym.cc/it/groups/posts/it.288.parte-2-parliamo-un-po-dellarchitettura-del-software\" target=\"_blank\">CodeGYM</a>"
+    },
+    "footer": {
+      "text": "Anescu Armando 5F"
+    }
+}
+  
