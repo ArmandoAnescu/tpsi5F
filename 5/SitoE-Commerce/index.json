@@ -16,6 +16,17 @@
     "title": "NomeSito",
     "prodotti": [
         {
+            "nome": "Nintendo DS",
+            "id": "0004",
+            "immagine": "immagini_prodotti/nintendo_ds/nintendods_nero.jpg",
+            "colori": [
+                "rosso",
+                "blu",
+                "nero"
+            ],
+            "prezzo": "149,99",
+            "descrizione": "Console portatile classica della Nintendo, con doppio schermo e un ampio catalogo di giochi."
+        {
             "nome": "Nintendo 3DS",
             "id": "0001",
             "immagine": "immagini_prodotti/nintendo_3ds/nintendo3ds_nero.jpg",
@@ -38,18 +49,6 @@
             ],
             "prezzo": "249,99",
             "descrizione": "La versione migliorata della console Nintendo 3DS, con maggiore potenza e nuove funzionalità."
-        },
-        {
-            "nome": "Nintendo DS",
-            "id": "0004",
-            "immagine": "immagini_prodotti/nintendo_ds/nintendods_nero.jpg",
-            "colori": [
-                "rosso",
-                "blu",
-                "nero"
-            ],
-            "prezzo": "149,99",
-            "descrizione": "Console portatile classica della Nintendo, con doppio schermo e un ampio catalogo di giochi."
         },
         {
             "nome": "Playstation 2",
@@ -109,7 +108,7 @@
         },
         {
             "nome": "Wii",
-            "id": "00010",
+            "id": "0010",
             "immagine": "immagini_prodotti/wii/wii_bianco.jpg",
             "colori": [
                 "bianco",
@@ -117,8 +116,99 @@
             ],
             "prezzo": "199,99",
             "descrizione": "Console innovativa di Nintendo che utilizza il controllo motion-sensing, con giochi come Wii Sports."
-        }
-    ],
+        },
+        {
+        "nome": "GameBoy Advance",
+        "id": "00011",
+        "immagine": "immagini_prodotti/gameboy_advance/gameboyadvance_color.jpg",
+        "prezzo": "129,99",
+        "descrizione": "Console portatile Nintendo GameBoy Advance, compatibile con una vasta libreria di giochi retro."
+    },
+    {
+        "nome": "PlayStation 1",
+        "id": "0012",
+        "immagine": "",
+        "prezzo": "99,99",
+        "descrizione": "La leggendaria console PlayStation 1 di Sony, che ha dato il via alla rivoluzione dei giochi 3D."
+    },
+    {
+        "nome": "Pokémon Bianco",
+        "id": "0013",
+        "immagine": "",
+        "prezzo": "39,99",
+        "descrizione": "Pokémon Bianco, uno dei titoli della quinta generazione di giochi Pokémon, con una nuova regione e nuovi Pokémon."
+    },
+    {
+        "nome": "Pokémon Nero",
+        "id": "0014",
+        "immagine": "",
+        "prezzo": "39,99",
+        "descrizione": "Pokémon Nero, gioco della quinta generazione che presenta una regione rinnovata e nuovi Pokémon da catturare."
+    },
+    {
+        "nome": "Pokémon Bianco 2",
+        "id": "0015",
+        "immagine": "",
+        "prezzo": "49,99",
+        "descrizione": "Pokémon Bianco 2, un sequel diretto di Pokémon Bianco, con nuove storie e sfide da affrontare."
+    },
+    {
+        "nome": "Pokémon Nero 2",
+        "id": "0016",
+        "immagine": "",
+        "prezzo": "49,99",
+        "descrizione": "Pokémon Nero 2, sequel di Pokémon Nero, con nuove dinamiche e Pokémon da scoprire."
+    },
+    {
+        "nome": "Pokémon HeartGold",
+        "id": "0017",
+        "immagine": "",
+        "prezzo": "44,99",
+        "descrizione": "Pokémon HeartGold, remake della versione originale Pokémon Oro, con nuove funzionalità e Pokémon da catturare."
+    },
+    {
+        "nome": "Pokémon SoulSilver",
+        "id": "0018",
+        "immagine": "",
+        "prezzo": "44,99",
+        "descrizione": "Pokémon SoulSilver, remake di Pokémon Argento con nuove caratteristiche e avventure da vivere."
+    },
+    {
+        "nome": "Pokémon X",
+        "id": "0019",
+        "immagine": "",
+        "prezzo": "59,99",
+        "descrizione": "Pokémon X, il gioco della sesta generazione di Pokémon, che introduce nuove meccaniche di gioco e una nuova regione."
+    },
+    {
+        "nome": "Pokémon Y",
+        "id": "0020",
+        "immagine": "",
+        "prezzo": "59,99",
+        "descrizione": "Pokémon Y, versione complementare di Pokémon X, con nuovi Pokémon e nuove sfide."
+    },
+    {
+        "nome": "Pokémon Diamante",
+        "id": "0021",
+        "immagine": "",
+        "prezzo": "49,99",
+        "descrizione": "Pokémon Diamante, gioco della quarta generazione con una nuova regione e nuove meccaniche di gioco."
+    },
+    {
+        "nome": "Pokémon Perla",
+        "id": "0022",
+        "immagine": "",
+        "prezzo": "49,99",
+        "descrizione": "Pokémon Perla, versione complementare di Pokémon Diamante, con nuove avventure e Pokémon da catturare."
+    },
+    {
+        "nome": "Pokémon Platino",
+        "id": "0023",
+        "immagine": "",
+        "prezzo": "59,99",
+        "descrizione": "Pokémon Platino, la versione definitiva della quarta generazione con contenuti extra e una storia arricchita."
+    }
+],
     "footer": {
         "text": "Anescu Armando 5F"
     }
