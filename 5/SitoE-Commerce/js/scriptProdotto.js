@@ -88,6 +88,22 @@ function caricaProdotto(prodotto) {
 
   // Aggiungi eventuali altre funzionalità ai pulsanti (come l'aggiunta al carrello o il pagamento)
 }
+function aggiungiAlCarrello() {
+ // Recupera l'ID del prodotto dalla query string
+ let Id = new URLSearchParams(window.location.search).get('id');
 
+ // Recupera il colore selezionato dall'input select
+ let selectColore = document.getElementById('colore');
+ let coloreSelezionato = selectColore ? selectColore.value : null;
+
+let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
+// Aggiungi il nuovo prodotto (id + colore)
+carrello.push({ id:Id, colore:coloreSelezionato });
+// Salva di nuovo l'array aggiornato
+localStorage.setItem("carrello", JSON.stringify(carrello));
+}
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
+document.getElementById('aggiungi-carrello').addEventListener('click', function () {
+  aggiungiAlCarrello();
+});

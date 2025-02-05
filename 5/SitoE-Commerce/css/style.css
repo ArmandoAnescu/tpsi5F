@@ -20,6 +20,10 @@ h2 {
     margin-top: 30px;
     flex-wrap: wrap;
 }
+.carrello{
+    width: auto;
+    align-self: center;
+}
 
 /* Aggiungiamo un po' di margine tra le cards */
 .card {
