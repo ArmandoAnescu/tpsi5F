@@ -59,7 +59,10 @@ function caricaProdotti(prodotti) {
             <select class="form-control" id="colore-${prodotto.id}">
               ${prodotto.colori.map(colore => `<option value="${colore}">${colore.charAt(0).toUpperCase() + colore.slice(1)}</option>`).join('')}
             </select>
-          ` : ''}
+          ` :
+           ''
+        }
+        <p class="card-text price">€${prodotto.prezzo}</p>
         </div>
         <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
       </div>
