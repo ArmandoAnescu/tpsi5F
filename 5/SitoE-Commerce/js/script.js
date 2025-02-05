@@ -1,28 +1,20 @@
 function loadJSON() {
-  Promise.all([
-    fetch('index.json').then(response => {
-      if (!response.ok) {
-        throw new Error('Errore nel caricamento di index.json');
-      }
-      return response.json();
-    }),
-    fetch('prodotti.json').then(response => {
-      if (!response.ok) {
-        throw new Error('Errore nel caricamento di prodotti.php');
-      }
-      return response.json();
-    })
-  ])
-    .then(([dataJson, dataProdotti]) => {
-      LoadPage(dataJson);
-      caricaProdotti(dataProdotti.prodotti);
-    })
-    .catch(error => {
-      console.error('Errore:', error);
-    });
+  fetch('index.json') // URL del file JSON
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Errore nel caricamento del file JSON');//dico che c'è stato un errore
+    }
+    return response.json(); // Restituisce i dati come oggetto JavaScript
+  })
+  .then(data => {
+    // Usa i dati caricati (data è l'oggetto JSON)
+    loadPage(data);
+  })
+  .catch(error => {
+    console.error('Errore:', error);
+  });
 }
-
-function LoadPage(jsonData) {
+function loadPage(jsonData) {
   const icona = document.getElementById('nav-brand');
   icona.innerHTML = jsonData.logo;
   icona.href = 'index.html';
@@ -37,41 +29,37 @@ function LoadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
+  document.getElementById('pageTitle').textContent=jsonData.pageTitle;
+  document.getElementById('introText').textContent=jsonData.introText;
+  //accordion
+  const accordion = document.getElementById("accordionExample");
+  Object.keys(jsonData.accordion_items).forEach((key, index) => {
+    const item = jsonData.accordion_items[key][0];
+    const accordionItem = document.createElement("div");
+    accordionItem.className = "accordion-item";
+    accordionItem.innerHTML = `
+      <h2 class="accordion-header" id="heading${index}">
+        <button class="accordion-button ${index === 0 ? "" : "collapsed"}" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#collapse${index}" 
+          aria-expanded="${index === 0 ? "true" : "false"}" 
+          aria-controls="collapse${index}">
+          ${item.question}
+        </button>
+      </h2>
+      <div id="collapse${index}" 
+           class="accordion-collapse collapse ${index === 0 ? "show" : ""}" 
+           aria-labelledby="heading${index}" 
+           data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          ${item.definition}
+        </div>
+      </div>
+    `;
+    accordion.appendChild(accordionItem);
+  });
   document.getElementById('footerText').textContent = jsonData.footer.text;
 }
-// Funzione per caricare dinamicamente i prodotti
-function caricaProdotti(prodotti) {
-  const container = document.getElementById("prodotti-container");
-
-  // Loop attraverso l'array di prodotti
-  prodotti.forEach(prodotto => {
-    // Creiamo una card per ogni prodotto
-    const card = document.createElement("div");
-    // Aggiungi un'immagine di default (se non disponibile nel JSON)
-    card.innerHTML = `
-         <div class="card" style="width: 18rem;">
-      <img src="${prodotto.immagine}" class="card-img-top" alt="${prodotto.nome}">
-      <div class="card-body">
-        <h5 class="card-title">${prodotto.nome}</h5>
-          ${prodotto.colori && prodotto.colori.length > 0 ? `
-            <p class="card-text">Seleziona il colore disponibile:</p>
-        <div class="form-group">
-            <select class="form-control" id="colore-${prodotto.id}">
-              ${prodotto.colori.map(colore => `<option value="${colore}">${colore.charAt(0).toUpperCase() + colore.slice(1)}</option>`).join('')}
-            </select>
-          ` :
-           ''
-        }
-        <p class="card-text price">€${prodotto.prezzo}</p>
-        </div>
-        <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
-      </div>
-    </div>
-  `;
-    // Aggiungiamo la card al contenitore
-    container.appendChild(card);
-  });
-}
-
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);

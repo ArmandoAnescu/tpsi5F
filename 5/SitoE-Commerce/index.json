@@ -16,6 +16,34 @@
         }
     ],
     "title": "PixalHaven",
+    "pageTitle":"PixalHaven",
+    "introText":"Benvenuti a PixalHaven!! Il paradiso per gli appasioanti del retro gaming. Qui troverete una vasta gamma di giochi e console retro. Dalla famiglia Nintendo a quella della Sony e microsoft,",
+    "accordion_items": {
+        "accordion-item-1": [
+          {
+            "question": "Cosa posso trovare?",
+            "definition": "come suggerisce il nome e la nostra intro, noi siamo un sito e-commerce dove potete trovare giochi e console retro di ogni tipo!"
+          }
+        ],
+        "accordion-item-2": [
+            {
+              "question": "Siete affidabili?",
+              "definition": "Certo! Il nostro obbiettivo è far rivivire i propri ricordi d'infanzia ma anche offrire un servizio di alta qualità. I nostri tecnici testano le console per essere certi del loro funzionamento e garantire un'esperienza perfetta."
+            }
+        ],
+        "accordion-item-3": [
+            {
+                "question": "Che faccio se ho problemi o non sono soddisfatto?",
+                "definition": "Noi offriamo 40 in cui puoi essere rimborsato se il tuo prodotto non ti soddisfa, per problemi tecnici offriamo una garanzia di un anno dall'acquisto, con una spesa aggiuntiva si può fare una garanzia di 5 anni. Con la garanzia puoi scegliere se sostituire il gioco oppure ricevere un rimborso"
+            }
+        ],
+        "accordion-item-4": [
+            {
+                "question": "Come posso pagare?",
+                "definition": "Siamo abilitati a pagamenti con PayPal o Carta di Credito"
+            }
+        ]
+    },
     "footer": {
         "text": "Anescu Armando 5F"
     }

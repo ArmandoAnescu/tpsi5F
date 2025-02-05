@@ -1,18 +1,18 @@
 
-h1 {
+.product-name h1 {
     text-align: center;
     margin-top: 20px;
     color: #000000;
     font-family: 'Arial', sans-serif;
 }
-
+/*
 h2 {
     text-align: center;
     margin-top: 30px;
     color: #000000;
     font-family: 'Arial', sans-serif;
 }
-
+*/
 /* Container per le cards */
 .card-container {
     display: flex;
@@ -29,6 +29,9 @@ h2 {
     transition: transform 0.3s ease;
 }
 
+.container{
+    margin-top: 150px;
+}
 
 
 #logo{
@@ -40,7 +43,6 @@ h2 {
     transform: scale(1.05);
 }
 
-/* Aggiungiamo padding e margine al corpo della pagina */
 body {
     background-color: #ffffff;
     color: black; /* Cambiato da white a black per miglior visibilità con background chiaro */
@@ -139,7 +141,7 @@ body {
 }
 
 /* Pulsanti */
-button {
+.product-btn {
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -153,7 +155,7 @@ button {
 }
 
 /* Cambia il colore dei pulsanti al passaggio del mouse */
-button:hover {
+.product-btn:hover {
     background-color: #0056b3;
 }
 
