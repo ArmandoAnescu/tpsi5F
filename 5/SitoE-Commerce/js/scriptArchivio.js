@@ -49,7 +49,7 @@ function loadJSON() {
       const card = document.createElement("div");
       // Aggiungi un'immagine di default (se non disponibile nel JSON)
       card.innerHTML = `
-           <div class="card" style="width: 18rem;">
+           <div class="card vert" style="width: 18rem;">
         <img src="${prodotto.immagine}" class="card-img-top" alt="${prodotto.nome}">
         <div class="card-body">
           <h5 class="card-title">${prodotto.nome}</h5>

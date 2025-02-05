@@ -42,36 +42,43 @@ function loadJSON() {
   }
   // Funzione per caricare dinamicamente i prodotti
 function caricaProdotti(prodotti) {
-    const container = document.getElementById("prodotti-container");
+    const container = document.getElementById("cart-container");
     let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
 carrello.forEach((carrelloProdotto) => {
     prodotti.forEach(prodotto => {
         if(carrelloProdotto.id===prodotto.id){
-                    // Creiamo una card per ogni prodotto
         const card = document.createElement("div");
         // Aggiungi un'immagine di default (se non disponibile nel JSON)
         card.innerHTML = `
-             <div class="card" style="width: 18rem;">
-          <img src="${prodotto.immagine}" class="card-img-top" alt="${prodotto.nome}">
-          <div class="card-body">
-            <h5 class="card-title">${prodotto.nome}</h5>
-              ${prodotto.colori && prodotto.colori.length > 0 ? `
-                <p class="card-text">Seleziona il colore disponibile:</p>
-            <div class="form-group">
-                <select class="form-control" id="colore-${prodotto.id}">
-                  ${prodotto.colori.map(colore => `<option value="${colore}">${colore.charAt(0).toUpperCase() + colore.slice(1)}</option>`).join('')}
-                </select>
-              ` :
-               ''}
-            <p class="card-text price">€${prodotto.prezzo}</p>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="${prodotto.immagine}" class="img-fluid rounded-start" alt="${prodotto.nome}">
             </div>
-            <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">${prodotto.nome}</h5>
+                <p class="card-text price">€${prodotto.prezzo}</p>
+                ${prodotto.colori && prodotto.colori.length > 0 ? `
+                  <p class="card-text">Seleziona il colore disponibile:</p>
+                  <div class="form-group">
+                    <select class="form-control" id="colore-${prodotto.id}">
+                      ${prodotto.colori.map(colore => `<option value="${colore}">${colore}</option>`).join('')}
+                    </select>
+                  </div>
+                ` : ''}
+                <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
+                <a id="remove-item" class="btn btn-danger" style="margin-left: 10px;">Rimuovi prodotto</a>
+              </div>
+            </div>
           </div>
         </div>
       `;
+      
         // Aggiungiamo la card al contenitore
         container.appendChild(card);
-        }
+        }//end
+
       });
     });
 }
