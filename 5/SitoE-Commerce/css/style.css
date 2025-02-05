@@ -19,19 +19,41 @@ h2 {
     justify-content: space-around;
     margin-top: 30px;
     flex-wrap: wrap;
-  }
+}
   
 .carrello{
     width: auto;
     align-self: center;
+    background-color: gainsboro;
+    padding: 20px;
+    border-radius: 10px;
+}
+.empty{
+    background-color:crimson;
+    color: white;
+}
+.transaction{
+    background-color: #007bff;
+    color: white;
+}
+.transaction,.empty {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-right: 10px; /* Distanza tra i pulsanti */
+    margin-top: 20px; /* Distanza dal contenuto sopra */
 }
 
 /* Aggiungiamo un po' di margine tra le cards */
-.card .vert {
+.card.vert {
     width: 30%;  /* 3 card per riga */
     min-width: 250px;  /* Imposta una larghezza minima */
     margin: 10px;
     transition: transform 0.3s ease;
+    
 }
 
 .container{

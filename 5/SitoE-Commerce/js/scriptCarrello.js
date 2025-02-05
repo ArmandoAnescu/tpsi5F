@@ -38,6 +38,8 @@ function loadJSON() {
       navbarLinks.appendChild(listItem);
     });
     document.getElementById('pageTitle').textContent=jsonData.cartTitle;
+    document.getElementById('empty-cart').textContent=jsonData.emptyCart;
+    document.getElementById('acquista').textContent=jsonData.acquista;
     document.getElementById('footerText').textContent = jsonData.footer.text;
   }
   // Funzione per caricare dinamicamente i prodotti

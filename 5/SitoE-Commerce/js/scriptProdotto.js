@@ -85,7 +85,7 @@ function caricaProdotto(prodotto) {
 
   const btnCompra = document.getElementById('compra');
   btnCompra.textContent = 'Compra ora';
-
+  document.getElementById('product-title').textContent=prodotto.nome;
   // Aggiungi eventuali altre funzionalità ai pulsanti (come l'aggiunta al carrello o il pagamento)
 }
 function aggiungiAlCarrello() {

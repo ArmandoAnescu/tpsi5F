@@ -31,6 +31,8 @@ function loadPage(jsonData) {
   });
   document.getElementById('pageTitle').textContent=jsonData.pageTitle;
   document.getElementById('introText').textContent=jsonData.introText;
+  document.getElementById('subTitle').textContent=jsonData.subTitle;
+  document.getElementById('subText').textContent=jsonData.subText;
   //accordion
   const accordion = document.getElementById("accordionExample");
   Object.keys(jsonData.accordion_items).forEach((key, index) => {

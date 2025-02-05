@@ -17,7 +17,7 @@
     ],
     "title": "PixalHaven",
     "pageTitle":"PixalHaven",
-    "introText":"Benvenuti a PixalHaven!! Il paradiso per gli appasioanti del retro gaming. Qui troverete una vasta gamma di giochi e console retro. Dalla famiglia Nintendo a quella della Sony e microsoft,",
+    "introText":"Benvenuti a PixalHaven!! Il paradiso per gli appasionati del retro gaming. Qui troverete una vasta gamma di giochi e console retro. Dalla famiglia Nintendo a quella della Sony e microsoft.",
     "accordion_items": {
         "accordion-item-1": [
           {
@@ -45,6 +45,10 @@
         ]
     },
     "cartTitle":"Carrello",
+    "subTitle":"Il nostro obbiettivo",
+    "subText":"L'obbiettivo di noi di PixelHaven è di rendere accessibile a tutti i le vecchie console e videogiochi, noi ci occupiamo di trovare,ripristinare,imballare e inviare a te il nsotro prodotto. Noi ci assicuriamo della cura dei nostri prodotti così che tu e tutte le altre persone interessate possiate divertirvi senza preoccupazioni. Cerchiamo anche di rendere i nostri pezzi non solo competitvi ma anche accessibili a tutti, perchè il gaming è un privilegio di tutti.",
+    "emptyCart":"Svuota il carrello",
+    "acquista":"Procedi all'acquisto",    
     "footer": {
         "text": "Anescu Armando 5F"
     }
