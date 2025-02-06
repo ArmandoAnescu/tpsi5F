@@ -70,6 +70,12 @@ h2 {
     transform: scale(1.05);
 }
 
+#return-arrow{
+    background-color: rgba(65, 37, 67,255);
+    color: white;
+    padding: auto;
+}
+
 body {
     background-color: #ffffff;
     color: black; /* Cambiato da white a black per miglior visibilità con background chiaro */

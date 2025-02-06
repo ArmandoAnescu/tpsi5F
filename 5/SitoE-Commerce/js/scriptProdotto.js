@@ -38,6 +38,7 @@ function LoadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
+  document.getElementById('return-arrow').innerHTML=jsonData.returnArrow;
   document.getElementById('footerText').textContent = jsonData.footer.text;
 }
 // Funzione per caricare dinamicamente i prodotti
@@ -101,6 +102,13 @@ let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
 carrello.push({ id:Id, colore:coloreSelezionato });
 // Salva di nuovo l'array aggiornato
 localStorage.setItem("carrello", JSON.stringify(carrello));
+let alert=document.createElement('div');
+alert.innerHTML=
+`
+  <div class="alert alert-success" role="alert">
+    Prodotto aggiunto al carrello!
+  </div>`;
+  document.getElementById('container-prodotto').appendChild(alert);
 }
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);

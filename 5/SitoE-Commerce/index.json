@@ -48,7 +48,8 @@
     "subTitle":"Il nostro obbiettivo",
     "subText":"L'obbiettivo di noi di PixelHaven è di rendere accessibile a tutti i le vecchie console e videogiochi, noi ci occupiamo di trovare,ripristinare,imballare e inviare a te il nsotro prodotto. Noi ci assicuriamo della cura dei nostri prodotti così che tu e tutte le altre persone interessate possiate divertirvi senza preoccupazioni. Cerchiamo anche di rendere i nostri pezzi non solo competitvi ma anche accessibili a tutti, perchè il gaming è un privilegio di tutti.",
     "emptyCart":"Svuota il carrello",
-    "acquista":"Procedi all'acquisto",    
+    "acquista":"Procedi all'acquisto",
+    "returnArrow":"<i class='bi bi-arrow-left'></i>",    
     "footer": {
         "text": "Anescu Armando 5F"
     }

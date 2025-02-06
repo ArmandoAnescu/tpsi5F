@@ -70,7 +70,7 @@ carrello.forEach((carrelloProdotto) => {
                   </div>
                 ` : ''}
                 <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
-                <a id="remove-item" class="btn btn-danger" style="margin-left: 10px;">Rimuovi prodotto</a>
+                <a id="remove-item" class="btn btn-danger" style="margin-left: 10px;" onclick="rimuoviDalCarrello('${prodotto.id}')">Rimuovi prodotto</a>
               </div>
             </div>
           </div>
@@ -84,6 +84,18 @@ carrello.forEach((carrelloProdotto) => {
       });
     });
 }
+function rimuoviDalCarrello(productId) { 
+  let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
+ // Aggiungi il nuovo prodotto (id + colore)
+ let index=carrello.findIndex(prodotto=>prodotto.id===productId);
+ if(index!==-1){
+  carrello.splice(index,1);
+  // Salva di nuovo l'array aggiornato
+ localStorage.setItem("carrello", JSON.stringify(carrello));
+ window.location.reload();
+}
+ 
+ }
   // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
   
