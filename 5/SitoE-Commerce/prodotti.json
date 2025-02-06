@@ -1,232 +1,247 @@
 {
-    "prodotti": [
-        {
-            "nome": "Nintendo DS",
-            "id": "0004",
-            "immagine": "immagini_prodotti/nintendo_ds/nintendods_nero.jpg",
-            "colori": [
-                "rosso",
-                "blu",
-                "nero"
-            ],
-            "prezzo": "149,99",
-            "descrizione": "Console portatile classica della Nintendo, con doppio schermo e un ampio catalogo di giochi."
-        },
-        {
-            "nome": "Nintendo 3DS",
-            "id": "0001",
-            "immagine": "immagini_prodotti/nintendo_3ds/nintendo3ds_nero.jpg",
-            "colori": [
-                "rosso",
-                "blu",
-                "nero"
-            ],
-            "prezzo": "199,99",
-            "descrizione": "Console portatile Nintendo 3DS con schermo 3D senza occhiali e ampio catalogo di giochi."
-        },
-        {
-            "nome": "New Nintendo 3DS",
-            "id": "0002",
-            "immagine": "immagini_prodotti/new_nintendo_3ds/newnintendo3ds_nero.jpg",
-            "colori": [
-                "rosso",
-                "blu",
-                "nero"
-            ],
-            "prezzo": "249,99",
-            "descrizione": "La versione migliorata della console Nintendo 3DS, con maggiore potenza e nuove funzionalità."
-        },
-        {
-            "nome": "Playstation 2",
-            "id": "0005",
-            "immagine": "immagini_prodotti/playstation_2/play2_nero.jpg",
-            "colori": [
-                "nero"
-            ],
-            "prezzo": "99,99",
-            "descrizione": "Console di gioco Sony, famosa per la sua vasta libreria di titoli e la retrocompatibilità con i giochi PS1."
-        },
-        {
-            "nome": "Gameboy Color",
-            "id": "0006",
-            "immagine": "immagini_prodotti/gameboy_color/gameboycolor_giallo.jpg",
-            "colori": [
-                "giallo",
-                "blu",
-                "nero"
-            ],
-            "prezzo": "79,99",
-            "descrizione": "Console portatile classica Nintendo con schermo a colori, disponibile in vari colori e giochi iconici."
-        },
-        {
-            "nome": "Gameboy SP",
-            "id": "0007",
-            "immagine": "immagini_prodotti/gameboy_sp/gameboysp_rosso.jpg",
-            "colori": [
-                "rosso",
-                "blu",
-                "verde",
-                "giallo"
-            ],
-            "prezzo": "119,99",
-            "descrizione": "Una versione compatta del Game Boy, con schermo retroilluminato e design pieghevole."
-        },
-        {
-            "nome": "Playstation 3",
-            "id": "0008",
-            "immagine": "immagini_prodotti/playstation_3/play3_nero.jpg",
-            "colori": [
-                "nero"
-            ],
-            "prezzo": "299,99",
-            "descrizione": "Console di gioco Sony della generazione PS3, con giochi in HD e supporto per il Blu-ray."
-        },
-        {
-            "nome": "Xbox 360",
-            "id": "0009",
-            "immagine": "immagini_prodotti/xbox_360/xbox360_bianco.jpg",
-            "colori": [
-                "bianco",
-                "nero"
-            ],
-            "prezzo": "249,99",
-            "descrizione": "Console Microsoft con un catalogo ricco di giochi e accessori, e supporto per giochi online tramite Xbox Live."
-        },
-        {
-            "nome": "Wii",
-            "id": "0010",
-            "immagine": "immagini_prodotti/wii/wii_bianco.jpg",
-            "colori": [
-                "bianco",
-                "nero"
-            ],
-            "prezzo": "199,99",
-            "descrizione": "Console innovativa di Nintendo che utilizza il controllo motion-sensing, con giochi come Wii Sports."
-        },
-        {
-            "nome": "GameBoy Advance",
-            "id": "00011",
-            "immagine": "immagini_prodotti/gameboy_advance/gameboyadvance_purple.jpg",
-            "colori": [
-                "viola",
-                "bianco"
-            ],
-            "prezzo": "129,99",
-            "descrizione": "Console portatile Nintendo GameBoy Advance, compatibile con una vasta libreria di giochi retro."
-        },
-        {
-            "nome": "PlayStation 1",
-            "id": "0012",
-            "immagine": "immagini_prodotti/playstation_1/play1_gray.jpg",
-            "colori": [
-                "grigio"
-            ],
-            "prezzo": "199,99",
-            "descrizione": "La leggendaria console PlayStation 1 di Sony, che ha dato il via alla rivoluzione dei giochi 3D."
-        },
-        {
-            "nome": "Pokémon Bianco",
-            "id": "0013",
-            "immagine": "immagini_prodotti/games/pkmn_white_0.jpg",
-            "colori": [],
-            "prezzo": "39,99",
-            "descrizione": "Pokémon Bianco, uno dei titoli della quinta generazione di giochi Pokémon, con una nuova regione e nuovi Pokémon."
-        },
-        {
-            "nome": "Pokémon Nero",
-            "id": "0014",
-            "immagine": "immagini_prodotti/games/pkmn_black_0.jpg",
-            "colori": [],
-            "prezzo": "39,99",
-            "descrizione": "Pokémon Nero, gioco della quinta generazione che presenta una regione rinnovata e nuovi Pokémon da catturare."
-        },
-        {
-            "nome": "Pokémon Bianco 2",
-            "id": "0015",
-            "immagine": "immagini_prodotti/games/pkmn_white2_0.jpg",
-            "colori": [],
-            "prezzo": "49,99",
-            "descrizione": "Pokémon Bianco 2, un sequel diretto di Pokémon Bianco, con nuove storie e sfide da affrontare."
-        },
-        {
-            "nome": "Pokémon Nero 2",
-            "id": "0016",
-            "immagine": "immagini_prodotti/games/pkmn_black2_0.jpg",
-            "prezzo": "49,99",
-            "descrizione": "Pokémon Nero 2, sequel di Pokémon Nero, con nuove dinamiche e Pokémon da scoprire."
-        },
-        {
-            "nome": "Pokémon HeartGold",
-            "id": "0017",
-            "immagine": "immagini_prodotti/games/pkmn_heartgold_0.jpg",
-            "colori": [],
-            "prezzo": "44,99",
-            "descrizione": "Pokémon HeartGold, remake della versione originale Pokémon Oro, con nuove funzionalità e Pokémon da catturare."
-        },
-        {
-            "nome": "Pokémon SoulSilver",
-            "id": "0018",
-            "immagine": "immagini_prodotti/games/pkmn_soulsilver_0.jpg",
-            "colori": [],
-            "prezzo": "44,99",
-            "descrizione": "Pokémon SoulSilver, remake di Pokémon Argento con nuove caratteristiche e avventure da vivere."
-        },
-        {
-            "nome": "Pokémon X",
-            "id": "0019",
-            "immagine": "immagini_prodotti/games/pkmn_X_0.jpg",
-            "colori": [],
-            "prezzo": "59,99",
-            "descrizione": "Pokémon X, il gioco della sesta generazione di Pokémon, che introduce nuove meccaniche di gioco e una nuova regione."
-        },
-        {
-            "nome": "Pokémon Y",
-            "id": "0020",
-            "immagine": "immagini_prodotti/games/pkmn_Y_0.jpg",
-            "colori": [],
-            "prezzo": "59,99",
-            "descrizione": "Pokémon Y, versione complementare di Pokémon X, con nuovi Pokémon e nuove sfide."
-        },
-        {
-            "nome": "Pokémon Diamante",
-            "id": "0021",
-            "immagine": "immagini_prodotti/games/pkmn_diamond_0.jpg",
-            "colori": [],
-            "prezzo": "49,99",
-            "descrizione": "Pokémon Diamante, gioco della quarta generazione con una nuova regione e nuove meccaniche di gioco."
-        },
-        {
-            "nome": "Pokémon Perla",
-            "id": "0022",
-            "immagine": "immagini_prodotti/games/pkmn_pearl_0.jpg",
-            "prezzo": "49,99",
-            "colori": [],
-            "descrizione": "Pokémon Perla, versione complementare di Pokémon Diamante, con nuove avventure e Pokémon da catturare."
-        },
-        {
-            "nome": "Pokémon Platino",
-            "id": "0023",
-            "immagine": "immagini_prodotti/games/pkmn_platinum_0.jpg",
-            "prezzo": "59,99",
-            "colori": [],
-            "descrizione": "Pokémon Platino, la versione definitiva della quarta generazione con contenuti extra e una storia arricchita."
-        },
-        {
-            "nome": "Pokémon Rubino Omega",
-            "id": "0024",
-            "immagine": "immagini_prodotti/games/pkmn_omegaruby_0.jpg",
-            "colori": [],
-            "prezzo": "49,99",
-            "descrizione": "Pokémon Rubino Omega, remake di Pokémon Rubino con nuove funzionalità e Pokémon da scoprire."
-        },
-        {
-            "nome": "Pokémon Zaffiro Alfa",
-            "id": "0025",
-            "immagine": "immagini_prodotti/games/pkmn_alphasapphire_0.jpg",
-            "colori": [],
-            "prezzo": "49,99",
-            "descrizione": "Pokémon Zaffiro Alfa, il remake di Pokémon Zaffiro con nuove avventure e ambientazioni."
-        },
+            "prodotti": [
+                {
+                    "nome": "Nintendo DS",
+                    "id": "0004",
+                    "immagine": "immagini_prodotti/nintendo_ds/nintendods_nero.jpg",
+                    "colori": [
+                        "rosso",
+                        "blu",
+                        "nero"
+                    ],
+                    "prezzo": "149,99",
+                    "descrizione": "Console portatile classica della Nintendo, con doppio schermo e un ampio catalogo di giochi."
+                },
+                {
+                    "nome": "Nintendo 3DS",
+                    "id": "0001",
+                    "immagine": "immagini_prodotti/nintendo_3ds/nintendo3ds_nero.jpg",
+                    "colori": [
+                        "rosso",
+                        "blu",
+                        "nero"
+                    ],
+                    "prezzo": "199,99",
+                    "descrizione": "Console portatile Nintendo 3DS con schermo 3D senza occhiali e ampio catalogo di giochi."
+                },
+                {
+                    "nome": "New Nintendo 3DS",
+                    "id": "0002",
+                    "immagine": "immagini_prodotti/new_nintendo_3ds/newnintendo3ds_nero.jpg",
+                    "colori": [
+                        "rosso",
+                        "blu",
+                        "nero"
+                    ],
+                    "prezzo": "249,99",
+                    "descrizione": "La versione migliorata della console Nintendo 3DS, con maggiore potenza e nuove funzionalità."
+                },
+                {
+                    "nome": "Playstation 2",
+                    "id": "0005",
+                    "immagine": "immagini_prodotti/playstation_2/play2_nero.jpg",
+                    "colori": [
+                        "nero"
+                    ],
+                    "prezzo": "99,99",
+                    "descrizione": "Console di gioco Sony, famosa per la sua vasta libreria di titoli e la retrocompatibilità con i giochi PS1."
+                },
+                {
+                    "nome": "Gameboy Color",
+                    "id": "0006",
+                    "immagine": "immagini_prodotti/gameboy_color/gameboycolor_giallo.jpg",
+                    "colori": [
+                        "giallo",
+                        "blu",
+                        "nero"
+                    ],
+                    "prezzo": "79,99",
+                    "descrizione": "Console portatile classica Nintendo con schermo a colori, disponibile in vari colori e giochi iconici."
+                },
+                {
+                    "nome": "Gameboy SP",
+                    "id": "0007",
+                    "immagine": "immagini_prodotti/gameboy_sp/gameboysp_rosso.jpg",
+                    "colori": [
+                        "rosso",
+                        "blu",
+                        "verde",
+                        "giallo"
+                    ],
+                    "prezzo": "119,99",
+                    "descrizione": "Una versione compatta del Game Boy, con schermo retroilluminato e design pieghevole."
+                },
+                {
+                    "nome": "Playstation 3",
+                    "id": "0008",
+                    "immagine": "immagini_prodotti/playstation_3/play3_nero.jpg",
+                    "colori": [
+                        "nero"
+                    ],
+                    "prezzo": "299,99",
+                    "descrizione": "Console di gioco Sony della generazione PS3, con giochi in HD e supporto per il Blu-ray."
+                },
+                {
+                    "nome": "Xbox 360",
+                    "id": "0009",
+                    "immagine": "immagini_prodotti/xbox_360/xbox360_bianco.jpg",
+                    "colori": [
+                        "bianco",
+                        "nero"
+                    ],
+                    "prezzo": "249,99",
+                    "descrizione": "Console Microsoft con un catalogo ricco di giochi e accessori, e supporto per giochi online tramite Xbox Live."
+                },
+                {
+                    "nome": "Wii",
+                    "id": "0010",
+                    "immagine": "immagini_prodotti/wii/wii_bianco.jpg",
+                    "colori": [
+                        "bianco",
+                        "nero"
+                    ],
+                    "prezzo": "199,99",
+                    "descrizione": "Console innovativa di Nintendo che utilizza il controllo motion-sensing, con giochi come Wii Sports."
+                },
+                {
+                    "nome": "GameBoy Advance",
+                    "id": "00011",
+                    "immagine": "immagini_prodotti/gameboy_advance/gameboyadvance_viola.jpg",
+                    "colori": [
+                        "viola",
+                        "bianco"
+                    ],
+                    "prezzo": "129,99",
+                    "descrizione": "Console portatile Nintendo GameBoy Advance, compatibile con una vasta libreria di giochi retro."
+                },
+                {
+                    "nome": "PlayStation 1",
+                    "id": "0012",
+                    "immagine": "immagini_prodotti/playstation_1/play1_grigio.jpg",
+                    "colori": [
+                        "grigio"
+                    ],
+                    "prezzo": "199,99",
+                    "descrizione": "La leggendaria console PlayStation 1 di Sony, che ha dato il via alla rivoluzione dei giochi 3D."
+                },
+                {
+                    "nome": "Pokémon Bianco",
+                    "id": "0013",
+                    "immagine": "immagini_prodotti/games/pkmn_white_0.jpg",
+                    "colori": [],
+                    "prezzo": "39,99",
+                    "descrizione": "Pokémon Bianco, uno dei titoli della quinta generazione di giochi Pokémon, con una nuova regione e nuovi Pokémon."
+                },
+                {
+                    "nome": "Pokémon Nero",
+                    "id": "0014",
+                    "immagine": "immagini_prodotti/games/pkmn_black_0.jpg",
+                    "colori": [],
+                    "prezzo": "39,99",
+                    "descrizione": "Pokémon Nero, gioco della quinta generazione che presenta una regione rinnovata e nuovi Pokémon da catturare."
+                },
+                {
+                    "nome": "Pokémon Bianco 2",
+                    "id": "0015",
+                    "immagine": "immagini_prodotti/games/pkmn_white2_0.jpg",
+                    "colori": [],
+                    "prezzo": "49,99",
+                    "descrizione": "Pokémon Bianco 2, un sequel diretto di Pokémon Bianco, con nuove storie e sfide da affrontare."
+                },
+                {
+                    "nome": "Pokémon Nero 2",
+                    "id": "0016",
+                    "immagine": "immagini_prodotti/games/pkmn_black2_0.jpg",
+                    "prezzo": "49,99",
+                    "descrizione": "Pokémon Nero 2, sequel di Pokémon Nero, con nuove dinamiche e Pokémon da scoprire."
+                },
+                {
+                    "nome": "Pokémon HeartGold",
+                    "id": "0017",
+                    "immagine": "immagini_prodotti/games/pkmn_heartgold_0.jpg",
+                    "colori": [],
+                    "prezzo": "44,99",
+                    "descrizione": "Pokémon HeartGold, remake della versione originale Pokémon Oro, con nuove funzionalità e Pokémon da catturare."
+                },
+                {
+                    "nome": "Pokémon SoulSilver",
+                    "id": "0018",
+                    "immagine": "immagini_prodotti/games/pkmn_soulsilver_0.jpg",
+                    "colori": [],
+                    "prezzo": "44,99",
+                    "descrizione": "Pokémon SoulSilver, remake di Pokémon Argento con nuove caratteristiche e avventure da vivere."
+                },
+                {
+                    "nome": "Pokémon X",
+                    "id": "0019",
+                    "immagine": "immagini_prodotti/games/pkmn_X_0.jpg",
+                    "colori": [],
+                    "prezzo": "59,99",
+                    "descrizione": "Pokémon X, il gioco della sesta generazione di Pokémon, che introduce nuove meccaniche di gioco e una nuova regione."
+                },
+                {
+                    "nome": "Pokémon Y",
+                    "id": "0020",
+                    "immagine": "immagini_prodotti/games/pkmn_Y_0.jpg",
+                    "colori": [],
+                    "prezzo": "59,99",
+                    "descrizione": "Pokémon Y, versione complementare di Pokémon X, con nuovi Pokémon e nuove sfide."
+                },
+                {
+                    "nome": "Pokémon Diamante",
+                    "id": "0021",
+                    "immagine": "immagini_prodotti/games/pkmn_diamond_0.jpg",
+                    "colori": [],
+                    "prezzo": "49,99",
+                    "descrizione": "Pokémon Diamante, gioco della quarta generazione con una nuova regione e nuove meccaniche di gioco."
+                },
+                {
+                    "nome": "Pokémon Perla",
+                    "id": "0022",
+                    "immagine": "immagini_prodotti/games/pkmn_pearl_0.jpg",
+                    "prezzo": "49,99",
+                    "colori": [],
+                    "descrizione": "Pokémon Perla, versione complementare di Pokémon Diamante, con nuove avventure e Pokémon da catturare."
+                },
+                {
+                    "nome": "Pokémon Platino",
+                    "id": "0023",
+                    "immagine": "immagini_prodotti/games/pkmn_platinum_0.jpg",
+                    "prezzo": "59,99",
+                    "colori": [],
+                    "descrizione": "Pokémon Platino, la versione definitiva della quarta generazione con contenuti extra e una storia arricchita."
+                },
+                {
+                    "nome": "Pokémon Rubino Omega",
+                    "id": "0024",
+                    "immagine": "immagini_prodotti/games/pkmn_omegaruby_0.jpg",
+                    "colori": [],
+                    "prezzo": "49,99",
+                    "descrizione": "Pokémon Rubino Omega, remake di Pokémon Rubino con nuove funzionalità e Pokémon da scoprire."
+                },
+                {
+                    "nome": "Pokémon Zaffiro Alfa",
+                    "id": "0025",
+                    "immagine": "immagini_prodotti/games/pkmn_alphasapphire_0.jpg",
+                    "colori": [],
+                    "prezzo": "49,99",
+                    "descrizione": "Pokémon Zaffiro Alfa, remake di Pokémon Zaffiro, con nuove dinamiche di gioco e contenuti extra."
+                },
+                {
+                    "nome": "Pokémon Sole",
+                    "id": "0026",
+                    "immagine": "immagini_prodotti/games/pkmn_sun_0.jpg",
+                    "colori": [],
+                    "prezzo": "59,99",
+                    "descrizione": "Pokémon Sole, gioco della settima generazione che introduce una nuova regione tropicale e nuovi Pokémon."
+                },
+                {
+                    "nome": "Pokémon Luna",
+                    "id": "0027",
+                    "immagine": "immagini_prodotti/games/pkmn_moon_0.jpg",
+                    "prezzo": "59,99",
+                    "descrizione": "Pokémon Luna, la versione complementare di Pokémon Sole, con nuovi elementi e avventure."
+                },
         {
             "nome": "Pokémon Smeraldo",
             "id": "0026",

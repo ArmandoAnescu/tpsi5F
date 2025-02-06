@@ -53,15 +53,7 @@ function loadJSON() {
         <img src="${prodotto.immagine}" class="card-img-top" alt="${prodotto.nome}">
         <div class="card-body">
           <h5 class="card-title">${prodotto.nome}</h5>
-            ${prodotto.colori && prodotto.colori.length > 0 ? `
-              <p class="card-text">Seleziona il colore disponibile:</p>
-          <div class="form-group">
-              <select class="form-control" id="colore-${prodotto.id}">
-                ${prodotto.colori.map(colore => `<option value="${colore}">${colore.charAt(0).toUpperCase() + colore.slice(1)}</option>`).join('')}
-              </select>
-            ` :
-             ''
-          }
+            
           <p class="card-text price">€${prodotto.prezzo}</p>
           </div>
           <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>

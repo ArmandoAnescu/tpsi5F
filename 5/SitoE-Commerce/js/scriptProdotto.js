@@ -67,8 +67,7 @@ function caricaProdotto(prodotto) {
     label.setAttribute('for', 'colore');
     label.textContent="Colori disponibili"
     //select
-    const select = document.createElement('select');
-    select.id = 'colore';
+    const select = document.getElementById('colore');
     select.name = 'colore';
     //aggiunta valori
     prodotto.colori.forEach(colore => {
@@ -110,8 +109,38 @@ alert.innerHTML=
   </div>`;
   document.getElementById('container-prodotto').appendChild(alert);
 }
+
+function cambiaImmagine() {
+  fetch('prodotti.json').then(response => {
+    if (!response.ok) {
+      throw new Error('Errore nel caricamento di prodotti.php');
+    }
+    return response.json();
+  }).then(prodotti => {
+    let colore = document.getElementById('colore').value;
+    const prodottoId = new URLSearchParams(window.location.search).get('id'); // Ottieni l'ID del prodotto dalla URL
+    const prodotto = prodotti.prodotti.find(p => p.id === prodottoId); // Trova il prodotto corrispondente all'ID
+    let  percorso=prodotto.immagine;
+    console.log(colore);
+    // Trova l'ultimo nome del file nel percorso
+    let nomeFile = percorso.split('/').pop(); // "xbox360_bianco_rosso.jpg"
+
+    // Sostituisci il colore nell'ultimo nome del file
+    nomeFile = nomeFile.replace(/_.*\.jpg$/, `_${colore}.jpg`);
+    // Riassembla il percorso con il nuovo nome del file
+    percorso = percorso.replace(/[^/]+$/, nomeFile);
+    console.log(percorso); 
+    document.getElementById('immagine-prodotto').src=percorso;
+  }).catch(error => {
+    console.error(error);
+  });
+}
+
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
 document.getElementById('aggiungi-carrello').addEventListener('click', function () {
   aggiungiAlCarrello();
 });
+document.getElementById('colore').addEventListener('change',function(){
+cambiaImmagine();
+});  

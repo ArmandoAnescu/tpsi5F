@@ -64,7 +64,7 @@ carrello.forEach((carrelloProdotto) => {
                 ${prodotto.colori && prodotto.colori.length > 0 ? `
                   <p class="card-text">Seleziona il colore disponibile:</p>
                   <div class="form-group">
-                    <select class="form-control" id="colore-${prodotto.id}">
+                    <select class="form-control" id="colore">
                       ${prodotto.colori.map(colore => `<option value="${colore}">${colore}</option>`).join('')}
                     </select>
                   </div>
@@ -98,4 +98,3 @@ function rimuoviDalCarrello(productId) {
  }
   // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
-  

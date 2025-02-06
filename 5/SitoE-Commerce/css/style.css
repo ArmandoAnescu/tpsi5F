@@ -5,14 +5,12 @@
     color: #000000;
     font-family: 'Arial', sans-serif;
 }
-/*
-h2 {
-    text-align: center;
-    margin-top: 30px;
-    color: #000000;
-    font-family: 'Arial', sans-serif;
+.btn-primary{
+    padding: 6px 12px;
+    width: fit-content;
+    margin-left:10px;
+    margin-bottom: 10px;
 }
-*/
 /* Container per le cards */
 .card-container.vert {
     display: flex;
