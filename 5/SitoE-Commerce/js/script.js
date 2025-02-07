@@ -1,18 +1,18 @@
 function loadJSON() {
   fetch('index.json') // URL del file JSON
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Errore nel caricamento del file JSON');//dico che c'è stato un errore
-    }
-    return response.json(); // Restituisce i dati come oggetto JavaScript
-  })
-  .then(data => {
-    // Usa i dati caricati (data è l'oggetto JSON)
-    loadPage(data);
-  })
-  .catch(error => {
-    console.error('Errore:', error);
-  });
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Errore nel caricamento del file JSON');//dico che c'è stato un errore
+      }
+      return response.json(); // Restituisce i dati come oggetto JavaScript
+    })
+    .then(data => {
+      // Usa i dati caricati (data è l'oggetto JSON)
+      loadPage(data);
+    })
+    .catch(error => {
+      console.error('Errore:', error);
+    });
 }
 function loadPage(jsonData) {
   const icona = document.getElementById('nav-brand');
@@ -29,10 +29,10 @@ function loadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
-  document.getElementById('pageTitle').textContent=jsonData.pageTitle;
-  document.getElementById('introText').textContent=jsonData.introText;
-  document.getElementById('subTitle').textContent=jsonData.subTitle;
-  document.getElementById('subText').textContent=jsonData.subText;
+  document.getElementById('pageTitle').textContent = jsonData.pageTitle;
+  document.getElementById('introText').textContent = jsonData.introText;
+  document.getElementById('subTitle').textContent = jsonData.subTitle;
+  document.getElementById('subText').textContent = jsonData.subText;
   //accordion
   const accordion = document.getElementById("accordionExample");
   Object.keys(jsonData.accordion_items).forEach((key, index) => {

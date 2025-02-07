@@ -1,6 +1,5 @@
 {
-    "logo":"<img src='PixelHaven_Logo_Transparent.png' id='logo'>",
-
+    "logo": "<img src='PixelHaven_Logo_Transparent.png' id='logo'>",
     "navbar": [
         {
             "nav-link": "index.html",
@@ -16,19 +15,19 @@
         }
     ],
     "title": "PixalHaven",
-    "pageTitle":"PixalHaven",
-    "introText":"Benvenuti a PixalHaven!! Il paradiso per gli appasionati del retro gaming. Qui troverete una vasta gamma di giochi e console retro. Dalla famiglia Nintendo a quella della Sony e microsoft.",
+    "pageTitle": "PixalHaven",
+    "introText": "Benvenuti a PixalHaven!! Il paradiso per gli appasionati del retro gaming. Qui troverete una vasta gamma di giochi e console retro. Dalla famiglia Nintendo a quella della Sony e microsoft.",
     "accordion_items": {
         "accordion-item-1": [
-          {
-            "question": "Cosa posso trovare?",
-            "definition": "come suggerisce il nome e la nostra intro, noi siamo un sito e-commerce dove potete trovare giochi e console retro di ogni tipo!"
-          }
+            {
+                "question": "Cosa posso trovare?",
+                "definition": "come suggerisce il nome e la nostra intro, noi siamo un sito e-commerce dove potete trovare giochi e console retro di ogni tipo!"
+            }
         ],
         "accordion-item-2": [
             {
-              "question": "Siete affidabili?",
-              "definition": "Certo! Il nostro obbiettivo è far rivivire i propri ricordi d'infanzia ma anche offrire un servizio di alta qualità. I nostri tecnici testano le console per essere certi del loro funzionamento e garantire un'esperienza perfetta."
+                "question": "Siete affidabili?",
+                "definition": "Certo! Il nostro obbiettivo è far rivivire i propri ricordi d'infanzia ma anche offrire un servizio di alta qualità. I nostri tecnici testano le console per essere certi del loro funzionamento e garantire un'esperienza perfetta."
             }
         ],
         "accordion-item-3": [
@@ -44,12 +43,12 @@
             }
         ]
     },
-    "cartTitle":"Carrello",
-    "subTitle":"Il nostro obbiettivo",
-    "subText":"L'obbiettivo di noi di PixelHaven è di rendere accessibile a tutti i le vecchie console e videogiochi, noi ci occupiamo di trovare,ripristinare,imballare e inviare a te il nsotro prodotto. Noi ci assicuriamo della cura dei nostri prodotti così che tu e tutte le altre persone interessate possiate divertirvi senza preoccupazioni. Cerchiamo anche di rendere i nostri pezzi non solo competitvi ma anche accessibili a tutti, perchè il gaming è un privilegio di tutti.",
-    "emptyCart":"Svuota il carrello",
-    "acquista":"Procedi all'acquisto",
-    "returnArrow":"<i class='bi bi-arrow-left'></i>",    
+    "cartTitle": "Carrello",
+    "subTitle": "Il nostro obbiettivo",
+    "subText": "L'obbiettivo di noi di PixelHaven è di rendere accessibile a tutti i le vecchie console e videogiochi, noi ci occupiamo di trovare,ripristinare,imballare e inviare a te il nsotro prodotto. Noi ci assicuriamo della cura dei nostri prodotti così che tu e tutte le altre persone interessate possiate divertirvi senza preoccupazioni. Cerchiamo anche di rendere i nostri pezzi non solo competitvi ma anche accessibili a tutti, perchè il gaming è un privilegio di tutti.",
+    "emptyCart": "Svuota il carrello",
+    "acquista": "Procedi all'acquisto",
+    "returnArrow": "<i class='bi bi-arrow-left'></i>",
     "footer": {
         "text": "Anescu Armando 5F"
     }

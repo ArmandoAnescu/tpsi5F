@@ -1,4 +1,9 @@
 
+footer{
+    align-items: center;
+    text-align: center;
+    height: auto;
+}
 .product-name h1 {
     text-align: center;
     margin-top: 20px;
@@ -21,10 +26,13 @@
   
 .carrello{
     width: auto;
+    height: 15%;
     align-self: center;
     background-color: gainsboro;
     padding: 20px;
     border-radius: 10px;
+    overflow: auto;
+
 }
 .empty{
     background-color:crimson;
