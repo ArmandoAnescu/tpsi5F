@@ -24,16 +24,17 @@ footer{
     flex-wrap: wrap;
 }
   
-.carrello{
+.carrello {
     width: auto;
-    height: 15%;
+    max-height: 650px;        /* Imposta un'altezza massima del 15% */
     align-self: center;
     background-color: gainsboro;
     padding: 20px;
     border-radius: 10px;
-    overflow: auto;
-
+    overflow-y: auto;       /* Mostra la barra di scorrimento verticale se il contenuto è troppo lungo */
+    box-sizing: border-box; /* Per includere il padding nelle dimensioni totali */
 }
+
 .empty{
     background-color:crimson;
     color: white;
