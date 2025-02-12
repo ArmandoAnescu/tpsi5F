@@ -1,0 +1,19 @@
+{
+    "paymentmethod": [
+        "Visa",
+        "Mastercard",
+        "PayPal"
+    ],
+    "cardNumLabel": "Numero della carta:",
+    "namesLabel": "Nome e Cognome:",
+    "addrCity": "Città e Indirizzo:",
+    "pcLabel": "Codice postale:",
+    "countryLabel": "Paese:",
+    "phoneNumber": "Numero di telefono:",
+    "submit": "Procedi al pagamento",
+    "personalDetails": "Dettagli personali:",
+    "secCode": "Codice di sicurezza (CVV):",
+    "expDate": "Data di scadenza (MM/YY):",
+    "paymentMethod": "Metodo di pagamento:",
+    "transaction": "Metodo di Pagamento"
+}

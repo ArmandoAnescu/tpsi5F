@@ -50,69 +50,64 @@
     <main class="flex-shrink-0">
         <div class="container" id="container-prodotto">
             <form action="" method="POST">
-                <h2>Metodo di Pagamento</h2>
-                
+                <h2 id="transaction"></h2>
+
                 <!-- Selettore del metodo di pagamento -->
-                <label for="payment-method">Metodo di pagamento:</label>
+                <label for="payment-method" id="paymentMethod"></label>
                 <select id="payment-method" name="payment-method" required>
-                    <option value="visa">Visa</option>
-                    <option value="mastercard">Mastercard</option>
-                    <option value="paypal">PayPal</option>
                     <!-- Aggiunti dinamicamente -->
                 </select>
                 <br>
-                
+
                 <!-- Numero della carta -->
-                <label for="card-number">Numero della carta:</label>
+                <label for="card-number" id="card-number-label"></label>
                 <input id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" type="text" required>
                 <br>
-                
+
                 <!-- Data di scadenza -->
-                <label for="expiration-date">Data di scadenza (MM/YY):</label>
+                <label for="expiration-date" id="expDate"></label>
                 <input id="expiration-date" name="expiration-date" type="month" required>
                 <br>
-                
+
                 <!-- Codice di sicurezza (CVV) -->
-                <label for="security-code">Codice di sicurezza (CVV):</label>
+                <label for="security-code" id="secCode"></label>
                 <input id="security-code" name="security-code" placeholder="123" type="text" required>
                 <br>
-            
-                <h2>Dettagli Personali</h2>
-                
+
+                <h2 id="personalDetails"></h2>
+
                 <!-- Nome e Cognome -->
-                <label for="name">Nome:</label>
+                <label id="names-label"></label>
                 <input type="text" id="name" name="name" placeholder="Nome" required>
-                <br>
-                
-                <label for="lastname">Cognome:</label>
                 <input type="text" id="lastname" name="lastname" placeholder="Cognome" required>
                 <br>
-            
+
                 <!-- Indirizzo -->
-                <label for="address-city">Città e Indirizzo:</label>
+                <label for="address-city" id="addrCity"></label>
                 <input type="text" id="address-city" placeholder="Città" required>
                 <input type="text" id="address" placeholder="Indirizzo" required>
                 <br>
-            
+
                 <!-- Codice postale -->
-                <label for="postal-code">Codice postale:</label>
+                <label for="postal-code" id="postal-code-label"></label>
                 <input type="text" id="postal-code" required>
                 <br>
-            
+
                 <!-- Paese -->
-                <label for="country">Paese:</label>
+                <label for="country" id="countryLabel"></label>
                 <input type="text" id="country" required>
                 <br>
-            
+
                 <!-- Numero di telefono -->
-                <label for="phone-number">Numero di telefono:</label>
-                <input type="tel" id="phone-number" placeholder="+39 123 456789" pattern="(\+39\s?)?([0-9]{3})[ -]?[0-9]{6,7}" required>
+                <label for="phone-number" id="phoneNumber"></label>
+                <input type="tel" id="phone-number" placeholder="+39 123 456789"
+                    pattern="(\+39\s?)?([0-9]{3})[ -]?[0-9]{6,7}" required>
                 <br><br>
-            
+
                 <!-- Pulsante di invio -->
-                <button type="submit">Invia</button>
+                <button type="submit" id="submit"></button>
             </form>
-            
+
         </div>
     </main>
     <!--Foooter-->

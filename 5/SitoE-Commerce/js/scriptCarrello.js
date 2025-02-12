@@ -47,7 +47,7 @@ function caricaProdotti(prodotti) {
   const container = document.getElementById("cart-container");
   let carrello = JSON.parse(localStorage.getItem("carrello"));
   if (carrello) {
-    let totale=0;
+    let totale = 0;
     carrello.forEach((carrelloProdotto) => {
       prodotti.forEach(prodotto => {
         if (carrelloProdotto.id === prodotto.id) {
@@ -72,13 +72,13 @@ function caricaProdotti(prodotti) {
               </div>
             </div>
           `;
-          
-          let prezzo = prodotto.prezzo.trim().replace(',','.');  // Rimuove eventuali spazi vuoti
+
+          let prezzo = prodotto.prezzo.trim().replace(',', '.');  // Rimuove eventuali spazi vuoti
           let quantita = carrelloProdotto.quantita.trim();  // Fa lo stesso per la quantità
           // Verifica se sono numeri validi
           if (!isNaN(prezzo) && !isNaN(quantita)) {
-            totale =totale+ Number(prezzo) * Number(quantita);
-            totale=parseFloat(totale.toFixed(2));
+            totale = totale + Number(prezzo) * Number(quantita);
+            totale = parseFloat(totale.toFixed(2));
           }
           // Aggiungiamo la card al contenitore
           container.appendChild(card);
@@ -86,9 +86,9 @@ function caricaProdotti(prodotti) {
 
       });
     });
-    document.getElementById('price').innerHTML=`totale: <span class="price">€${totale}</span>`;
+    document.getElementById('price').innerHTML = `totale: <span class="price">€${totale}</span>`;
   } else {
-    let alert=document.createElement('div');
+    let alert = document.createElement('div');
     alert.innerHTML = `<div class="alert alert-secondary" role="alert">
     Il tuo carrello è vuoto.
                       </div>`

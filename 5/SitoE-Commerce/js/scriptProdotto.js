@@ -97,10 +97,10 @@ function aggiungiAlCarrello() {
   // Recupera il colore selezionato dall'input select
   let selectColore = document.getElementById('colore');
   let coloreSelezionato = selectColore ? selectColore.value : null;
-  let quantita=document.getElementById('quantita').value;
+  let quantita = document.getElementById('quantita').value;
   let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
   // Aggiungi il nuovo prodotto (id + colore)
-  carrello.push({ id: Id, colore: coloreSelezionato,quantita:quantita});
+  carrello.push({ id: Id, colore: coloreSelezionato, quantita: quantita });
   // Salva di nuovo l'array aggiornato
   localStorage.setItem("carrello", JSON.stringify(carrello));
   let alert = document.createElement('div');
