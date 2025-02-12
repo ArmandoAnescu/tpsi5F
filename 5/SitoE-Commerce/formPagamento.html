@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="it" class="h-100">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="product-title">Pagamento</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" type="image/jpg" href="PixelHaven_Logo.png">
+    <link rel="icon" type="image/jpg" href="PixelHaven_Logo.png">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="d-flex flex-column h-100">
+    <header>
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html" id="nav-brand"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0" id="navbarLinks">
+                        <!-- I collegamenti della navbar saranno riempiti dinamicamente -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <main class="flex-shrink-0">
+        <div class="container" id="container-prodotto">
+            <form action="" method="POST">
+                <h2>Metodo di Pagamento</h2>
+                
+                <!-- Selettore del metodo di pagamento -->
+                <label for="payment-method">Metodo di pagamento:</label>
+                <select id="payment-method" name="payment-method" required>
+                    <option value="visa">Visa</option>
+                    <option value="mastercard">Mastercard</option>
+                    <option value="paypal">PayPal</option>
+                    <!-- Aggiunti dinamicamente -->
+                </select>
+                <br>
+                
+                <!-- Numero della carta -->
+                <label for="card-number">Numero della carta:</label>
+                <input id="card-number" name="card-number" placeholder="XXXX-XXXX-XXXX-XXXX" type="text" required>
+                <br>
+                
+                <!-- Data di scadenza -->
+                <label for="expiration-date">Data di scadenza (MM/YY):</label>
+                <input id="expiration-date" name="expiration-date" type="month" required>
+                <br>
+                
+                <!-- Codice di sicurezza (CVV) -->
+                <label for="security-code">Codice di sicurezza (CVV):</label>
+                <input id="security-code" name="security-code" placeholder="123" type="text" required>
+                <br>
+            
+                <h2>Dettagli Personali</h2>
+                
+                <!-- Nome e Cognome -->
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Nome" required>
+                <br>
+                
+                <label for="lastname">Cognome:</label>
+                <input type="text" id="lastname" name="lastname" placeholder="Cognome" required>
+                <br>
+            
+                <!-- Indirizzo -->
+                <label for="address-city">Città e Indirizzo:</label>
+                <input type="text" id="address-city" placeholder="Città" required>
+                <input type="text" id="address" placeholder="Indirizzo" required>
+                <br>
+            
+                <!-- Codice postale -->
+                <label for="postal-code">Codice postale:</label>
+                <input type="text" id="postal-code" required>
+                <br>
+            
+                <!-- Paese -->
+                <label for="country">Paese:</label>
+                <input type="text" id="country" required>
+                <br>
+            
+                <!-- Numero di telefono -->
+                <label for="phone-number">Numero di telefono:</label>
+                <input type="tel" id="phone-number" placeholder="+39 123 456789" pattern="(\+39\s?)?([0-9]{3})[ -]?[0-9]{6,7}" required>
+                <br><br>
+            
+                <!-- Pulsante di invio -->
+                <button type="submit">Invia</button>
+            </form>
+            
+        </div>
+    </main>
+    <!--Foooter-->
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container mt-auto">
+            <span class="text-muted" id="footerText"></span>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scriptPagamento.js"></script>
+</body>
+
+</html>
