@@ -47,6 +47,7 @@ function caricaProdotti(prodotti) {
   const container = document.getElementById("cart-container");
   let carrello = JSON.parse(localStorage.getItem("carrello"));
   if (carrello) {
+    let totale=0;
     carrello.forEach((carrelloProdotto) => {
       prodotti.forEach(prodotto => {
         if (carrelloProdotto.id === prodotto.id) {
@@ -62,14 +63,8 @@ function caricaProdotti(prodotti) {
                   <div class="card-body">
                     <h5 class="card-title">${prodotto.nome}</h5>
                     <p class="card-text price">€${prodotto.prezzo}</p>
-                    ${prodotto.colori && prodotto.colori.length > 0 ? `
-                      <p class="card-text">Seleziona il colore disponibile:</p>
-                      <div class="form-group">
-                        <select class="form-control" id="colore">
-                          ${prodotto.colori.map(colore => `<option value="${colore}">${colore}</option>`).join('')}
-                        </select>
-                      </div>
-                    ` : ''}
+                    <p class="card-text">quantità: ${carrelloProdotto.quantita}</p>
+                    
                     <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
                     <a id="remove-item" class="btn btn-danger" style="margin-left: 10px;" onclick="rimuoviDalCarrello('${prodotto.id}')">Rimuovi prodotto</a>
                   </div>
@@ -77,13 +72,21 @@ function caricaProdotti(prodotti) {
               </div>
             </div>
           `;
-
+          
+          let prezzo = prodotto.prezzo.trim().replace(',','.');  // Rimuove eventuali spazi vuoti
+          let quantita = carrelloProdotto.quantita.trim();  // Fa lo stesso per la quantità
+          // Verifica se sono numeri validi
+          if (!isNaN(prezzo) && !isNaN(quantita)) {
+            totale =totale+ Number(prezzo) * Number(quantita);
+            totale=parseFloat(totale.toFixed(2));
+          }
           // Aggiungiamo la card al contenitore
           container.appendChild(card);
         }//end
 
       });
     });
+    document.getElementById('price').innerHTML=`totale: <span class="price">€${totale}</span>`;
   } else {
     let alert=document.createElement('div');
     alert.innerHTML = `<div class="alert alert-secondary" role="alert">

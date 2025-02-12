@@ -108,7 +108,8 @@ body {
 .price {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #28a745; /* Verde per indicare il prezzo */
+    color: #28a745; /* Verde per il prezzo */
+    margin-bottom: 20px;
 }
 
 /*CSS PAGINA PRODOTTO*/
@@ -177,12 +178,7 @@ body {
 }
 
 /* Prezzo del prodotto */
-#price {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #28a745; /* Verde per il prezzo */
-    margin-bottom: 20px;
-}
+
 
 /* Pulsanti */
 .product-btn {
