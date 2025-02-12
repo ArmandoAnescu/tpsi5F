@@ -34,6 +34,10 @@ footer{
     overflow-y: auto;       /* Mostra la barra di scorrimento verticale se il contenuto è troppo lungo */
     box-sizing: border-box; /* Per includere il padding nelle dimensioni totali */
 }
+.alert-secondary{
+    background-color: gainsboro;
+    border: none;
+}
 
 .empty{
     background-color:crimson;

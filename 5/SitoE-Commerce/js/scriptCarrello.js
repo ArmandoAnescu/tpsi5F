@@ -45,48 +45,56 @@ function LoadPage(jsonData) {
 // Funzione per caricare dinamicamente i prodotti
 function caricaProdotti(prodotti) {
   const container = document.getElementById("cart-container");
-  let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
-  carrello.forEach((carrelloProdotto) => {
-    prodotti.forEach(prodotto => {
-      if (carrelloProdotto.id === prodotto.id) {
-        const card = document.createElement("div");
-        // Aggiungi un'immagine di default (se non disponibile nel JSON)
-        card.innerHTML = `
-        <div class="card mb-3" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="${prodotto.immagine}" class="img-fluid rounded-start" alt="${prodotto.nome}">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">${prodotto.nome}</h5>
-                <p class="card-text price">€${prodotto.prezzo}</p>
-                ${prodotto.colori && prodotto.colori.length > 0 ? `
-                  <p class="card-text">Seleziona il colore disponibile:</p>
-                  <div class="form-group">
-                    <select class="form-control" id="colore">
-                      ${prodotto.colori.map(colore => `<option value="${colore}">${colore}</option>`).join('')}
-                    </select>
+  let carrello = JSON.parse(localStorage.getItem("carrello"));
+  if (carrello) {
+    carrello.forEach((carrelloProdotto) => {
+      prodotti.forEach(prodotto => {
+        if (carrelloProdotto.id === prodotto.id) {
+          const card = document.createElement("div");
+          // Aggiungi un'immagine di default (se non disponibile nel JSON)
+          card.innerHTML = `
+            <div class="card mb-3" style="max-width: 540px;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="${prodotto.immagine}" class="img-fluid rounded-start" alt="${prodotto.nome}">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+                    <h5 class="card-title">${prodotto.nome}</h5>
+                    <p class="card-text price">€${prodotto.prezzo}</p>
+                    ${prodotto.colori && prodotto.colori.length > 0 ? `
+                      <p class="card-text">Seleziona il colore disponibile:</p>
+                      <div class="form-group">
+                        <select class="form-control" id="colore">
+                          ${prodotto.colori.map(colore => `<option value="${colore}">${colore}</option>`).join('')}
+                        </select>
+                      </div>
+                    ` : ''}
+                    <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
+                    <a id="remove-item" class="btn btn-danger" style="margin-left: 10px;" onclick="rimuoviDalCarrello('${prodotto.id}')">Rimuovi prodotto</a>
                   </div>
-                ` : ''}
-                <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
-                <a id="remove-item" class="btn btn-danger" style="margin-left: 10px;" onclick="rimuoviDalCarrello('${prodotto.id}')">Rimuovi prodotto</a>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      `;
+          `;
 
-        // Aggiungiamo la card al contenitore
-        container.appendChild(card);
-      }//end
+          // Aggiungiamo la card al contenitore
+          container.appendChild(card);
+        }//end
 
+      });
     });
-  });
+  } else {
+    let alert=document.createElement('div');
+    alert.innerHTML = `<div class="alert alert-secondary" role="alert">
+    Il tuo carrello è vuoto.
+                      </div>`
+    container.appendChild(alert);
+  }
+
 }
 function rimuoviDalCarrello(productId) {
   let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
-  // Aggiungi il nuovo prodotto (id + colore)
   let index = carrello.findIndex(prodotto => prodotto.id === productId);
   if (index !== -1) {
     carrello.splice(index, 1);
@@ -96,5 +104,12 @@ function rimuoviDalCarrello(productId) {
   }
 
 }
+function svuotaCarrello() {
+  localStorage.clear();
+  window.location.reload();
+}
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
+document.getElementById("empty-cart").addEventListener("click", function () {
+  svuotaCarrello();
+});
