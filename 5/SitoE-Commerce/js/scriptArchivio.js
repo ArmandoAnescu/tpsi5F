@@ -58,7 +58,6 @@ function caricaProdotti(prodotti) {
           </div>
           <div>
             <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
-            <button class="btn btn-primary">Aggiungi al carrello</button>
           </div>
         </div>
       </div>

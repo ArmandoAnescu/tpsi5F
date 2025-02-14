@@ -10,7 +10,8 @@
                 "blu"
             ],
             "prezzo": "149,99",
-            "descrizione": "Console portatile classica della Nintendo, con doppio schermo e un ampio catalogo di giochi."
+            "descrizione": "Console portatile classica della Nintendo, con doppio schermo e un ampio catalogo di giochi.",
+            "tipo": "console"
         },
         {
             "nome": "Nintendo 3DS",
@@ -22,7 +23,8 @@
                 "blu"
             ],
             "prezzo": "199,99",
-            "descrizione": "Console portatile Nintendo 3DS con schermo 3D senza occhiali e ampio catalogo di giochi."
+            "descrizione": "Console portatile Nintendo 3DS con schermo 3D senza occhiali e ampio catalogo di giochi.",
+            "tipo": "console"
         },
         {
             "nome": "New Nintendo 3DS",
@@ -34,7 +36,8 @@
                 "blu"
             ],
             "prezzo": "249,99",
-            "descrizione": "La versione migliorata della console Nintendo 3DS, con maggiore potenza e nuove funzionalità."
+            "descrizione": "La versione migliorata della console Nintendo 3DS, con maggiore potenza e nuove funzionalità.",
+            "tipo": "console"
         },
         {
             "nome": "Playstation 2",
@@ -44,7 +47,8 @@
                 "nero"
             ],
             "prezzo": "99,99",
-            "descrizione": "Console di gioco Sony, famosa per la sua vasta libreria di titoli e la retrocompatibilità con i giochi PS1."
+            "descrizione": "Console di gioco Sony, famosa per la sua vasta libreria di titoli e la retrocompatibilità con i giochi PS1.",
+            "tipo": "console"
         },
         {
             "nome": "Gameboy Color",
@@ -56,7 +60,8 @@
                 "nero"
             ],
             "prezzo": "79,99",
-            "descrizione": "Console portatile classica Nintendo con schermo a colori, disponibile in vari colori e giochi iconici."
+            "descrizione": "Console portatile classica Nintendo con schermo a colori, disponibile in vari colori e giochi iconici.",
+            "tipo": "console"
         },
         {
             "nome": "Gameboy SP",
@@ -67,7 +72,8 @@
                 "blu"
             ],
             "prezzo": "119,99",
-            "descrizione": "Una versione compatta del Game Boy, con schermo retroilluminato e design pieghevole."
+            "descrizione": "Una versione compatta del Game Boy, con schermo retroilluminato e design pieghevole.",
+            "tipo": "console"
         },
         {
             "nome": "Playstation 3",
@@ -77,7 +83,8 @@
                 "nero"
             ],
             "prezzo": "299,99",
-            "descrizione": "Console di gioco Sony della generazione PS3, con giochi in HD e supporto per il Blu-ray."
+            "descrizione": "Console di gioco Sony della generazione PS3, con giochi in HD e supporto per il Blu-ray.",
+            "tipo": "console"
         },
         {
             "nome": "PlayStation Portable(PSP)",
@@ -89,7 +96,8 @@
                 "blu"
             ],
             "prezzo": "129,99",
-            "descrizione": "Console portatile della Sony, con un ampio catalogo di giochi e funzionalità multimediali, perfetta per giocare in movimento."
+            "descrizione": "Console portatile della Sony, con un ampio catalogo di giochi e funzionalità multimediali, perfetta per giocare in movimento.",
+            "tipo": "console"
         },
         {
             "nome": "PlayStation Vita(PSVita)",
@@ -101,7 +109,8 @@
                 "bianco"
             ],
             "prezzo": "199,99",
-            "descrizione": "La console portatile di Sony con uno schermo OLED e un'esperienza di gioco avanzata, offrendo giochi di alta qualità e supporto per la connettività online."
+            "descrizione": "La console portatile di Sony con uno schermo OLED e un'esperienza di gioco avanzata, offrendo giochi di alta qualità e supporto per la connettività online.",
+            "tipo": "console"
         },
         {
             "nome": "Xbox 360",
@@ -112,7 +121,8 @@
                 "nero"
             ],
             "prezzo": "249,99",
-            "descrizione": "Console Microsoft con un catalogo ricco di giochi e accessori, e supporto per giochi online tramite Xbox Live."
+            "descrizione": "Console Microsoft con un catalogo ricco di giochi e accessori, e supporto per giochi online tramite Xbox Live.",
+            "tipo": "console"
         },
         {
             "nome": "Wii",
@@ -123,7 +133,8 @@
                 "nero"
             ],
             "prezzo": "199,99",
-            "descrizione": "Console innovativa di Nintendo che utilizza il controllo motion-sensing, con giochi come Wii Sports."
+            "descrizione": "Console innovativa di Nintendo che utilizza il controllo motion-sensing, con giochi come Wii Sports.",
+            "tipo": "console"
         },
         {
             "nome": "GameBoy Advance",
@@ -134,7 +145,8 @@
                 "bianco"
             ],
             "prezzo": "129,99",
-            "descrizione": "Console portatile Nintendo GameBoy Advance, compatibile con una vasta libreria di giochi retro."
+            "descrizione": "Console portatile Nintendo GameBoy Advance, compatibile con una vasta libreria di giochi retro.",
+            "tipo": "console"
         },
         {
             "nome": "PlayStation 1",
@@ -144,196 +156,176 @@
                 "grigio"
             ],
             "prezzo": "199,99",
-            "descrizione": "La leggendaria console PlayStation 1 di Sony, che ha dato il via alla rivoluzione dei giochi 3D."
+            "descrizione": "La leggendaria console PlayStation 1 di Sony, che ha dato il via alla rivoluzione dei giochi 3D.",
+            "tipo": "console"
         },
         {
             "nome": "Pokémon Bianco",
             "id": "0013",
             "immagine": "immagini_prodotti/games/pkmn_white_0.jpg",
             "prezzo": "39,99",
-            "descrizione": "Pokémon Bianco, uno dei titoli della quinta generazione di giochi Pokémon, con una nuova regione e nuovi Pokémon."
+            "descrizione": "Pokémon Bianco, uno dei titoli della quinta generazione di giochi Pokémon, con una nuova regione e nuovi Pokémon.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Nero",
             "id": "0014",
             "immagine": "immagini_prodotti/games/pkmn_black_0.jpg",
             "prezzo": "39,99",
-            "descrizione": "Pokémon Nero, gioco della quinta generazione che presenta una regione rinnovata e nuovi Pokémon da catturare."
+            "descrizione": "Pokémon Nero, gioco della quinta generazione che presenta una regione rinnovata e nuovi Pokémon da catturare.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Bianco 2",
             "id": "0015",
             "immagine": "immagini_prodotti/games/pkmn_white2_0.jpg",
             "prezzo": "49,99",
-            "descrizione": "Pokémon Bianco 2, un sequel diretto di Pokémon Bianco, con nuove storie e sfide da affrontare."
+            "descrizione": "Pokémon Bianco 2, un sequel diretto di Pokémon Bianco, con nuove storie e sfide da affrontare.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Nero 2",
             "id": "0016",
             "immagine": "immagini_prodotti/games/pkmn_black2_0.jpg",
             "prezzo": "49,99",
-            "descrizione": "Pokémon Nero 2, sequel di Pokémon Nero, con nuove dinamiche e Pokémon da scoprire."
+            "descrizione": "Pokémon Nero 2, sequel di Pokémon Nero, con nuove dinamiche e Pokémon da scoprire.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon HeartGold",
             "id": "0017",
             "immagine": "immagini_prodotti/games/pkmn_heartgold_0.jpg",
             "prezzo": "44,99",
-            "descrizione": "Pokémon HeartGold, remake della versione originale Pokémon Oro, con nuove funzionalità e Pokémon da catturare."
+            "descrizione": "Pokémon HeartGold, remake della versione originale Pokémon Oro, con nuove funzionalità e Pokémon da catturare.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon SoulSilver",
             "id": "0018",
             "immagine": "immagini_prodotti/games/pkmn_soulsilver_0.jpg",
             "prezzo": "44,99",
-            "descrizione": "Pokémon SoulSilver, remake di Pokémon Argento con nuove caratteristiche e avventure da vivere."
+            "descrizione": "Pokémon SoulSilver, remake di Pokémon Argento con nuove caratteristiche e avventure da vivere.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon X",
             "id": "0019",
             "immagine": "immagini_prodotti/games/pkmn_X_0.jpg",
             "prezzo": "59,99",
-            "descrizione": "Pokémon X, il gioco della sesta generazione di Pokémon, che introduce nuove meccaniche di gioco e una nuova regione."
+            "descrizione": "Pokémon X, il gioco della sesta generazione di Pokémon, che introduce nuove meccaniche di gioco e una nuova regione.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Y",
             "id": "0020",
             "immagine": "immagini_prodotti/games/pkmn_Y_0.jpg",
             "prezzo": "59,99",
-            "descrizione": "Pokémon Y, versione complementare di Pokémon X, con nuovi Pokémon e nuove sfide."
+            "descrizione": "Pokémon Y, versione complementare di Pokémon X, con nuovi Pokémon e nuove sfide.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Diamante",
             "id": "0021",
             "immagine": "immagini_prodotti/games/pkmn_diamond_0.jpg",
             "prezzo": "49,99",
-            "descrizione": "Pokémon Diamante, gioco della quarta generazione con una nuova regione e nuove meccaniche di gioco."
+            "descrizione": "Pokémon Diamante, gioco della quarta generazione con una nuova regione e nuove meccaniche di gioco.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Perla",
             "id": "0022",
             "immagine": "immagini_prodotti/games/pkmn_pearl_0.jpg",
             "prezzo": "49,99",
-            "descrizione": "Pokémon Perla, versione complementare di Pokémon Diamante, con nuove avventure e Pokémon da catturare."
+            "descrizione": "Pokémon Perla, versione complementare di Pokémon Diamante, con nuove avventure e Pokémon da catturare.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Platino",
             "id": "0023",
             "immagine": "immagini_prodotti/games/pkmn_platinum_0.jpg",
             "prezzo": "59,99",
-            "descrizione": "Pokémon Platino, la versione definitiva della quarta generazione con contenuti extra e una storia arricchita."
+            "descrizione": "Pokémon Platino, la versione definitiva della quarta generazione con contenuti extra e una storia arricchita.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Rubino Omega",
             "id": "0024",
             "immagine": "immagini_prodotti/games/pkmn_omegaruby_0.jpg",
             "prezzo": "49,99",
-            "descrizione": "Pokémon Rubino Omega, remake di Pokémon Rubino con nuove funzionalità e Pokémon da scoprire."
+            "descrizione": "Pokémon Rubino Omega, remake di Pokémon Rubino con nuove funzionalità e Pokémon da scoprire.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Zaffiro Alfa",
             "id": "0025",
             "immagine": "immagini_prodotti/games/pkmn_alphasapphire_0.jpg",
             "prezzo": "49,99",
-            "descrizione": "Pokémon Zaffiro Alfa, remake di Pokémon Zaffiro, con nuove dinamiche di gioco e contenuti extra."
+            "descrizione": "Pokémon Zaffiro Alfa, remake di Pokémon Zaffiro, con nuove dinamiche di gioco e contenuti extra.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Sole",
             "id": "0026",
             "immagine": "immagini_prodotti/games/pkmn_sun_0.jpg",
             "prezzo": "59,99",
-            "descrizione": "Pokémon Sole, gioco della settima generazione che introduce una nuova regione tropicale e nuovi Pokémon."
+            "descrizione": "Pokémon Sole, gioco della settima generazione che introduce una nuova regione tropicale e nuovi Pokémon.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Luna",
             "id": "0027",
             "immagine": "immagini_prodotti/games/pkmn_moon_0.jpg",
             "prezzo": "59,99",
-            "descrizione": "Pokémon Luna, la versione complementare di Pokémon Sole, con nuovi elementi e avventure."
+            "descrizione": "Pokémon Luna, la versione complementare di Pokémon Sole, con nuovi elementi e avventure.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Smeraldo",
             "id": "0026",
             "immagine": "immagini_prodotti/games/pkmn_emerald_0.jpg",
             "prezzo": "39,99",
-            "descrizione": "Pokémon Smeraldo, il capitolo leggendario della terza generazione con sfide e lotte indimenticabili."
+            "descrizione": "Pokémon Smeraldo, il capitolo leggendario della terza generazione con sfide e lotte indimenticabili.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Rubino",
             "id": "0027",
             "immagine": "immagini_prodotti/games/pkmn_ruby_0.jpg",
             "prezzo": "39,99",
-            "descrizione": "Pokémon Rubino, il classico titolo della terza generazione per il controllo dei Pokémon leggendari."
+            "descrizione": "Pokémon Rubino, il classico titolo della terza generazione per il controllo dei Pokémon leggendari.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Zaffiro",
             "id": "0028",
             "immagine": "immagini_prodotti/games/pkmn_sapphire_0.jpg",
             "prezzo": "39,99",
-            "descrizione": "Pokémon Zaffiro, il gioco che ti porta a scoprire il mondo di Hoenn e la sua fauna unica."
+            "descrizione": "Pokémon Zaffiro, il gioco che ti porta a scoprire il mondo di Hoenn e la sua fauna unica.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Rosso Fuoco",
             "id": "0029",
             "immagine": "immagini_prodotti/games/pkmn_firered_0.jpg",
             "prezzo": "34,99",
-            "descrizione": "Pokémon Rosso Fuoco, il remake di Pokémon Rosso con nuovi Pokémon, nuove sfide e grafica aggiornata."
+            "descrizione": "Pokémon Rosso Fuoco, il remake di Pokémon Rosso con nuovi Pokémon, nuove sfide e grafica aggiornata.",
+            "tipo": "videogame"
         },
         {
             "nome": "Pokémon Verde Foglia",
             "id": "0030",
             "immagine": "immagini_prodotti/games/pkmn_leafgreen_0.jpg",
             "prezzo": "34,99",
-            "descrizione": "Pokémon Verde Foglia, il remake di Pokémon Verde con nuove sfide e avventure nell'area di Kanto."
+            "descrizione": "Pokémon Verde Foglia, il remake di Pokémon Verde con nuove sfide e avventure nell'area di Kanto.",
+            "tipo": "videogame"
         },
         {
             "nome": "Final Fantasy VII",
             "id": "0031",
             "immagine": "immagini_prodotti/games/ff7_0.jpg",
-            "prezzo": "19,99",
-            "descrizione": "Final Fantasy VII è un leggendario gioco di ruolo che segue le avventure di Cloud Strife, impegnato a salvare il mondo da una minaccia catastrofica."
-        },
-        {
-            "nome": "Grand Theft Auto: San Andreas",
-            "id": "0032",
-            "immagine": "immagini_prodotti/games/gtasa_0.jpg",
-            "prezzo": "34,99",
-            "descrizione": "Grand Theft Auto: San Andreas è un open world dove esplori la città di San Andreas, affrontando missioni e interagendo con un vasto ambiente."
-        },
-        {
-            "nome": "The Last of Us",
-            "id": "0033",
-            "immagine": "immagini_prodotti/games/tlou_0.jpg",
-            "prezzo": "29,99",
-            "descrizione": "The Last of Us è un gioco d'azione e sopravvivenza che segue Joel e Ellie in un mondo post-apocalittico, dove la lotta per la sopravvivenza è al centro della trama."
-        },
-        {
-            "nome": "Halo 3",
-            "id": "0035",
-            "immagine": "immagini_prodotti/games/halo_3_0.jpg",
-            "prezzo": "24,99",
-            "descrizione": "Halo 3 è un gioco sparatutto in prima persona che conclude la trilogia originale di Master Chief, con battaglie spaziali e terrestri epiche."
-        },
-        {
-            "nome": "The Legend of Zelda: Link's Awakening DX",
-            "id": "0036",
-            "immagine": "immagini_prodotti/games/zelda_lw_dx_0.jpg",
-            "prezzo": "24,99",
-            "descrizione": "Un'avventura che vede Link esplorare un'isola misteriosa, risolvendo enigmi e battendo nemici per risvegliare la Triforza e salvare l'isola."
-        },
-        {
-            "nome": "The Legend of Zelda: Twilight Princess",
-            "id": "0034",
-            "immagine": "immagini_prodotti/games/zelda_tp_0.jpg",
-            "prezzo": "39,99",
-            "descrizione": "Un'avventura epica in cui Link esplora terre oscure e misteriose per salvare il regno di Hyrule da una minaccia sovrannaturale."
-        },
-        {
-            "nome": "Grand Theft Auto: Liberty City Stories",
-            "id": "0037",
-            "immagine": "immagini_prodotti/games/gta_lcs_0.jpg",
-            "prezzo": "19,99",
-            "descrizione": "GTA: Liberty City Stories è un gioco di azione e avventura che ti permette di esplorare la città di Liberty City e affrontare missioni da criminale."
+            "prezzo": "49,99",
+            "descrizione": "Final Fantasy VII, il gioco di ruolo che ha definito il genere con una storia epica e una grafica innovativa per l'epoca.",
+            "tipo": "videogame"
         }
     ]
 }

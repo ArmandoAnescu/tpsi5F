@@ -83,7 +83,11 @@ footer {
 .container {
     margin-top: 150px;
 }
-
+.container.loadin{
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
 
 #logo {
     width: 100px;

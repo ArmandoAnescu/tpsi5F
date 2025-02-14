@@ -123,9 +123,9 @@ function cambiaImmagine() {
     const prodottoId = new URLSearchParams(window.location.search).get('id'); // Ottieni l'ID del prodotto dalla URL
     const prodotto = prodotti.prodotti.find(p => p.id === prodottoId); // Trova il prodotto corrispondente all'ID
     let percorso = prodotto.immagine;
-    console.log(colore);
+    //console.log(colore);
     // Trova l'ultimo nome del file nel percorso
-    let nomeFile = percorso.split('/').pop(); // "xbox360_bianco_rosso.jpg"
+    let nomeFile = percorso.split('/').pop();
 
     // Sostituisci il colore nell'ultimo nome del file
     nomeFile = nomeFile.replace(/_.*\.jpg$/, `_${colore}.jpg`);
