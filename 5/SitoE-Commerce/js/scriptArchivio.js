@@ -37,6 +37,14 @@ function LoadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
+  let select=document.getElementById('type');
+  jsonData.types.forEach(tipo => {
+    const option = document.createElement('option');
+    option.value = tipo;
+    option.textContent = tipo;
+    select.appendChild(option);
+  });
+  document.getElementById('pageTitle').textContent=jsonData.archiveTitle;
   document.getElementById('footerText').textContent = jsonData.footer.text;
 }
 // Funzione per caricare dinamicamente i prodotti
