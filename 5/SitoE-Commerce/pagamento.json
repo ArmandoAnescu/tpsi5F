@@ -1,5 +1,20 @@
 {
-    "paymentmethod": [
+    "logo": "<img src='PixelHaven_Logo_Transparent.png' id='logo'>",
+    "navbar": [
+        {
+            "nav-link": "index.html",
+            "nav-text": "Home"
+        },
+        {
+            "nav-link": "archivio.html",
+            "nav-text": "Archivio"
+        },
+        {
+            "nav-link": "carrello.html",
+            "nav-text": "Carrello"
+        }
+    ],
+    "metodoPagamento": [
         "Visa",
         "Mastercard",
         "PayPal"
@@ -14,6 +29,8 @@
     "personalDetails": "Dettagli personali:",
     "secCode": "Codice di sicurezza (CVV):",
     "expDate": "Data di scadenza (MM/YY):",
-    "paymentMethod": "Metodo di pagamento:",
-    "transaction": "Metodo di Pagamento"
+    "transaction": "Metodo di Pagamento",
+    "footer": {
+        "text": "Anescu Armando 5F"
+    }
 }
