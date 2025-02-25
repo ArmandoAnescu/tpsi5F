@@ -116,3 +116,6 @@ document.addEventListener("DOMContentLoaded", loadJSON);
 document.getElementById("empty-cart").addEventListener("click", function () {
   svuotaCarrello();
 });
+document.getElementById("acquista").addEventListener("click",function(){
+  window.location.href='formPagamento.html';
+});

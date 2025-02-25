@@ -37,14 +37,24 @@ function LoadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
+  let select = document.getElementById('type');
+  jsonData.types.forEach(tipo => {
+    const option = document.createElement('option');
+    option.value = tipo;
+    option.textContent = tipo;
+    select.appendChild(option);
+  });
+  document.getElementById('pageTitle').textContent = jsonData.archiveTitle;
   document.getElementById('footerText').textContent = jsonData.footer.text;
 }
 // Funzione per caricare dinamicamente i prodotti
 function caricaProdotti(prodotti) {
   const container = document.getElementById("prodotti-container");
-
+  // Filtra i prodotti
+  let tipo=document.getElementById('type');
+  const prodottiFiltrati = tipo.value === "--" ? prodotti : prodotti.filter(prodotto => prodotto.tipo === tipo);
   // Loop attraverso l'array di prodotti
-  prodotti.forEach(prodotto => {
+  prodottiFiltrati.forEach(prodotto => {
     // Creiamo una card per ogni prodotto
     const card = document.createElement("div");
     // Aggiungi un'immagine di default (se non disponibile nel JSON)
@@ -58,7 +68,6 @@ function caricaProdotti(prodotti) {
           </div>
           <div>
             <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
-            <button class="btn btn-primary">Aggiungi al carrello</button>
           </div>
         </div>
       </div>
@@ -70,3 +79,6 @@ function caricaProdotti(prodotti) {
 
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
+document.getElementById("type").addEventListener("change", function () {
+
+});

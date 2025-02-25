@@ -14,7 +14,7 @@
             "nav-text": "Carrello"
         }
     ],
-    "metodoPagamento": [
+    "paymentmethod": [
         "Visa",
         "Mastercard",
         "PayPal"
@@ -29,7 +29,8 @@
     "personalDetails": "Dettagli personali:",
     "secCode": "Codice di sicurezza (CVV):",
     "expDate": "Data di scadenza (MM/YY):",
-    "transaction": "Metodo di Pagamento",
+    "paymentMethod": "Metodo di pagamento:",
+    "transaction": "Pagamento",
     "footer": {
         "text": "Anescu Armando 5F"
     }
