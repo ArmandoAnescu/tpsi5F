@@ -99,7 +99,7 @@ footer {
     transform: scale(1.05);
 }
 
-#return-arrow {
+.btn {
     background-color: rgba(65, 37, 67, 255);
     color: white;
     padding: auto;

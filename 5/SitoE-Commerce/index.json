@@ -56,6 +56,7 @@
     "emptyCart": "Svuota il carrello",
     "acquista": "Procedi all'acquisto",
     "returnArrow": "<i class='bi bi-arrow-left'></i>",
+    "specsTable":"tabella specifiche",
     "footer": {
         "text": "Anescu Armando 5F"
     }

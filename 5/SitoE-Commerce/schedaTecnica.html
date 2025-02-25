@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="product-title"></title>
+    <title id="product-title">Scheda Tecnica</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -49,23 +49,15 @@
     <br>
     <main class="flex-shrink-0">
         <div class="container-prodotto" id="container-prodotto">
-            <a href="archivio.html" class="btn" id="return-arrow"></a>
+            <a href="" class="btn" id="return-arrow"></a>
             <div class="product-details">
-                <img id="immagine-prodotto" src="" alt="">
                 <div class="product-info" id="product-info">
                     <h1 id="nome-prodotto" class="product-name"></h1>
                     <hr>
-                    <span id="descrizione"></span>
-                    <br>
-                    <h3 id="price" class="price"></h3>
-                    <!--<select id="colore" class="select-colore">-->
-                    <a class="btn" id="tabella_tecnica" href="" ></a>
-                    <div id="colore-container"></div>
-                    <br>
-                    <input type="number" id="quantita" min="1" max="20" value="1">
-                    <br>
-                    <button class="product-btn" id="aggiungi-carrello"></button>
-                    <button class="product-btn" id="compra" onclick="window.location.href='formPagamento.html'"></button>
+                    
+                    <table id="table-prodotto" class="table table-striped table-hover table-dark table-bordered ">
+                    
+                    </table>
                 </div>
             </div>
         </div>
@@ -78,7 +70,7 @@
     </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/scriptProdotto.js"></script>
+    <script src="js/scriptScheda.js"></script>
 </body>
 
 </html>

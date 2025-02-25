@@ -17,13 +17,13 @@ function loadJSON() {
       const prodottoId = new URLSearchParams(window.location.search).get('id'); // Ottieni l'ID del prodotto dalla URL
       const prodotto = dataProdotti.prodotti.find(p => p.id === prodottoId); // Trova il prodotto corrispondente all'ID
       caricaProdotto(prodotto);
-      LoadPage(dataJson);
+      LoadPage(dataJson,prodottoId);
     })
     .catch(error => {
       console.error('Errore:', error);
     });
 }
-function LoadPage(jsonData) {
+function LoadPage(jsonData,id) {
   const icona = document.getElementById('nav-brand');
   icona.innerHTML = jsonData.logo;
   icona.href = 'index.html';
@@ -39,6 +39,8 @@ function LoadPage(jsonData) {
     navbarLinks.appendChild(listItem);
   });
   document.getElementById('return-arrow').innerHTML = jsonData.returnArrow;
+  document.getElementById('tabella_tecnica').href="schedaTecnica.html?id="+id;
+  document.getElementById('tabella_tecnica').textContent=jsonData.specsTable;
   document.getElementById('footerText').textContent = jsonData.footer.text;
 }
 // Funzione per caricare dinamicamente i prodotti
