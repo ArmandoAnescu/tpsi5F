@@ -467,10 +467,10 @@
             "descrizione": "GTA: Liberty City Stories è un gioco di azione e avventura che ti permette di esplorare la città di Liberty City e affrontare missioni da criminale."
         },
         {
-            "nome":"Generazione 4 e 5",
+            "nome":"Bundle: Famiglia Pokemon DS",
             "id":"0040",
             "tipo":"bundle",
-            "immagine":"immagini_prodotti/bundle/gen_4_5_0.jpg",
+            "immagine":"immagini_prodotti/bundle/nintendods_pkmn_family.jpg",
             "prezzo":"80,99",
             "descrizione":"Tutti i giochi della 4a e 5a generazione pokemon: Diamante, Platino, Perla, Bianco, Nero, Bianco 2, Nero 2",
             "include":[

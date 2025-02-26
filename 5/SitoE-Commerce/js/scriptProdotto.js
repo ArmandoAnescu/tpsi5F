@@ -53,7 +53,9 @@ function caricaProdotto(prodotto) {
   const immagineProdotto = document.getElementById('immagine-prodotto');
   immagineProdotto.src = prodotto.immagine;
   immagineProdotto.alt = prodotto.nome;
-
+  if(prodotto.tipo==='bundle'){
+    document.getElementById('quantita').max=1;
+  }
   // Carica il nome del prodotto
   const nomeProdotto = document.getElementById('nome-prodotto');
   nomeProdotto.textContent = prodotto.nome;
@@ -103,12 +105,29 @@ function aggiungiAlCarrello() {
   // Recupera il colore selezionato dall'input select
   let selectColore = document.getElementById('colore');
   let coloreSelezionato = selectColore ? selectColore.value : null;
-  let quantita = document.getElementById('quantita').value;
+  let quantita = parseInt(document.getElementById('quantita').value);
+  let maxQuantita = parseInt(document.getElementById('quantita').max);
   let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
-  // Aggiungi il nuovo prodotto (id + colore)
+  let index = carrello.findIndex(prodotto => prodotto.id === Id);
+  if (index !== -1 &&carrello[index].quantita>=maxQuantita) {
+    window.alert("Svuota il carrello o completa l'acquisto. Il limite di quantità impedisce la rivendita non autorizzata.");
+    return null;
+
+  }else if(index !== -1 &&carrello[index].quantita<maxQuantita){
+    // Se il prodotto esiste e la quantità è inferiore al massimo, aggiungi la quantità
+    let nuovaQuantita = (parseInt(carrello[index].quantita) + parseInt(quantita)).toString();
+    // Limita la quantità massima a 20
+    carrello[index].quantita = (nuovaQuantita > 20) ? "20" : nuovaQuantita;
+    localStorage.setItem("carrello", JSON.stringify(carrello));
+    console.log(carrello[index].quantita +" "+carrello[index].id);
+  }else{
+    // Se il prodotto non esiste nel carrello, lo aggiungo con la quantità desiderata
+    console.log('sei qui');
+    // Aggiungi il nuovo prodotto (id + colore)
   carrello.push({ id: Id, colore: coloreSelezionato, quantita: quantita });
   // Salva di nuovo l'array aggiornato
   localStorage.setItem("carrello", JSON.stringify(carrello));
+  }
   let alert = document.createElement('div');
   alert.innerHTML =
     `
