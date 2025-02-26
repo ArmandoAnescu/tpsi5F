@@ -5,7 +5,11 @@
             "id": "0004",
             "tipo": "console",
             "immagine": "immagini_prodotti/nintendo_ds/nintendods_nero.jpg",
-            "colori": ["nero", "rosso", "blu"],
+            "colori": [
+                "nero",
+                "rosso",
+                "blu"
+            ],
             "prezzo": "149,99",
             "descrizione": "Console portatile classica della Nintendo, con doppio schermo e un ampio catalogo di giochi.",
             "specifiche": {
@@ -21,7 +25,11 @@
             "id": "0001",
             "tipo": "console",
             "immagine": "immagini_prodotti/nintendo_3ds/nintendo3ds_nero.jpg",
-            "colori": ["nero", "rosso", "blu"],
+            "colori": [
+                "nero",
+                "rosso",
+                "blu"
+            ],
             "prezzo": "199,99",
             "descrizione": "Console portatile Nintendo 3DS con schermo 3D senza occhiali e ampio catalogo di giochi.",
             "specifiche": {
@@ -37,7 +45,11 @@
             "id": "0002",
             "tipo": "console",
             "immagine": "immagini_prodotti/new_nintendo_3ds/newnintendo3ds_nero.jpg",
-            "colori": ["nero", "rosso", "blu"],
+            "colori": [
+                "nero",
+                "rosso",
+                "blu"
+            ],
             "prezzo": "249,99",
             "descrizione": "La versione migliorata della console Nintendo 3DS, con maggiore potenza e nuove funzionalità.",
             "specifiche": {
@@ -53,7 +65,9 @@
             "id": "0005",
             "tipo": "console",
             "immagine": "immagini_prodotti/playstation_2/play2_nero.jpg",
-            "colori": ["nero"],
+            "colori": [
+                "nero"
+            ],
             "prezzo": "99,99",
             "descrizione": "Console di gioco Sony, famosa per la sua vasta libreria di titoli e la retrocompatibilità con i giochi PS1.",
             "specifiche": {
@@ -69,7 +83,11 @@
             "id": "0006",
             "tipo": "console",
             "immagine": "immagini_prodotti/gameboy_color/gameboycolor_giallo.jpg",
-            "colori": ["giallo", "blu", "nero"],
+            "colori": [
+                "giallo",
+                "blu",
+                "nero"
+            ],
             "prezzo": "79,99",
             "descrizione": "Console portatile classica Nintendo con schermo a colori, disponibile in vari colori e giochi iconici.",
             "specifiche": {
@@ -85,7 +103,10 @@
             "id": "0007",
             "tipo": "console",
             "immagine": "immagini_prodotti/gameboy_sp/gameboysp_rosso.jpg",
-            "colori": ["rosso", "blu"],
+            "colori": [
+                "rosso",
+                "blu"
+            ],
             "prezzo": "119,99",
             "descrizione": "Una versione compatta del Game Boy, con schermo retroilluminato e design pieghevole.",
             "specifiche": {
@@ -101,7 +122,9 @@
             "id": "0008",
             "tipo": "console",
             "immagine": "immagini_prodotti/playstation_3/play3_nero.jpg",
-            "colori": ["nero"],
+            "colori": [
+                "nero"
+            ],
             "prezzo": "299,99",
             "descrizione": "Console di gioco Sony della generazione PS3, con giochi in HD e supporto per il Blu-ray.",
             "specifiche": {
@@ -112,106 +135,125 @@
                 "Connettività": "Wi-Fi 802.11b/g, Bluetooth 2.0, Ethernet"
             }
         },
-            {
-                "nome": "PlayStation Portable (PSP)",
-                "id": "0038",
-                "tipo": "console",
-                "immagine": "immagini_prodotti/psp/psp_nero.jpg",
-                "colori": ["nero", "argento", "blu"],
-                "prezzo": "129,99",
-                "descrizione": "Console portatile della Sony, con un ampio catalogo di giochi e funzionalità multimediali, perfetta per giocare in movimento.",
-                "specifiche": {
-                    "CPU": "MIPS R4000 a 333 MHz",
-                    "RAM": "32 MB (PSP-1000) / 64 MB (PSP-2000 e PSP-3000)",
-                    "Memoria": "Memory Stick PRO Duo fino a 32 GB",
-                    "Schermo": "LCD TFT da 4,3 pollici (480×272 pixel)",
-                    "Connettività": "Wi-Fi 802.11b, USB 2.0, UMD per giochi e film"
-                }
-            },
-            {
-                "nome": "PlayStation Vita (PS Vita)",
-                "id": "0039",
-                "tipo": "console",
-                "immagine": "immagini_prodotti/psvita/psvita_nero.jpg",
-                "colori": ["nero", "blu", "bianco"],
-                "prezzo": "199,99",
-                "descrizione": "La console portatile di Sony con uno schermo OLED e un'esperienza di gioco avanzata, offrendo giochi di alta qualità e supporto per la connettività online.",
-                "specifiche": {
-                    "CPU": "Quad-core ARM Cortex-A9",
-                    "RAM": "512 MB RAM, 128 MB VRAM",
-                    "Memoria": "Memory Card proprietaria fino a 64 GB",
-                    "Schermo": "OLED da 5 pollici (960×544 pixel) per il modello originale, LCD per il modello Slim",
-                    "Connettività": "Wi-Fi 802.11b/g/n, Bluetooth 2.1, (modello 3G: supporto SIM)"
-                }
-            },
-            {
-                "nome": "Xbox 360",
-                "id": "0009",
-                "tipo": "console",
-                "immagine": "immagini_prodotti/xbox_360/xbox360_bianco.jpg",
-                "colori": ["bianco", "nero"],
-                "prezzo": "249,99",
-                "descrizione": "Console Microsoft con un catalogo ricco di giochi e accessori, e supporto per giochi online tramite Xbox Live.",
-                "specifiche": {
-                    "CPU": "IBM PowerPC Xenon a 3,2 GHz (tri-core)",
-                    "RAM": "512 MB GDDR3",
-                    "Memoria": "Hard disk da 20 GB a 250 GB (modelli successivi)",
-                    "Grafica": "ATI Xenos a 500 MHz con 10 MB di eDRAM",
-                    "Connettività": "Wi-Fi (modelli Slim e E), Ethernet, USB 2.0, supporto per Xbox Live"
-                }
-            },
-            {
-                "nome": "Wii",
-                "id": "0010",
-                "tipo": "console",
-                "immagine": "immagini_prodotti/wii/wii_bianco.jpg",
-                "colori": ["bianco", "nero"],
-                "prezzo": "199,99",
-                "descrizione": "Console innovativa di Nintendo che utilizza il controllo motion-sensing, con giochi come Wii Sports.",
-                "specifiche": {
-                    "CPU": "IBM PowerPC Broadway a 729 MHz",
-                    "RAM": "88 MB (24 MB integrati + 64 MB GDDR3)",
-                    "Memoria": "512 MB NAND flash, espandibile con schede SD",
-                    "Grafica": "ATI Hollywood a 243 MHz con 3 MB di eDRAM",
-                    "Connettività": "Wi-Fi 802.11b/g, Bluetooth, USB 2.0"
-                }
-            },
-            {
-                "nome": "Game Boy Advance",
-                "id": "0011",
-                "tipo": "console",
-                "immagine": "immagini_prodotti/gameboy_advance/gameboyadvance_viola.jpg",
-                "colori": ["viola", "bianco"],
-                "prezzo": "129,99",
-                "descrizione": "Console portatile Nintendo GameBoy Advance, compatibile con una vasta libreria di giochi retro.",
-                "specifiche": {
-                    "CPU": "ARM7TDMI a 16,8 MHz",
-                    "RAM": "32 KB di RAM interna, 96 KB di VRAM",
-                    "Memoria": "Slot per cartucce di gioco",
-                    "Schermo": "LCD TFT da 2,9 pollici",
-                    "Connettività": "Porta seriale per collegamento a cavo link"
-                }
-            },
-            {
-                "nome": "PlayStation 1",
-                "id": "0012",
-                "tipo": "console",
-                "immagine": "immagini_prodotti/playstation_1/play1_grigio.jpg",
-                "colori": ["grigio"],
-                "prezzo": "199,99",
-                "descrizione": "La leggendaria console PlayStation 1 di Sony, che ha dato il via alla rivoluzione dei giochi 3D.",
-                "specifiche": {
-                    "CPU": "MIPS R3000A a 33,87 MHz",
-                    "RAM": "2 MB RAM principale, 1 MB VRAM",
-                    "Memoria": "Memory Card da 128 KB",
-                    "Grafica": "GPU personalizzata a 33 MHz con supporto per risoluzioni fino a 640×480",
-                    "Connettività": "Porte per controller e Memory Card, uscita AV analogica"
-                }
-            },        
+        {
+            "nome": "PlayStation Portable (PSP)",
+            "id": "0038",
+            "tipo": "console",
+            "immagine": "immagini_prodotti/psp/psp_nero.jpg",
+            "colori": [
+                "nero",
+                "argento",
+                "blu"
+            ],
+            "prezzo": "129,99",
+            "descrizione": "Console portatile della Sony, con un ampio catalogo di giochi e funzionalità multimediali, perfetta per giocare in movimento.",
+            "specifiche": {
+                "CPU": "MIPS R4000 a 333 MHz",
+                "RAM": "32 MB (PSP-1000) / 64 MB (PSP-2000 e PSP-3000)",
+                "Memoria": "Memory Stick PRO Duo fino a 32 GB",
+                "Schermo": "LCD TFT da 4,3 pollici (480×272 pixel)",
+                "Connettività": "Wi-Fi 802.11b, USB 2.0, UMD per giochi e film"
+            }
+        },
+        {
+            "nome": "PlayStation Vita (PS Vita)",
+            "id": "0039",
+            "tipo": "console",
+            "immagine": "immagini_prodotti/psvita/psvita_nero.jpg",
+            "colori": [
+                "nero",
+                "blu",
+                "bianco"
+            ],
+            "prezzo": "199,99",
+            "descrizione": "La console portatile di Sony con uno schermo OLED e un'esperienza di gioco avanzata, offrendo giochi di alta qualità e supporto per la connettività online.",
+            "specifiche": {
+                "CPU": "Quad-core ARM Cortex-A9",
+                "RAM": "512 MB RAM, 128 MB VRAM",
+                "Memoria": "Memory Card proprietaria fino a 64 GB",
+                "Schermo": "OLED da 5 pollici (960×544 pixel) per il modello originale, LCD per il modello Slim",
+                "Connettività": "Wi-Fi 802.11b/g/n, Bluetooth 2.1, (modello 3G: supporto SIM)"
+            }
+        },
+        {
+            "nome": "Xbox 360",
+            "id": "0009",
+            "tipo": "console",
+            "immagine": "immagini_prodotti/xbox_360/xbox360_bianco.jpg",
+            "colori": [
+                "bianco",
+                "nero"
+            ],
+            "prezzo": "249,99",
+            "descrizione": "Console Microsoft con un catalogo ricco di giochi e accessori, e supporto per giochi online tramite Xbox Live.",
+            "specifiche": {
+                "CPU": "IBM PowerPC Xenon a 3,2 GHz (tri-core)",
+                "RAM": "512 MB GDDR3",
+                "Memoria": "Hard disk da 20 GB a 250 GB (modelli successivi)",
+                "Grafica": "ATI Xenos a 500 MHz con 10 MB di eDRAM",
+                "Connettività": "Wi-Fi (modelli Slim e E), Ethernet, USB 2.0, supporto per Xbox Live"
+            }
+        },
+        {
+            "nome": "Wii",
+            "id": "0010",
+            "tipo": "console",
+            "immagine": "immagini_prodotti/wii/wii_bianco.jpg",
+            "colori": [
+                "bianco",
+                "nero"
+            ],
+            "prezzo": "199,99",
+            "descrizione": "Console innovativa di Nintendo che utilizza il controllo motion-sensing, con giochi come Wii Sports.",
+            "specifiche": {
+                "CPU": "IBM PowerPC Broadway a 729 MHz",
+                "RAM": "88 MB (24 MB integrati + 64 MB GDDR3)",
+                "Memoria": "512 MB NAND flash, espandibile con schede SD",
+                "Grafica": "ATI Hollywood a 243 MHz con 3 MB di eDRAM",
+                "Connettività": "Wi-Fi 802.11b/g, Bluetooth, USB 2.0"
+            }
+        },
+        {
+            "nome": "Game Boy Advance",
+            "id": "0011",
+            "tipo": "console",
+            "immagine": "immagini_prodotti/gameboy_advance/gameboyadvance_viola.jpg",
+            "colori": [
+                "viola",
+                "bianco"
+            ],
+            "prezzo": "129,99",
+            "descrizione": "Console portatile Nintendo GameBoy Advance, compatibile con una vasta libreria di giochi retro.",
+            "specifiche": {
+                "CPU": "ARM7TDMI a 16,8 MHz",
+                "RAM": "32 KB di RAM interna, 96 KB di VRAM",
+                "Memoria": "Slot per cartucce di gioco",
+                "Schermo": "LCD TFT da 2,9 pollici",
+                "Connettività": "Porta seriale per collegamento a cavo link"
+            }
+        },
+        {
+            "nome": "PlayStation 1",
+            "id": "0012",
+            "tipo": "console",
+            "immagine": "immagini_prodotti/playstation_1/play1_grigio.jpg",
+            "colori": [
+                "grigio"
+            ],
+            "prezzo": "199,99",
+            "descrizione": "La leggendaria console PlayStation 1 di Sony, che ha dato il via alla rivoluzione dei giochi 3D.",
+            "specifiche": {
+                "CPU": "MIPS R3000A a 33,87 MHz",
+                "RAM": "2 MB RAM principale, 1 MB VRAM",
+                "Memoria": "Memory Card da 128 KB",
+                "Grafica": "GPU personalizzata a 33 MHz con supporto per risoluzioni fino a 640×480",
+                "Connettività": "Porte per controller e Memory Card, uscita AV analogica"
+            }
+        },
         {
             "nome": "Pokémon Bianco",
             "id": "0013",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_white_0.jpg",
             "prezzo": "39,99",
             "descrizione": "Pokémon Bianco, uno dei titoli della quinta generazione di giochi Pokémon, con una nuova regione e nuovi Pokémon."
@@ -219,7 +261,7 @@
         {
             "nome": "Pokémon Nero",
             "id": "0014",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_black_0.jpg",
             "prezzo": "39,99",
             "descrizione": "Pokémon Nero, gioco della quinta generazione che presenta una regione rinnovata e nuovi Pokémon da catturare."
@@ -227,7 +269,7 @@
         {
             "nome": "Pokémon Bianco 2",
             "id": "0015",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_white2_0.jpg",
             "prezzo": "49,99",
             "descrizione": "Pokémon Bianco 2, un sequel diretto di Pokémon Bianco, con nuove storie e sfide da affrontare."
@@ -235,7 +277,7 @@
         {
             "nome": "Pokémon Nero 2",
             "id": "0016",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_black2_0.jpg",
             "prezzo": "49,99",
             "descrizione": "Pokémon Nero 2, sequel di Pokémon Nero, con nuove dinamiche e Pokémon da scoprire."
@@ -243,7 +285,7 @@
         {
             "nome": "Pokémon HeartGold",
             "id": "0017",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_heartgold_0.jpg",
             "prezzo": "44,99",
             "descrizione": "Pokémon HeartGold, remake della versione originale Pokémon Oro, con nuove funzionalità e Pokémon da catturare."
@@ -251,7 +293,7 @@
         {
             "nome": "Pokémon SoulSilver",
             "id": "0018",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_soulsilver_0.jpg",
             "prezzo": "44,99",
             "descrizione": "Pokémon SoulSilver, remake di Pokémon Argento con nuove caratteristiche e avventure da vivere."
@@ -259,7 +301,7 @@
         {
             "nome": "Pokémon X",
             "id": "0019",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_X_0.jpg",
             "prezzo": "59,99",
             "descrizione": "Pokémon X, il gioco della sesta generazione di Pokémon, che introduce nuove meccaniche di gioco e una nuova regione."
@@ -267,7 +309,7 @@
         {
             "nome": "Pokémon Y",
             "id": "0020",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_Y_0.jpg",
             "prezzo": "59,99",
             "descrizione": "Pokémon Y, versione complementare di Pokémon X, con nuovi Pokémon e nuove sfide."
@@ -275,7 +317,7 @@
         {
             "nome": "Pokémon Diamante",
             "id": "0021",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_diamond_0.jpg",
             "prezzo": "49,99",
             "descrizione": "Pokémon Diamante, gioco della quarta generazione con una nuova regione e nuove meccaniche di gioco."
@@ -283,7 +325,7 @@
         {
             "nome": "Pokémon Perla",
             "id": "0022",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_pearl_0.jpg",
             "prezzo": "49,99",
             "descrizione": "Pokémon Perla, versione complementare di Pokémon Diamante, con nuove avventure e Pokémon da catturare."
@@ -291,7 +333,7 @@
         {
             "nome": "Pokémon Platino",
             "id": "0023",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_platinum_0.jpg",
             "prezzo": "59,99",
             "descrizione": "Pokémon Platino, la versione definitiva della quarta generazione con contenuti extra e una storia arricchita."
@@ -299,7 +341,7 @@
         {
             "nome": "Pokémon Rubino Omega",
             "id": "0024",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_omegaruby_0.jpg",
             "prezzo": "49,99",
             "descrizione": "Pokémon Rubino Omega, remake di Pokémon Rubino con nuove funzionalità e Pokémon da scoprire."
@@ -307,7 +349,7 @@
         {
             "nome": "Pokémon Zaffiro Alfa",
             "id": "0025",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_alphasapphire_0.jpg",
             "prezzo": "49,99",
             "descrizione": "Pokémon Zaffiro Alfa, remake di Pokémon Zaffiro, con nuove dinamiche di gioco e contenuti extra."
@@ -315,7 +357,7 @@
         {
             "nome": "Pokémon Sole",
             "id": "0026",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_sun_0.jpg",
             "prezzo": "59,99",
             "descrizione": "Pokémon Sole, gioco della settima generazione che introduce una nuova regione tropicale e nuovi Pokémon."
@@ -323,7 +365,7 @@
         {
             "nome": "Pokémon Luna",
             "id": "0027",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_moon_0.jpg",
             "prezzo": "59,99",
             "descrizione": "Pokémon Luna, la versione complementare di Pokémon Sole, con nuovi elementi e avventure."
@@ -331,7 +373,7 @@
         {
             "nome": "Pokémon Smeraldo",
             "id": "0026",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_emerald_0.jpg",
             "prezzo": "39,99",
             "descrizione": "Pokémon Smeraldo, il capitolo leggendario della terza generazione con sfide e lotte indimenticabili."
@@ -339,7 +381,7 @@
         {
             "nome": "Pokémon Rubino",
             "id": "0027",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_ruby_0.jpg",
             "prezzo": "39,99",
             "descrizione": "Pokémon Rubino, il classico titolo della terza generazione per il controllo dei Pokémon leggendari."
@@ -347,7 +389,7 @@
         {
             "nome": "Pokémon Zaffiro",
             "id": "0028",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_sapphire_0.jpg",
             "prezzo": "39,99",
             "descrizione": "Pokémon Zaffiro, il gioco che ti porta a scoprire il mondo di Hoenn e la sua fauna unica."
@@ -355,7 +397,7 @@
         {
             "nome": "Pokémon Rosso Fuoco",
             "id": "0029",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_firered_0.jpg",
             "prezzo": "34,99",
             "descrizione": "Pokémon Rosso Fuoco, il remake di Pokémon Rosso con nuovi Pokémon, nuove sfide e grafica aggiornata."
@@ -363,7 +405,7 @@
         {
             "nome": "Pokémon Verde Foglia",
             "id": "0030",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/pkmn_leafgreen_0.jpg",
             "prezzo": "34,99",
             "descrizione": "Pokémon Verde Foglia, il remake di Pokémon Verde con nuove sfide e avventure nell'area di Kanto."
@@ -371,7 +413,7 @@
         {
             "nome": "Final Fantasy VII",
             "id": "0031",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/ff7_0.jpg",
             "prezzo": "19,99",
             "descrizione": "Final Fantasy VII è un leggendario gioco di ruolo che segue le avventure di Cloud Strife, impegnato a salvare il mondo da una minaccia catastrofica."
@@ -379,7 +421,7 @@
         {
             "nome": "Grand Theft Auto: San Andreas",
             "id": "0032",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/gtasa_0.jpg",
             "prezzo": "34,99",
             "descrizione": "Grand Theft Auto: San Andreas è un open world dove esplori la città di San Andreas, affrontando missioni e interagendo con un vasto ambiente."
@@ -387,7 +429,7 @@
         {
             "nome": "The Last of Us",
             "id": "0033",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/tlou_0.jpg",
             "prezzo": "29,99",
             "descrizione": "The Last of Us è un gioco d'azione e sopravvivenza che segue Joel e Ellie in un mondo post-apocalittico, dove la lotta per la sopravvivenza è al centro della trama."
@@ -395,7 +437,7 @@
         {
             "nome": "Halo 3",
             "id": "0035",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/halo_3_0.jpg",
             "prezzo": "24,99",
             "descrizione": "Halo 3 è un gioco sparatutto in prima persona che conclude la trilogia originale di Master Chief, con battaglie spaziali e terrestri epiche."
@@ -403,7 +445,7 @@
         {
             "nome": "The Legend of Zelda: Link's Awakening DX",
             "id": "0036",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/zelda_lw_dx_0.jpg",
             "prezzo": "24,99",
             "descrizione": "Un'avventura che vede Link esplorare un'isola misteriosa, risolvendo enigmi e battendo nemici per risvegliare la Triforza e salvare l'isola."
@@ -411,7 +453,7 @@
         {
             "nome": "The Legend of Zelda: Twilight Princess",
             "id": "0034",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/zelda_tp_0.jpg",
             "prezzo": "39,99",
             "descrizione": "Un'avventura epica in cui Link esplora terre oscure e misteriose per salvare il regno di Hyrule da una minaccia sovrannaturale."
@@ -419,7 +461,7 @@
         {
             "nome": "Grand Theft Auto: Liberty City Stories",
             "id": "0037",
-            "tipo":"video game",
+            "tipo": "video game",
             "immagine": "immagini_prodotti/games/gta_lcs_0.jpg",
             "prezzo": "19,99",
             "descrizione": "GTA: Liberty City Stories è un gioco di azione e avventura che ti permette di esplorare la città di Liberty City e affrontare missioni da criminale."

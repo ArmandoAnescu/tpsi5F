@@ -38,12 +38,12 @@ function loadJSON() {
       listItem.appendChild(link);
       navbarLinks.appendChild(listItem);
     });
-    document.getElementById('return-arrow').href="paginaProdotto.html?id="+id;
     document.getElementById('return-arrow').innerHTML = jsonData.returnArrow;
     document.getElementById('footerText').textContent = jsonData.footer.text;
   }
   // Funzione per caricare dinamicamente i prodotti
   function caricaProdotto(prodotto) {
+    document.getElementById('return-arrow').href="paginaProdotto.html?id="+prodotto.id+"&tipo="+prodotto.tipo;
     // Carica il nome del prodotto
     const nomeProdotto = document.getElementById('nome-prodotto');
     nomeProdotto.textContent = prodotto.nome;

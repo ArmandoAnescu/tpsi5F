@@ -39,7 +39,17 @@ footer {
     box-sizing: border-box;
     /* Per includere il padding nelle dimensioni totali */
 }
-
+#products{
+    width: auto;
+    max-height: 650px;
+    /* Imposta un'altezza massima del 15% */
+    background-color: rgb(233, 221, 221);
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    /* Mostra la barra di scorrimento verticale se il contenuto è troppo lungo */
+    box-sizing: border-box;
+}
 .alert-secondary {
     background-color: gainsboro;
     border: none;
@@ -89,6 +99,13 @@ footer {
     align-self: center;
 }
 
+.container.pagamento{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
 #logo {
     width: 100px;
     height: 100px;
@@ -99,7 +116,7 @@ footer {
     transform: scale(1.05);
 }
 
-.btn {
+#return-arrow {
     background-color: rgba(65, 37, 67, 255);
     color: white;
     padding: auto;

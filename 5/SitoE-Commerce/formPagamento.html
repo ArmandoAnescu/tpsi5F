@@ -48,7 +48,7 @@
     </header>
     <br>
     <main class="flex-shrink-0">
-        <div class="container" id="container-prodotto">
+        <div class="container pagamento" id="container-prodotto">
             <form action="loadingPage.html" method="POST">
                 <h2 id="transaction"></h2>
 
@@ -102,12 +102,23 @@
                 <label for="phone-number" id="phoneNumber"></label>
                 <input type="tel" id="phone-number" placeholder="+39 123 456789"
                     pattern="(\+39\s?)?([0-9]{3})[ -]?[0-9]{6,7}" required>
+                <br>
+                
                 <br><br>
 
                 <!-- Pulsante di invio -->
                 <button class="btn btn-primary" type="submit" id="submit"></button>
             </form>
+            <div id="products">
+                <ul id="product-list">
 
+                </ul>
+                <p id="price"></p>
+                <label for="discount" id="discountLabel"></label>
+                <input type="text" name="discount" id="discount" placeholder="CODICESCONTO">
+                <br><br>
+                <button id="apply-discount" class="btn btn-primary"></button>
+            </div>
         </div>
     </main>
     <!--Foooter-->

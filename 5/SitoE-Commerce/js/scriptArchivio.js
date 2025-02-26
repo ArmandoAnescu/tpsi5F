@@ -67,7 +67,7 @@ function caricaProdotti(prodotti) {
           <p class="card-text price">€${prodotto.prezzo}</p>
           </div>
           <div>
-            <a href="paginaProdotto.html?id=${prodotto.id}" class="btn btn-primary">Vedi prodotto</a>
+            <a href="paginaProdotto.html?id=${prodotto.id}&tipo=${prodotto.tipo}" class="btn btn-primary">Vedi prodotto</a>
           </div>
         </div>
       </div>

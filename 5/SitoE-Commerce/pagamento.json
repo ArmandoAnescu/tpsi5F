@@ -31,6 +31,8 @@
     "expDate": "Data di scadenza (MM/YY):",
     "paymentMethod": "Metodo di pagamento:",
     "transaction": "Pagamento",
+    "discountText":"Codice sconto",
+    "applyDiscount":"Usa codice sconto",
     "footer": {
         "text": "Anescu Armando 5F"
     }

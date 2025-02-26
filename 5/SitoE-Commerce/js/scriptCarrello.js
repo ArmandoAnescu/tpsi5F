@@ -21,7 +21,7 @@ function loadJSON() {
       console.error('Errore:', error);
     });
 }
-
+let totale = 0;
 function LoadPage(jsonData) {
   const icona = document.getElementById('nav-brand');
   icona.innerHTML = jsonData.logo;
@@ -47,7 +47,6 @@ function caricaProdotti(prodotti) {
   const container = document.getElementById("cart-container");
   let carrello = JSON.parse(localStorage.getItem("carrello"));
   if (carrello) {
-    let totale = 0;
     carrello.forEach((carrelloProdotto) => {
       prodotti.forEach(prodotto => {
         if (carrelloProdotto.id === prodotto.id) {
@@ -117,5 +116,5 @@ document.getElementById("empty-cart").addEventListener("click", function () {
   svuotaCarrello();
 });
 document.getElementById("acquista").addEventListener("click",function(){
-  window.location.href='formPagamento.html';
+  window.location.href='formPagamento.html?prezzo='+totale;
 });
