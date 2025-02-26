@@ -35,5 +35,19 @@
     "applyDiscount":"Usa codice sconto",
     "footer": {
         "text": "Anescu Armando 5F"
-    }
+    },
+    "discountCodes":[
+        {
+            "code":"ARMANDO",
+            "discount":"15"
+        },
+        {
+            "code":"ICHIGOAT",
+            "discount":"45"
+        },
+        {
+            "code":"Jugemu Jugemu Goko no Surikire Kaijarisuigyo no Suigyomatsu Unraimatsu Furaimatsu Ku Neru Tokoro ni Sumu Tokoro Yabura Koji no Bura Koji Paipo-paipo Paipo no Shuringan Shuringan no Gurindai Gurindai no Ponpokopi no Ponpokona no Chokyumei no Chosuke Jugemu Jugemu Goko no Surikire Kaijarisuigyo no Suigyomatsu Unraimatsu Furaimatsu Ku Neru Tokoro ni Sumu Tokoro Yabura Koji no Bura Koji Paipo-paipo Paipo no Shuringan Shuringan no Gurindai Gurindai no Ponpokopi no Ponpokona no Chokyumei no Chosuke",
+            "discount":"95"
+        }
+    ]
 }

@@ -101,6 +101,7 @@ footer {
 
 .container.pagamento{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px;
@@ -302,5 +303,8 @@ select:focus {
     select {
         width: 80%;
         /* Rende i selettori più larghi su schermi piccoli */
+    }
+    .container.pagamento{
+        padding: 20px;
     }
 }
