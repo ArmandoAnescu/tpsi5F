@@ -124,7 +124,7 @@ function aggiungiAlCarrello() {
     // Se il prodotto non esiste nel carrello, lo aggiungo con la quantità desiderata
     console.log('sei qui');
     // Aggiungi il nuovo prodotto (id + colore)
-  carrello.push({ id: Id, colore: coloreSelezionato, quantita: quantita });
+  carrello.push({ id: Id, colore: coloreSelezionato, quantita: quantita.toString()});
   // Salva di nuovo l'array aggiornato
   localStorage.setItem("carrello", JSON.stringify(carrello));
   }
