@@ -21,19 +21,19 @@
         "accordion-item-1": [
             {
                 "question": "Cosa posso trovare?",
-                "definition": "come suggerisce il nome e la nostra intro, noi siamo un sito e-commerce dove potete trovare giochi e console retro di ogni tipo!"
+                "definition": "Come suggerisce il nome e la nostra intro, noi siamo un sito e-commerce dove potete trovare giochi e console retro di ogni tipo!"
             }
         ],
         "accordion-item-2": [
             {
                 "question": "Siete affidabili?",
-                "definition": "Certo! Il nostro obbiettivo è far rivivire i propri ricordi d'infanzia ma anche offrire un servizio di alta qualità. I nostri tecnici testano le console per essere certi del loro funzionamento e garantire un'esperienza perfetta."
+                "definition": "Certo! Il nostro obbiettivo è far rivivire i propri ricordi d'infanzia e offrire nuove esperienze ai più giovani ma anche offrire un servizio di alta qualità. I nostri tecnici testano le console per essere certi del loro funzionamento e garantire un'esperienza di gioco perfetta."
             }
         ],
         "accordion-item-3": [
             {
-                "question": "Che faccio se ho problemi o non sono soddisfatto?",
-                "definition": "Noi offriamo 40 in cui puoi essere rimborsato se il tuo prodotto non ti soddisfa, per problemi tecnici offriamo una garanzia di un anno dall'acquisto, con una spesa aggiuntiva si può fare una garanzia di 5 anni. Con la garanzia puoi scegliere se sostituire il gioco oppure ricevere un rimborso"
+                "question": "Che faccio se ho dei problemi o non sono soddisfatto?",
+                "definition": "Noi offriamo 40 giorni in cui puoi essere rimborsato se il tuo prodotto non ti soddisfa, per problemi tecnici offriamo una garanzia di un anno dall'acquisto, con una spesa aggiuntiva si può rinnovare o estendere la garanzia fino a 5 anni. Con la garanzia puoi scegliere se sostituire il gioco o la console con un altra insieme a un codice sconto speciale per il tuo prossimo acquisto"
             }
         ],
         "accordion-item-4": [
@@ -52,7 +52,7 @@
     "archiveTitle":"Prodotti",
     "cartTitle": "Carrello",
     "subTitle": "Il nostro obbiettivo",
-    "subText": "L'obbiettivo di noi di PixelHaven è di rendere accessibile a tutti i le vecchie console e videogiochi, noi ci occupiamo di trovare,ripristinare,imballare e inviare a te il nsotro prodotto. Noi ci assicuriamo della cura dei nostri prodotti così che tu e tutte le altre persone interessate possiate divertirvi senza preoccupazioni. Cerchiamo anche di rendere i nostri pezzi non solo competitvi ma anche accessibili a tutti, perchè il gaming è un privilegio di tutti.",
+    "subText": "L'obbiettivo di noi di PixelHaven è di rendere accessibile a tutti,le vecchie console e videogiochi, noi ci occupiamo di trovare,ripristinare,imballare e inviare a te il prodotto. Noi ci assicuriamo della cura dei prodotti così che, tu e tutte le altre persone interessate possiate divertirvi senza preoccupazioni. Cerchiamo anche di rendere i nostri pezzi non solo competitvi ma anche accessibili a tutti, perchè il gaming è un privilegio di tutti.",
     "emptyCart": "Svuota il carrello",
     "acquista": "Procedi all'acquisto",
     "returnArrow": "<i class='bi bi-arrow-left'></i>",
