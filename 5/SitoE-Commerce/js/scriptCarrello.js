@@ -46,7 +46,7 @@ function LoadPage(jsonData) {
 function caricaProdotti(prodotti) {
   const container = document.getElementById("cart-container");
   let carrello = JSON.parse(localStorage.getItem("carrello"));
-  if (carrello) {
+  if (carrello && carrello.length>0) {
     carrello.forEach((carrelloProdotto) => {
       prodotti.forEach(prodotto => {
         if (carrelloProdotto.id === prodotto.id) {

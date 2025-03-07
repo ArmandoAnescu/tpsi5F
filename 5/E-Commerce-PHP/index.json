@@ -2,21 +2,21 @@
     "logo": "<img src='PixelHaven_Logo_Transparent.png' id='logo'>",
     "navbar": [
         {
-            "nav-link": "index.html",
+            "nav-link": "index.php",
             "nav-text": "Home"
         },
         {
-            "nav-link": "archivio.html",
+            "nav-link": "archivio.php",
             "nav-text": "Archivio"
         },
         {
-            "nav-link": "carrello.html",
+            "nav-link": "carrello.php",
             "nav-text": "Carrello"
         }
     ],
-    "title": "PixelHaven",
-    "pageTitle": "PixelHaven",
-    "introText": "Benvenuti a PixelHaven!! Il paradiso per gli appassionati del retro gaming. Qui troverete una vasta gamma di giochi e console retro. Dalla famiglia Nintendo a quella della Sony e microsoft.",
+    "title": "PixalHaven",
+    "pageTitle": "PixalHaven",
+    "introText": "Benvenuti a PixalHaven!! Il paradiso per gli appasionati del retro gaming. Qui troverete una vasta gamma di giochi e console retro. Dalla famiglia Nintendo a quella della Sony e microsoft.",
     "accordion_items": {
         "accordion-item-1": [
             {
