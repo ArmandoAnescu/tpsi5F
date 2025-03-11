@@ -25,7 +25,6 @@ let totale = 0;
 function LoadPage(jsonData) {
   const icona = document.getElementById('nav-brand');
   icona.innerHTML = jsonData.logo;
-  icona.href = 'index.html';
   const navbarLinks = document.getElementById('navbarLinks');
   jsonData.navbar.forEach(item => {//foreach dove creo gli elementi della navbar
     const listItem = document.createElement('li');

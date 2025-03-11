@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];  // Inizializza il carrello se non esiste
+}
+?>
 <!DOCTYPE html>
 <html lang="it" class="h-100">
 
@@ -37,7 +43,7 @@
         <!-- Fixed navbar -->
         <nav class="navbar navbar-expand-md navbar-dark fixed-top ">
             <div class="container-fluid">
-                <a class="navbar-brand" href="" id="nav-brand"></a>
+                <a class="navbar-brand" href="index.php" id="nav-brand"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,6 +51,27 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav me-auto mb-2 mb-md-0" id="navbarLinks">
                         <!-- I collegamenti della navbar saranno riempiti dinamicamente -->
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <?php if (isset($_SESSION['user_id'])): ?>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
+                                    Il Mio Account
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="account.php">Profilo</a></li>
+                                    <li><a class="dropdown-item text-danger" href="logout.php">Logout</a></li>
+                                </ul>
+                            </li>
+                        <?php else: ?>
+                            <li class="nav-item">
+                                <a class="nav-link" href="login.php">Login</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="register.php">Registrati</a>
+                            </li>
+                        <?php endif; ?>
+
                     </ul>
                 </div>
             </div>

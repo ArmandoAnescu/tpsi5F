@@ -101,33 +101,23 @@ function caricaProdotto(prodotto) {
 function aggiungiAlCarrello() {
   // Recupera l'ID del prodotto dalla query string
   let Id = new URLSearchParams(window.location.search).get('id');
-
   // Recupera il colore selezionato dall'input select
   let selectColore = document.getElementById('colore');
   let coloreSelezionato = selectColore ? selectColore.value : null;
   let quantita = parseInt(document.getElementById('quantita').value);
   let maxQuantita = parseInt(document.getElementById('quantita').max);
-  let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
-  let index = carrello.findIndex(prodotto => prodotto.id === Id);
-  if (index !== -1 &&carrello[index].quantita>=maxQuantita) {
-    window.alert("Svuota il carrello o completa l'acquisto. Il limite di quantità impedisce la rivendita non autorizzata.");
-    return null;
-
-  }else if(index !== -1 &&carrello[index].quantita<maxQuantita){
-    // Se il prodotto esiste e la quantità è inferiore al massimo, aggiungi la quantità
-    let nuovaQuantita = (parseInt(carrello[index].quantita) + parseInt(quantita)).toString();
-    // Limita la quantità massima a 20
-    carrello[index].quantita = (nuovaQuantita > 20) ? "20" : nuovaQuantita;
-    localStorage.setItem("carrello", JSON.stringify(carrello));
-    console.log(carrello[index].quantita +" "+carrello[index].id);
-  }else{
-    // Se il prodotto non esiste nel carrello, lo aggiungo con la quantità desiderata
-    console.log('sei qui');
-    // Aggiungi il nuovo prodotto (id + colore)
-  carrello.push({ id: Id, colore: coloreSelezionato, quantita: quantita.toString()});
-  // Salva di nuovo l'array aggiornato
-  localStorage.setItem("carrello", JSON.stringify(carrello));
+  if (quantita > maxQuantita) {
+    alert("La quantità selezionata non è disponibile");
+    return;
   }
+  
+  fetch("add_to_cart.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `id=${Id}&colore=${coloreSelezionato}&quantita=${quantita}&maxQuantita=${maxQuantita}`
+})
+.then(response => response.text())
+.then(data => {
   let alert = document.createElement('div');
   alert.innerHTML =
     `
@@ -135,36 +125,19 @@ function aggiungiAlCarrello() {
     Prodotto aggiunto al carrello!
   </div>`;
   document.getElementById('container-prodotto').appendChild(alert);
+  // Rimuove il messaggio dopo 3 secondi
+    setTimeout(() => alert.remove(), 3000);
+});
 }
 
 function cambiaImmagine() {
-  fetch('prodotti.json').then(response => {
-    if (!response.ok) {
-      throw new Error('Errore nel caricamento di prodotti.php');
-    }
-    return response.json();
-  }).then(prodotti => {
+ 
     let colore = document.getElementById('colore').value;
-    const prodottoId = new URLSearchParams(window.location.search).get('id'); // Ottieni l'ID del prodotto dalla URL
-    const prodotto = prodotti.prodotti.find(p => p.id === prodottoId); // Trova il prodotto corrispondente all'ID
-    let percorso = prodotto.immagine;
-    //console.log(colore);
-    // Trova l'ultimo nome del file nel percorso
-    let nomeFile = percorso.split('/').pop();
-
-    // Sostituisci il colore nell'ultimo nome del file
-    nomeFile = nomeFile.replace(/_.*\.jpg$/, `_${colore}.jpg`);
-    // Riassembla il percorso con il nuovo nome del file
-    percorso = percorso.replace(/[^/]+$/, nomeFile);
-    // console.log(percorso); 
-    document.getElementById('immagine-prodotto').src = percorso;
-  }).catch(error => {
-    console.error(error);
-  });
+    document.getElementById('immagine-prodotto').src = colore;
 }
 
 // Carica i prodotti quando la pagina è pronta
-document.addEventListener("DOMContentLoaded", loadJSON);
+//document.addEventListener("DOMContentLoaded", loadJSON);
 document.getElementById('aggiungi-carrello').addEventListener('click', function () {
   aggiungiAlCarrello();
 });

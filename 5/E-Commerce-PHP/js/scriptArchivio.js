@@ -1,21 +1,14 @@
 function loadJSON() {
-  Promise.all([
-    fetch('index.json').then(response => {
+  fetch('index.json') // URL del file JSON
+    .then(response => {
       if (!response.ok) {
-        throw new Error('Errore nel caricamento di index.json');
+        throw new Error('Errore nel caricamento del file JSON');//dico che c'è stato un errore
       }
-      return response.json();
-    }),
-    fetch('prodotti.json').then(response => {
-      if (!response.ok) {
-        throw new Error('Errore nel caricamento di prodotti.php');
-      }
-      return response.json();
+      return response.json(); // Restituisce i dati come oggetto JavaScript
     })
-  ])
-    .then(([dataJson, dataProdotti]) => {
-      LoadPage(dataJson);
-      caricaProdotti(dataProdotti.prodotti);
+    .then(data => {
+      // Usa i dati caricati (data è l'oggetto JSON)
+      LoadPage(data);
     })
     .catch(error => {
       console.error('Errore:', error);
@@ -25,7 +18,6 @@ function loadJSON() {
 function LoadPage(jsonData) {
   const icona = document.getElementById('nav-brand');
   icona.innerHTML = jsonData.logo;
-  icona.href = 'index.html';
   const navbarLinks = document.getElementById('navbarLinks');
   jsonData.navbar.forEach(item => {//foreach dove creo gli elementi della navbar
     const listItem = document.createElement('li');
