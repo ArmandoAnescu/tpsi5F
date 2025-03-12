@@ -11,8 +11,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"])) {
 
     // Se il prodotto è già nel carrello, aggiorna la quantità
     if (isset($_SESSION["cart"][$id])) {
-        $nuovaQunatita = 0;
-        $nuovaQunatita = ($_SESSION["cart"][$id]['quantita'] + $quantita) > $maxQuantita ? $maxQuantita : $_SESSION["cart"][$id]['quantita'] + $quantita;
+        $nuovaQuantita = 0;
+        $nuovaQuantita = ($_SESSION["cart"][$id]['quantita'] + $quantita) > $maxQuantita ? $maxQuantita : $_SESSION["cart"][$id]['quantita'] + $quantita;
         $_SESSION["cart"][$id]["quantita"] += $nuovaQuantita;
     } else {
         $_SESSION["cart"][$id] = [
