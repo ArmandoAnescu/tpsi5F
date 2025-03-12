@@ -39,7 +39,8 @@ footer {
     box-sizing: border-box;
     /* Per includere il padding nelle dimensioni totali */
 }
-#products{
+
+#products {
     width: auto;
     max-height: 650px;
     /* Imposta un'altezza massima del 15% */
@@ -50,6 +51,7 @@ footer {
     /* Mostra la barra di scorrimento verticale se il contenuto è troppo lungo */
     box-sizing: border-box;
 }
+
 .alert-secondary {
     background-color: gainsboro;
     border: none;
@@ -93,13 +95,14 @@ footer {
 .container {
     margin-top: 150px;
 }
-.container.loadin{
+
+.container.loadin {
     display: flex;
     align-items: center;
     align-self: center;
 }
 
-.container.pagamento{
+.container.pagamento {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -115,6 +118,20 @@ footer {
 /* Aggiungiamo un effetto hover per le cards */
 .card:hover {
     transform: scale(1.05);
+}
+
+.login,
+.register {
+    background-color: rgba(65, 37, 67, 255);
+    width: 25%;
+    color: white;
+    padding: auto;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 25%;
 }
 
 #return-arrow {
@@ -304,7 +321,8 @@ select:focus {
         width: 80%;
         /* Rende i selettori più larghi su schermi piccoli */
     }
-    .container.pagamento{
+
+    .container.pagamento {
         padding: 20px;
     }
 }

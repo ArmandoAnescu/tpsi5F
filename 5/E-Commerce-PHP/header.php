@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start(); // Avvia la sessione solo se non è già attiva
+}
 if (!isset($_SESSION['cart'])) {
     $_SESSION['cart'] = [];  // Inizializza il carrello se non esiste
 }
@@ -53,10 +55,10 @@ if (!isset($_SESSION['cart'])) {
                         <!-- I collegamenti della navbar saranno riempiti dinamicamente -->
                     </ul>
                     <ul class="navbar-nav ms-auto">
-                        <?php if (isset($_SESSION['user_id'])): ?>
+                        <?php if (isset($_SESSION['id'])): ?>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
-                                    Il Mio Account
+                                    <?= $_SESSION['username'] ?>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="account.php">Profilo</a></li>

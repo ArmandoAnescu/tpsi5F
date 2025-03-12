@@ -27,7 +27,7 @@ $immagini = OttieniImmaginiProdotto($id);
                     </select>
                 </div>
                 <br>
-                <input type="number" id="quantita" min="1" max="20" value="1">
+                <input type="number" id="quantita" min="1" max="<?= $prodotto['quantita'] ?>" value="1">
                 <br>
                 <button class="product-btn" id="aggiungi-carrello">Aggiungi carello</button>
                 <button class="product-btn" id="compra" onclick="window.location.href=''"></button>
