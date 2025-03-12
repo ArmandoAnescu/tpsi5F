@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"])) {
     $id = $_POST['id'];
     $quantita = isset($_POST['quantita']) ? (int)$_POST['quantita'] : 1;
     $colore = isset($_POST['colore']) ? $_POST['colore'] : "N/A";
+    $maxQuantita = isset($_POST['maxQuantita']) ? $_POST['maxQuantita'] : "20";
     if (!isset($_SESSION["cart"])) {
         $_SESSION["cart"] = [];
     }
@@ -13,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"])) {
     if (isset($_SESSION["cart"][$id])) {
         $nuovaQuantita = 0;
         $nuovaQuantita = ($_SESSION["cart"][$id]['quantita'] + $quantita) > $maxQuantita ? $maxQuantita : $_SESSION["cart"][$id]['quantita'] + $quantita;
-        $_SESSION["cart"][$id]["quantita"] += $nuovaQuantita;
+        echo "Quantità aggiornata a $nuovaQuantita.";
+        $_SESSION["cart"][$id]["quantita"] = $nuovaQuantita;
     } else {
         $_SESSION["cart"][$id] = [
             'id' => $id,
