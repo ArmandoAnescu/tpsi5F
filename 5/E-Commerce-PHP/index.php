@@ -14,9 +14,7 @@ include 'header.php';
         <div class="accordion" id="accordionExample">
 
         </div>
-
     </div>
-    <?= var_dump($_SESSION) ?>
 </main>
 <?php
 include 'footer.php';
