@@ -1,20 +1,21 @@
 function loadJSON() {
-  fetch('index.json') // URL del file JSON
+  fetch('get_content.php') // URL del file JSON
     .then(response => {
       if (!response.ok) {
-        throw new Error('Errore nel caricamento del file JSON');//dico che c'è stato un errore
+        throw new Error('Errore nel caricamento dei contenuti');//dico che c'è stato un errore
       }
       return response.json(); // Restituisce i dati come oggetto JavaScript
     })
     .then(data => {
+      //console.log(data);  // Verifica la struttura del JSON
       // Usa i dati caricati (data è l'oggetto JSON)
-      loadPage(data);
+      LoadPage(data);
     })
     .catch(error => {
       console.error('Errore:', error);
     });
 }
-function loadPage(jsonData) {
+function LoadPage(jsonData) {
   const icona = document.getElementById('nav-brand');
   icona.innerHTML = jsonData.logo;
   icona.href = 'index.php';

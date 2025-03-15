@@ -1,21 +1,15 @@
 function loadJSON() {
-  Promise.all([
-    fetch('index.json').then(response => {
+  fetch('get_content.php') // URL del file JSON
+    .then(response => {
       if (!response.ok) {
-        throw new Error('Errore nel caricamento di index.json');
+        throw new Error('Errore nel caricamento dei contenuti');//dico che c'è stato un errore
       }
-      return response.json();
-    }),
-    fetch('prodotti.json').then(response => {
-      if (!response.ok) {
-        throw new Error('Errore nel caricamento di prodotti.php');
-      }
-      return response.json();
+      return response.json(); // Restituisce i dati come oggetto JavaScript
     })
-  ])
-    .then(([dataJson, dataProdotti]) => {
-      LoadPage(dataJson);
-      caricaProdotti(dataProdotti.prodotti);
+    .then(data => {
+      //console.log(data);  // Verifica la struttura del JSON
+      // Usa i dati caricati (data è l'oggetto JSON)
+      LoadPage(data);
     })
     .catch(error => {
       console.error('Errore:', error);
@@ -114,6 +108,6 @@ document.addEventListener("DOMContentLoaded", loadJSON);
 document.getElementById("empty-cart").addEventListener("click", function () {
   svuotaCarrello();
 });
-document.getElementById("acquista").addEventListener("click",function(){
-  window.location.href='formPagamento.html?prezzo='+totale;
+document.getElementById("acquista").addEventListener("click", function () {
+  window.location.href = 'formPagamento.html?prezzo=' + totale;
 });

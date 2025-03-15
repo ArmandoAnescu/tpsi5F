@@ -1,20 +1,21 @@
 function loadJSON() {
-    fetch('pagamento.json') // URL del file JSON
+    fetch('get_content.php') // URL del file JSON
         .then(response => {
             if (!response.ok) {
-                throw new Error('Errore nel caricamento del file JSON');//dico che c'è stato un errore
+                throw new Error('Errore nel caricamento dei contenuti');//dico che c'è stato un errore
             }
             return response.json(); // Restituisce i dati come oggetto JavaScript
         })
         .then(data => {
+            //console.log(data);  // Verifica la struttura del JSON
             // Usa i dati caricati (data è l'oggetto JSON)
-            loadPage(data);
+            LoadPage(data);
         })
         .catch(error => {
             console.error('Errore:', error);
         });
 }
-function giveCodiciSconto(){
+function giveCodiciSconto() {
     return fetch('pagamento.json') // URL del file JSON
         .then(response => {
             if (!response.ok) {
@@ -47,7 +48,7 @@ function giveProdotti() {
         });
 }
 
-function loadPage(jsonData) {
+function LoadPage(jsonData) {
     const icona = document.getElementById('nav-brand');
     icona.innerHTML = jsonData.logo;
     icona.href = 'index.html';
@@ -83,7 +84,7 @@ function loadPage(jsonData) {
     document.getElementById('price').innerHTML = `totale: <span class="price">€${new URLSearchParams(window.location.search).get('prezzo')}</span>`;
     let lista = document.getElementById('product-list');
     let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
-    prodotti = giveProdotti().then(prodotti=>{
+    prodotti = giveProdotti().then(prodotti => {
         carrello.forEach((carrelloProdotto) => {
             prodotti.forEach(prodotto => {
                 if (carrelloProdotto.id === prodotto.id) {
@@ -95,21 +96,21 @@ function loadPage(jsonData) {
         }
         );
     });
-    document.getElementById('apply-discount').textContent=jsonData.applyDiscount;    
+    document.getElementById('apply-discount').textContent = jsonData.applyDiscount;
     document.getElementById('footerText').textContent = jsonData.footer.text;
 }
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
-document.getElementById("apply-discount").addEventListener('click',function(){
-    let codiceInserito=document.getElementById('discount').value;
-    giveCodiciSconto().then(codici=>{
-        codiceValido=codici.find(codice=>codice.code === codiceInserito);
-        if(codiceValido){
-            let prezzo=new URLSearchParams(window.location.search).get('prezzo');
-            let sconto=prezzo - (prezzo*codiceValido.discount / 100);
+document.getElementById("apply-discount").addEventListener('click', function () {
+    let codiceInserito = document.getElementById('discount').value;
+    giveCodiciSconto().then(codici => {
+        codiceValido = codici.find(codice => codice.code === codiceInserito);
+        if (codiceValido) {
+            let prezzo = new URLSearchParams(window.location.search).get('prezzo');
+            let sconto = prezzo - (prezzo * codiceValido.discount / 100);
             sconto = parseFloat(sconto.toFixed(2));
             document.getElementById('price').innerHTML = `totale: <span class="price">€${sconto}</span>`;
-        }else{
+        } else {
             window.alert('Codice sconto NON valido!');
         }
     });

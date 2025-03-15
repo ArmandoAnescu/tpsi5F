@@ -16,7 +16,7 @@ function OttieniProdotti(): ?array
         (SELECT i.percorso 
          FROM immagini i 
          WHERE i.prodotto = p.id 
-         LIMIT 1) AS immagine FROM prodotti p;";
+         LIMIT 1) AS immagine FROM prodotti p";
     try {
         $stm = $db->prepare($query);
         $stm->execute();
@@ -32,7 +32,7 @@ function OttieniProdotti(): ?array
 function OttieniProdotto($id)
 {
     global $db;
-    $query = "SELECT p.id, p.nome, p.prezzo, p.descrizione,p.quantita 
+    $query = "SELECT p.id, p.nome, p.prezzo, p.descrizione,p.quantita, 
     (SELECT i.percorso 
      FROM immagini i 
      WHERE i.prodotto = p.id 

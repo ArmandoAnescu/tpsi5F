@@ -1,12 +1,13 @@
 function loadJSON() {
-  fetch('index.json') // URL del file JSON
+  fetch('get_content.php') // URL del file JSON
     .then(response => {
       if (!response.ok) {
-        throw new Error('Errore nel caricamento del file JSON');//dico che c'è stato un errore
+        throw new Error('Errore nel caricamento dei contenuti');//dico che c'è stato un errore
       }
       return response.json(); // Restituisce i dati come oggetto JavaScript
     })
     .then(data => {
+      //console.log(data);  // Verifica la struttura del JSON
       // Usa i dati caricati (data è l'oggetto JSON)
       LoadPage(data);
     })
@@ -43,7 +44,7 @@ function LoadPage(jsonData) {
 function caricaProdotti(prodotti) {
   const container = document.getElementById("prodotti-container");
   // Filtra i prodotti
-  let tipo=document.getElementById('type');
+  let tipo = document.getElementById('type');
   const prodottiFiltrati = tipo.value === "--" ? prodotti : prodotti.filter(prodotto => prodotto.tipo === tipo);
   // Loop attraverso l'array di prodotti
   prodottiFiltrati.forEach(prodotto => {
