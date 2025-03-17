@@ -10,7 +10,6 @@
 <script src="js/bootstrap.bundle.min.js"></script>
 <?php
 $current_page = basename($_SERVER['PHP_SELF']); // Ottiene solo il nome del file
-
 switch ($current_page) {
     case "index.php": ?>
         <script src="js/script.js"></script>
@@ -23,6 +22,7 @@ switch ($current_page) {
     case "carrello.php": ?>
         <script src="js/scriptCarrello.js"></script>
     <?php
+        break;
     case "archivio.php": ?>
         <script src="js/scriptArchivio.js"></script>
 <?php
