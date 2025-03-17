@@ -2,6 +2,12 @@
 require 'header.php';
 require 'connection.php';
 $prodotti = OttieniProdotti();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start(); // Avvia la sessione solo se non è già attiva
+}
+if (!isset($_SESSION['cart'])) {
+    $_SESSION['cart'] = [];  // Inizializza il carrello se non esiste
+}
 ?>
 <!-- Begin page content -->
 <main class="flex-shrink-0">

@@ -13,7 +13,7 @@ $prodotti = OttieniProdotti();
                 <div class="row">
                     <!--Prodotti caricati dinamicamente-->
                     <?php
-                    if ($prodotti) {
+                    if ($carrello) {
                         foreach ($carrello as $item) {
                             foreach ($prodotti as $prodotto) {
                                 if ($item['id'] == $prodotto['id']) { ?>
@@ -39,7 +39,7 @@ $prodotti = OttieniProdotti();
                             }
                         }
                     } else { ?>
-                        <p class="cart-warning"></p>
+                        <p class="cart-warning">Il tuo carrello è vuoto</p>
                     <?php } ?>
                 </div>
             </div>

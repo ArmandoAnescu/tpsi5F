@@ -19,18 +19,21 @@ $immagini = OttieniImmaginiProdotto($id);
                 <!--<select id="colore" class="select-colore">-->
                 <a class="btn" id="tabella_tecnica" href=""></a>
                 <div id="colore-container">
-                    <select name="colori" class="select-colore" id="colore">
-                        <?php foreach ($immagini as $immagine) { ?>
-                            <option value="<?= $immagine['percorso'] ?>"><?= $immagine['colore'] ?></option>
-                        <?php }
-                        ?>
-                    </select>
+                    <?php if (!in_array(null, $immagini, true)) { ?>
+                        <select name="colori" class="select-colore" id="colore">
+                            <?php foreach ($immagini as $immagine) { ?>
+                                <option value="<?= $immagine['percorso'] ?>"><?= $immagine['colore'] ?></option>
+                            <?php }
+                            ?>
+                        </select>
+                    <?php }
+                    ?>
                 </div>
                 <br>
                 <input type="number" id="quantita" min="1" max="<?= $prodotto['quantita'] ?>" value="1">
                 <br>
-                <button class="product-btn" id="aggiungi-carrello">Aggiungi carello</button>
-                <button class="product-btn" id="compra" onclick="window.location.href=''"></button>
+                <button class="product-btn" id="addToCart"></button>
+                <button class="product-btn" id="buyNow" onclick="window.location.href='pagamento.php?id=<?= $prodotto['id'] ?>'"></button>
             </div>
         </div>
     </div>

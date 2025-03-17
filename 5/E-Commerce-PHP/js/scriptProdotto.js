@@ -31,6 +31,8 @@ function LoadPage(jsonData) {
     navbarLinks.appendChild(listItem);
   });
   document.getElementById('return-arrow').innerHTML = jsonData.returnArrow;
+  document.getElementById('addToCart').textContent = jsonData.addToCart;
+  document.getElementById('buyNow').textContent = jsonData.buyNow;
   document.getElementById('footerText').textContent = jsonData.footer.text;
 }
 function aggiungiAlCarrello() {
@@ -73,7 +75,7 @@ function cambiaImmagine() {
 
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
-document.getElementById('aggiungi-carrello').addEventListener('click', function () {
+document.getElementById('addToCart').addEventListener('click', function () {
   aggiungiAlCarrello();
 });
 // Delegazione dell'evento per il click sugli elementi che sono le opzioni di colore

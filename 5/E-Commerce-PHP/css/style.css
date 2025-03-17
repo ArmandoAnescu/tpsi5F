@@ -4,6 +4,11 @@ footer {
     height: auto;
 }
 
+form {
+    align-items: center;
+    align-self: center;
+}
+
 .product-name h1 {
     text-align: center;
     margin-top: 20px;
@@ -131,7 +136,7 @@ footer {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 25%;
+    width: 50%;
 }
 
 #return-arrow {
@@ -184,7 +189,7 @@ body {
 .container-prodotto {
     max-width: 1200px;
     /* Limita la larghezza */
-    margin: 120px auto;
+    margin: 150px auto;
     /* Centra il contenuto */
     padding: 20px;
     background-color: #fff;
@@ -248,9 +253,6 @@ body {
     color: #777;
     margin-bottom: 15px;
 }
-
-/* Prezzo del prodotto */
-
 
 /* Pulsanti */
 .product-btn {

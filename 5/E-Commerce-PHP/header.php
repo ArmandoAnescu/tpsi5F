@@ -1,9 +1,9 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start(); // Avvia la sessione solo se non è già attiva
-}
-if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = [];  // Inizializza il carrello se non esiste
+session_start();
+if (isset($_SESSION['id'])) {
+    if (!isset($_SESSION['cart'])) {
+        $_SESSION['cart'] = [];  // Inizializza il carrello se non esiste
+    }
 }
 ?>
 <!DOCTYPE html>

@@ -11,21 +11,20 @@
 <?php
 $current_page = basename($_SERVER['PHP_SELF']); // Ottiene solo il nome del file
 switch ($current_page) {
-    case "index.php": ?>
-        <script src="js/script.js"></script>
-    <?php
+    case "index.php":
+        echo '<script src="js/script.js"></script>';
         break;
-    case "prodotto.php": ?>
-        <script src="js/scriptProdotto.js"></script>
-    <?php
+    case "prodotto.php":
+        echo '<script src="js/scriptProdotto.js"></script>';
         break;
-    case "carrello.php": ?>
-        <script src="js/scriptCarrello.js"></script>
-    <?php
+    case "carrello.php":
+        echo '<script src="js/scriptCarrello.js"></script>';
         break;
-    case "archivio.php": ?>
-        <script src="js/scriptArchivio.js"></script>
-<?php
+    case "archivio.php":
+        echo '<script src="js/scriptArchivio.js"></script>';
+        break;
+    default: // Default case per tutte le altre pagine
+        echo '<script src="js/script.js"></script>';
         break;
 }
 

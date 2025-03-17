@@ -2,15 +2,12 @@
 require 'connection.php';
 switch ($_REQUEST['action']) {
     case 'login':
+        session_start(); // Assicurati che la sessione sia attiva
         $email = $_POST['email'];
         $password = $_POST['password'];
-
         $user = Login($email, $password);
 
         if ($user) {
-            if (session_status() === PHP_SESSION_NONE) {
-                session_start(); // Avvia la sessione solo se non è già attiva
-            }
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
