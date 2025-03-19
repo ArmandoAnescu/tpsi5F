@@ -28,8 +28,10 @@ $prodotti = OttieniProdotti();
                                                         <h5 class="card-title"><?= $prodotto['nome'] ?></h5>
                                                         <p class="card-text price">€<?= $prodotto['prezzo'] ?></p>
                                                         <p class="card-text">quantità: <?= $item['quantita'] ?></p>
-                                                        <a href="prodotto.php?id=<?= $prodotto['id'] ?>" class="btn btn-primary">Vedi prodotto</a>
-                                                        <a id="remove-item" class="btn btn-danger" style="margin-left: 10px;">Rimuovi prodotto</a>
+                                                        <div class="btn-group">
+                                                            <a href="prodotto.php?id=<?= $prodotto['id'] ?>" class="btn btn-primary">Vedi prodotto</a>
+                                                            <a id="remove-item" class="btn btn-danger">Rimuovi prodotto</a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
