@@ -16,7 +16,7 @@
 body {
     background-color: var(--primary-dark);
     color: var(--text-color);
-    font-family: 'Rajdhani', 'Arial', sans-serif;
+    font-family: 'Press Start 2P', 'Arial', sans-serif;
     background-image: linear-gradient(to bottom right, var(--primary-dark), var(--primary-color));
     background-attachment: fixed;
     position: relative;
@@ -171,7 +171,7 @@ body::before {
 }
 
 .card-title {
-    font-family: 'Chakra Petch', 'Arial', sans-serif;
+    font-family: 'Press Start 2P', 'Chakra Petch', 'Arial', sans-serif;
     font-weight: 600;
     color: var(--text-color);
     margin-bottom: 0.75rem;
@@ -179,7 +179,7 @@ body::before {
 }
 
 .card-text.price {
-    font-family: 'Orbitron', 'Arial', sans-serif;
+    font-family: 'Press Start 2P', 'Orbitron', 'Arial', sans-serif;
     color: var(--neon-color);
     font-size: 1.3rem;
     font-weight: 700;
@@ -191,7 +191,7 @@ body::before {
     background-color: var(--accent-color);
     border-color: var(--neon-color);
     color: var(--text-color);
-    font-family: 'Chakra Petch', 'Arial', sans-serif;
+    font-family: 'Press Start 2P', 'Chakra Petch', 'Arial', sans-serif;
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
@@ -251,8 +251,12 @@ footer::before {
 }
 
 /* Titoli pagina */
-h1, h2, h3, h4, h5 {
-    font-family: 'Orbitron', 'Arial', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Press Start 2P', 'Orbitron', 'Arial', sans-serif;
     margin-bottom: 1.5rem;
     position: relative;
     display: inline-block;
@@ -284,7 +288,7 @@ select#type {
     border: 1px solid var(--card-border);
     padding: 0.5rem 1rem;
     margin-bottom: 2rem;
-    font-family: 'Chakra Petch', 'Arial', sans-serif;
+    font-family: 'Press Start 2P', 'Chakra Petch', 'Arial', sans-serif;
     appearance: none;
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='rgb(210, 70, 250)' viewBox='0 0 16 16'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>");
     background-repeat: no-repeat;
@@ -298,9 +302,11 @@ select#type {
     0% {
         opacity: 0.6;
     }
+
     50% {
         opacity: 1;
     }
+
     100% {
         opacity: 0.6;
     }
@@ -358,7 +364,7 @@ form {
     text-align: center;
     margin-top: 20px;
     color: var(--text-color);
-    font-family: 'Orbitron', 'Arial', sans-serif;
+    font-family: 'Press Start 2P', 'Orbitron', 'Arial', sans-serif;
 }
 
 /* Container per le cards */
@@ -429,7 +435,7 @@ form {
     transition: background-color 0.3s;
     margin-right: 10px;
     margin-top: 20px;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Press Start 2P', 'Chakra Petch', sans-serif;
 }
 
 /* Card specifics */
@@ -569,7 +575,7 @@ input[type="password"]:focus {
     color: var(--text-color);
     padding: 10px;
     margin: 0 0 10px 0;
-    font-family: 'Orbitron', sans-serif;
+    font-family: 'Press Start 2P', 'Orbitron', sans-serif;
     text-shadow: 0 0 5px var(--accent-color);
 }
 
@@ -577,7 +583,7 @@ input[type="password"]:focus {
     font-size: 1.1rem;
     color: var(--dark-text);
     margin-bottom: 15px;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Press Start 2P', 'Rajdhani', sans-serif;
 }
 
 .product-btn {
@@ -591,7 +597,7 @@ input[type="password"]:focus {
     transition: all 0.3s ease;
     margin-right: 10px;
     margin-top: 20px;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Press Start 2P', 'Chakra Petch', sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -606,7 +612,7 @@ label {
     font-weight: bold;
     margin-top: 15px;
     color: var(--text-color);
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Press Start 2P', 'Chakra Petch', sans-serif;
 }
 
 select {
@@ -635,7 +641,7 @@ input[type="number"] {
     padding: 10px;
     width: 25%;
     margin-top: 15px;
-    font-family: 'Chakra Petch', sans-serif;
+    font-family: 'Press Start 2P', 'Chakra Petch', sans-serif;
     transition: all 0.3s ease;
 }
 
@@ -661,7 +667,7 @@ input[type="number"]::-webkit-outer-spin-button {
     background-color: crimson;
     border-color: #ff6b81;
     color: var(--text-color);
-    font-family: 'Chakra Petch', 'Arial', sans-serif;
+    font-family: 'Press Start 2P', 'Chakra Petch', 'Arial', sans-serif;
     font-weight: 600;
     padding: 0.5rem 1.5rem;
     position: relative;
@@ -715,6 +721,7 @@ input[type="number"]::-webkit-outer-spin-button {
         width: 100%;
     }
 }
+
 /* Stile per allineare i bottoni del carrello uno accanto all'altro */
 .card-body {
     display: flex;
@@ -745,9 +752,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .press-start-2p-regular {
-  font-family: "Press Start 2P", system-ui;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
