@@ -14,44 +14,49 @@ $prodotti = OttieniProdotti();
                     <!--Prodotti caricati dinamicamente-->
                     <?php
                     if ($carrello) {
-                        foreach ($carrello as $item) {
-                            foreach ($prodotti as $prodotto) {
-                                if ($item['id'] == $prodotto['id']) { ?>
-                                    <div>
-                                        <div class="card mb-3" style="max-width: 800px;">
-                                            <div class="row g-0">
-                                                <div class="col-md-4">
-                                                    <img src="<?= $prodotto['immagine'] ?>" class="img-fluid rounded-start" alt="<?= $prodotto['nome'] ?>">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title"><?= $prodotto['nome'] ?></h5>
-                                                        <p class="card-text price">€<?= $prodotto['prezzo'] ?></p>
-                                                        <p class="card-text">quantità: <?= $item['quantita'] ?></p>
-                                                        <div class="btn-group">
-                                                            <a href="prodotto.php?id=<?= $prodotto['id'] ?>" id="seeProduct" class="btn btn-primary"></a>
-                                                            <a id="remove-item" href="action_page.php?action=remove&id=<?= $prodotto['id'] ?>" class="btn"></a>
-                                                        </div>
-                                                    </div>
+                        foreach ($carrello as $item) { ?>
+                            <div>
+                                <div class="card mb-3" style="max-width: 800px;">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="<?= $item['immagine'] ?>" class="img-fluid rounded-start" alt="<?= $item['nome'] ?>">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><?= $item['nome'] ?></h5>
+                                                <p class="card-text price">€<?= $item['prezzo'] ?></p>
+                                                <p class="card-text">quantità: <?= $item['quantita'] ?></p>
+                                                <div class="btn-group">
+                                                    <a href="prodotto.php?id=<?= $item['id'] ?>" id="seeProduct" class="btn btn-primary">Vedi Prodotto</a>
+                                                    <a id="remove-item" href="action_page.php?action=remove&id=<?= $item['id'] ?>" class="btn">Rimuovi dal Carrello</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
                         <?php }
-                            }
-                        }
                     } else { ?>
-                        <p class="cart-warning">Il tuo carrello è vuoto</p>
+                        <p id="cart-warning" class="cart-warning"></p>
                     <?php } ?>
                 </div>
             </div>
         </div>
-        <p id="price"></p>
-        <button id="empty-cart" class="empty"></button>
+        <p id="price">
+            <?php
+            $somma = 0;
+            foreach ($carrello as $item) {
+                $somma += (float)$item['prezzo'] * (int)$item['quantita'];
+            }
+            echo "Totale: €" . number_format($somma, 2);
+            ?>
+        </p>
+        <button id="empty-cart" class="empty" onclick="window.location.href='action_page.php?action=empty'"></button>
         <button id="acquista" class="transaction"></button>
     </div>
     <br>
 </main>
 <?php
+//var_dump($_SESSION['cart']);
 include 'footer.php';
 ?>

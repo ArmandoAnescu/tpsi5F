@@ -30,12 +30,13 @@ function LoadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
-  document.getElementById("remove-item").textContent = jsonData.removeItem;
-  document.getElementById("seeProduct").textContent = jsonData.seeProduct;
   document.getElementById('cartTitle').textContent = jsonData.cartTitle;
   document.getElementById('empty-cart').textContent = jsonData.emptyCart;
   document.getElementById('acquista').textContent = jsonData.acquista;
   document.getElementById('footerText').textContent = jsonData.footer.text;
+  document.getElementById("remove-item").textContent = jsonData.removeItem;
+  document.getElementById("seeProduct").textContent = jsonData.seeProduct;
+  document.getElementById("cart-warning").textContent = jsonData.cartWarning;
 }
 
 

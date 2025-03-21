@@ -201,7 +201,7 @@ VALUES
 ('buyNow','Compra Ora');
 
 INSERT INTO ecommerce.configurazione_sito (chiave, valore)
-values ('removeItem','Rimuovi dal carrello'),('seeProduct','Vedi prodotto');
+values ('removeItem','Rimuovi dal carrello'),('seeProduct','Vedi prodotto'),('cartWarning','Il tuo carrello è vuoto');
 
 
 

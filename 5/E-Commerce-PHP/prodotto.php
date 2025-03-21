@@ -26,7 +26,11 @@ $immagini = OttieniImmaginiProdotto($id);
                             <?php }
                             ?>
                         </select>
-                    <?php }
+                    <?php } else {
+                    ?>
+                        <input type="hidden" id="immagine" value="<?= $prodotto['immagine'] ?>">
+                    <?php
+                    }
                     ?>
                 </div>
                 <br>

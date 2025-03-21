@@ -38,20 +38,38 @@ function LoadPage(jsonData) {
 function aggiungiAlCarrello() {
   // Recupera l'ID del prodotto dalla query string
   let Id = new URLSearchParams(window.location.search).get('id');
-  // Recupera il colore selezionato dall'input select
+  let nomeProdotto = document.getElementById('nome-prodotto').textContent;
+  let percorsoImmagine;
+  let nomeColore;
+
+  // Recupera l'elemento select per il colore
   let selectColore = document.getElementById('colore');
-  let coloreSelezionato = selectColore ? selectColore.value : null;
+  if (selectColore) {
+    // Recupera il percorso dell'immagine (value) e il nome del colore (testo dell'option)
+    percorsoImmagine = selectColore ? selectColore.value : null;
+    nomeColore = selectColore ? selectColore.options[selectColore.selectedIndex].text : null;
+  } else {
+    percorsoImmagine = document.getElementById('immagine').value;
+    nomeColore = null;
+  }
+  // Recupera il prezzo del prodotto
+  let prezzo = document.getElementById('price').textContent;
+
+  // Recupera la quantità selezionata
   let quantita = parseInt(document.getElementById('quantita').value);
   let maxQuantita = parseInt(document.getElementById('quantita').max);
+
+  // Verifica che la quantità selezionata non superi la quantità massima disponibile
   if (quantita > maxQuantita) {
     alert("La quantità selezionata non è disponibile");
     return;
   }
 
+  // Invia i dati al server tramite fetch
   fetch("add_to_cart.php", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: `id=${Id}&colore=${coloreSelezionato}&quantita=${quantita}&maxQuantita=${maxQuantita}`
+    body: `nome=${nomeProdotto}&id=${Id}&colore=${nomeColore}&immagine=${percorsoImmagine}&quantita=${quantita}&maxQuantita=${maxQuantita}&prezzo=${prezzo}`
   })
     .then(response => response.text())
     .then(data => {
@@ -66,6 +84,7 @@ function aggiungiAlCarrello() {
       setTimeout(() => alert.remove(), 3000);
     });
 }
+
 
 function cambiaImmagine() {
 
