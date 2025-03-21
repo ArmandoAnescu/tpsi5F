@@ -12,6 +12,127 @@
     --success-color: #28a745;
 }
 
+/* Stile accordion personalizzato */
+#accordionExample.accordion {
+    margin-bottom: 2rem !important;
+    border: 1px solid var(--card-border) !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+    background-color: var(--card-bg) !important;
+}
+
+#accordionExample .accordion-item {
+    background-color: var(--card-bg) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--card-border) !important;
+    position: relative !important;
+}
+
+#accordionExample .accordion-item:last-child {
+    border-bottom: none !important;
+}
+
+#accordionExample .accordion-header {
+    margin: 0 !important;
+}
+
+#accordionExample .accordion-button {
+    font-family: 'Press Start 2P', 'Chakra Petch', 'Arial', sans-serif !important;
+    background-color: var(--primary-color) !important;
+    color: var(--text-color) !important;
+    padding: 1rem 1.25rem !important;
+    font-size: 1rem !important;
+    position: relative !important;
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+#accordionExample .accordion-button:not(.collapsed) {
+    background-color: var(--primary-light) !important;
+    color: var(--neon-color) !important;
+    box-shadow: 0 0 10px rgba(210, 70, 250, 0.2) inset !important;
+}
+
+#accordionExample .accordion-button:focus {
+    box-shadow: 0 0 0 2px var(--neon-color) !important;
+    border-color: var(--neon-color) !important;
+    z-index: 3 !important;
+}
+
+#accordionExample .accordion-button::after {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgb(210, 70, 250)' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+    transition: transform 0.3s ease !important;
+}
+
+#accordionExample .accordion-button:not(.collapsed)::after {
+    transform: rotate(-180deg) !important;
+}
+
+#accordionExample .accordion-button:hover {
+    background-color: var(--primary-light) !important;
+    color: var(--neon-color) !important;
+    text-shadow: 0 0 3px var(--neon-color) !important;
+}
+
+#accordionExample .accordion-button::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    height: 100% !important;
+    width: 3px !important;
+    background-color: var(--neon-color) !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+#accordionExample .accordion-button:not(.collapsed)::before {
+    opacity: 1 !important;
+}
+
+#accordionExample .accordion-body {
+    background-color: var(--primary-dark) !important;
+    color: var(--dark-text) !important;
+    padding: 1.25rem !important;
+    font-family: 'Press Start 2P', 'Rajdhani', sans-serif !important;
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    border-top: 1px solid var(--card-border) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+#accordionExample .accordion-body::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 1px !important;
+    background: linear-gradient(90deg, transparent, var(--neon-color), transparent) !important;
+    opacity: 0.4 !important;
+}
+
+/* Effetto neon per gli elementi attivi */
+#accordionExample .accordion-button:not(.collapsed)::after {
+    filter: drop-shadow(0 0 3px var(--neon-color)) !important;
+}
+
+/* Animazione fade-in per il contenuto dell'accordion */
+#accordionExample .accordion-collapse {
+    transition: all 0.4s ease !important;
+}
+
+#accordionExample .accordion-collapse.collapsing {
+    opacity: 0 !important;
+}
+
+#accordionExample .accordion-collapse.show {
+    opacity: 1 !important;
+}
+
 /* Stile generale */
 body {
     background-color: var(--primary-dark);
@@ -67,7 +188,6 @@ body::before {
 }
 
 .navbar-brand::before {
-    content: "P I X E L   H A V E N";
     position: absolute;
     top: 0;
     left: 0;
@@ -259,7 +379,6 @@ h5 {
     font-family: 'Press Start 2P', 'Orbitron', 'Arial', sans-serif;
     margin-bottom: 1.5rem;
     position: relative;
-    display: inline-block;
 }
 
 h1#pageTitle {
@@ -440,7 +559,7 @@ form {
 
 /* Card specifics */
 .card.vert {
-    width: 30%;
+    width: 60%;
     min-width: 250px;
     margin: 10px;
 }
@@ -805,4 +924,124 @@ input[type="number"]::-webkit-outer-spin-button {
         width: 100%;
     }
 
+    /* Stile accordion personalizzato */
+    #accordionExample.accordion {
+        margin-bottom: 2rem !important;
+        border: 1px solid var(--card-border) !important;
+        border-radius: 8px !important;
+        overflow: hidden !important;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3) !important;
+        background-color: var(--card-bg) !important;
+    }
+
+    #accordionExample .accordion-item {
+        background-color: var(--card-bg) !important;
+        border: none !important;
+        border-bottom: 1px solid var(--card-border) !important;
+        position: relative !important;
+    }
+
+    #accordionExample .accordion-item:last-child {
+        border-bottom: none !important;
+    }
+
+    #accordionExample .accordion-header {
+        margin: 0 !important;
+    }
+
+    #accordionExample .accordion-button {
+        font-family: 'Press Start 2P', 'Chakra Petch', 'Arial', sans-serif !important;
+        background-color: var(--primary-color) !important;
+        color: var(--text-color) !important;
+        padding: 1rem 1.25rem !important;
+        font-size: 1rem !important;
+        position: relative !important;
+        transition: all 0.3s ease !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    #accordionExample .accordion-button:not(.collapsed) {
+        background-color: var(--primary-light) !important;
+        color: var(--neon-color) !important;
+        box-shadow: 0 0 10px rgba(210, 70, 250, 0.2) inset !important;
+    }
+
+    #accordionExample .accordion-button:focus {
+        box-shadow: 0 0 0 2px var(--neon-color) !important;
+        border-color: var(--neon-color) !important;
+        z-index: 3 !important;
+    }
+
+    #accordionExample .accordion-button::after {
+        background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='rgb(210, 70, 250)' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+        transition: transform 0.3s ease !important;
+    }
+
+    #accordionExample .accordion-button:not(.collapsed)::after {
+        transform: rotate(-180deg) !important;
+    }
+
+    #accordionExample .accordion-button:hover {
+        background-color: var(--primary-light) !important;
+        color: var(--neon-color) !important;
+        text-shadow: 0 0 3px var(--neon-color) !important;
+    }
+
+    #accordionExample .accordion-button::before {
+        content: '' !important;
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        height: 100% !important;
+        width: 3px !important;
+        background-color: var(--neon-color) !important;
+        opacity: 0 !important;
+        transition: opacity 0.3s ease !important;
+    }
+
+    #accordionExample .accordion-button:not(.collapsed)::before {
+        opacity: 1 !important;
+    }
+
+    #accordionExample .accordion-body {
+        background-color: var(--primary-dark) !important;
+        color: var(--dark-text) !important;
+        padding: 1.25rem !important;
+        font-family: 'Press Start 2P', 'Rajdhani', sans-serif !important;
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        border-top: 1px solid var(--card-border) !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    #accordionExample .accordion-body::before {
+        content: '' !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        height: 1px !important;
+        background: linear-gradient(90deg, transparent, var(--neon-color), transparent) !important;
+        opacity: 0.4 !important;
+    }
+
+    /* Effetto neon per gli elementi attivi */
+    #accordionExample .accordion-button:not(.collapsed)::after {
+        filter: drop-shadow(0 0 3px var(--neon-color)) !important;
+    }
+
+    /* Animazione fade-in per il contenuto dell'accordion */
+    #accordionExample .accordion-collapse {
+        transition: all 0.4s ease !important;
+    }
+
+    #accordionExample .accordion-collapse.collapsing {
+        opacity: 0 !important;
+    }
+
+    #accordionExample .accordion-collapse.show {
+        opacity: 1 !important;
+    }
 }

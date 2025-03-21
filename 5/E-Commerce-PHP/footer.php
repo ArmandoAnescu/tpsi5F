@@ -1,7 +1,7 @@
 <?php
 ?>
 <!--Foooter-->
-<footer class="footer mt-auto py-3 bg-light">
+<footer class="footer mt-auto py-3 bg-dark">
     <div class="container mt-auto">
         <span class="text-muted" id="footerText"></span>
     </div>

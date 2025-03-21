@@ -18,7 +18,7 @@ $prodotti = OttieniProdotti();
                             foreach ($prodotti as $prodotto) {
                                 if ($item['id'] == $prodotto['id']) { ?>
                                     <div>
-                                        <div class="card mb-3" style="max-width: 540px;">
+                                        <div class="card mb-3" style="max-width: 800px;">
                                             <div class="row g-0">
                                                 <div class="col-md-4">
                                                     <img src="<?= $prodotto['immagine'] ?>" class="img-fluid rounded-start" alt="<?= $prodotto['nome'] ?>">
@@ -29,8 +29,8 @@ $prodotti = OttieniProdotti();
                                                         <p class="card-text price">€<?= $prodotto['prezzo'] ?></p>
                                                         <p class="card-text">quantità: <?= $item['quantita'] ?></p>
                                                         <div class="btn-group">
-                                                            <a href="prodotto.php?id=<?= $prodotto['id'] ?>" class="btn btn-primary">Vedi prodotto</a>
-                                                            <a id="remove-item" class="btn btn-danger">Rimuovi prodotto</a>
+                                                            <a href="prodotto.php?id=<?= $prodotto['id'] ?>" id="seeProduct" class="btn btn-primary"></a>
+                                                            <a id="remove-item" href="action_page.php?action=remove&id=<?= $prodotto['id'] ?>" class="btn"></a>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -50,6 +50,7 @@ $prodotti = OttieniProdotti();
         <button id="empty-cart" class="empty"></button>
         <button id="acquista" class="transaction"></button>
     </div>
+    <br>
 </main>
 <?php
 include 'footer.php';

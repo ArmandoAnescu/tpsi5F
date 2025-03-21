@@ -200,6 +200,9 @@ VALUES
 ('addToCart','Aggiungi al Carrello'),
 ('buyNow','Compra Ora');
 
+INSERT INTO ecommerce.configurazione_sito (chiave, valore)
+values ('removeItem','Rimuovi dal carrello'),('seeProduct','Vedi prodotto');
+
 
 
 

@@ -30,26 +30,15 @@ function LoadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
+  document.getElementById("remove-item").textContent = jsonData.removeItem;
+  document.getElementById("seeProduct").textContent = jsonData.seeProduct;
   document.getElementById('cartTitle').textContent = jsonData.cartTitle;
   document.getElementById('empty-cart').textContent = jsonData.emptyCart;
   document.getElementById('acquista').textContent = jsonData.acquista;
   document.getElementById('footerText').textContent = jsonData.footer.text;
 }
-function rimuoviDalCarrello(productId) {
-  let carrello = JSON.parse(localStorage.getItem("carrello")) || [];
-  let index = carrello.findIndex(prodotto => prodotto.id === productId);
-  if (index !== -1) {
-    carrello.splice(index, 1);
-    // Salva di nuovo l'array aggiornato
-    localStorage.setItem("carrello", JSON.stringify(carrello));
-    window.location.reload();
-  }
 
-}
-function svuotaCarrello() {
-  localStorage.clear();
-  window.location.reload();
-}
+
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
 document.getElementById("empty-cart").addEventListener("click", function () {

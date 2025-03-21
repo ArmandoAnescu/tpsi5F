@@ -12,9 +12,9 @@ if (!isset($_SESSION['cart'])) {
 <!-- Begin page content -->
 <main class="flex-shrink-0">
     <div class="container">
-        <h1 class="mt-5 pt-5" id="pageTitle"></h1>
+        <h1 class="" id="pageTitle"></h1>
         <select name="type" id="type"></select>
-        <div id="prodotti-container" class="container">
+        <div id="prodotti-container" class="">
             <div class="row">
                 <?php foreach ($prodotti as $prodotto) { ?>
                     <div class="col-md-4">
@@ -31,7 +31,7 @@ if (!isset($_SESSION['cart'])) {
             </div>
         </div>
     </div>
-    </div>
+    <br>
 </main>
 <?php
 require 'footer.php';
