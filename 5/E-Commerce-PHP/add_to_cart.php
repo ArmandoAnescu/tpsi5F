@@ -29,7 +29,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"]) && isset($_SESSI
             'prezzo' => $prezzo
         ];
     }
-    return 1;
+    echo "1";
+    exit;
 } else {
-    return null; // Nessun prodotto aggiunto
+    echo "0";
+    exit;
 }

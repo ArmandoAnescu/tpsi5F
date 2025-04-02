@@ -77,7 +77,7 @@ function aggiungiAlCarrello() {
   })
     .then(response => response.text())
     .then(data => {
-      if (data) {
+      if (data.trim() === "1") {
         let alert = document.createElement('div');
         alert.innerHTML =
           `
@@ -91,7 +91,7 @@ function aggiungiAlCarrello() {
         let alert = document.createElement('div');
         alert.innerHTML =
           `
-    <div class="alert alert-success" role="alert">
+    <div class="alert alert-danger" role="alert">
       Impossibile aggiungere il prodotto al carrello! Registrati o effettua il login per continuare.
     </div>`;
         document.getElementById('container-prodotto').appendChild(alert);
