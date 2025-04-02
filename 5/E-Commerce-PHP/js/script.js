@@ -30,17 +30,32 @@ function LoadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
-  document.getElementById('pageTitle').textContent = jsonData.pageTitle;
-  document.getElementById('introText').textContent = jsonData.introText;
-  document.getElementById('subTitle').textContent = jsonData.subTitle;
-  document.getElementById('subText').textContent = jsonData.subText;
+  document.getElementById('footerText').textContent = jsonData.footer.text;
+  let titolo = document.getElementById('pageTitle');
+  if (titolo) {
+    titolo.textContent = jsonData.pageTitle;
+  }
+  let intro = document.getElementById('introText');
+  if (intro) {
+    intro.textContent = jsonData.introText;
+  }
+  let subTitle = document.getElementById('subTitle');
+  if (subTitle) {
+    subTitle.textContent = jsonData.subTitle;
+  }
+
+  let subText = document.getElementById('subText');
+  if (subText) {
+    subText.textContent = jsonData.subText;
+  }
   //accordion
   const accordion = document.getElementById("accordionExample");
-  Object.keys(jsonData.accordion_items).forEach((key, index) => {
-    const item = jsonData.accordion_items[key][0];
-    const accordionItem = document.createElement("div");
-    accordionItem.className = "accordion-item";
-    accordionItem.innerHTML = `
+  if (accordion) {
+    Object.keys(jsonData.accordion_items).forEach((key, index) => {
+      const item = jsonData.accordion_items[key][0];
+      const accordionItem = document.createElement("div");
+      accordionItem.className = "accordion-item";
+      accordionItem.innerHTML = `
       <h2 class="accordion-header" id="heading${index}">
         <button class="accordion-button ${index === 0 ? "" : "collapsed"}" 
           type="button" 
@@ -60,9 +75,13 @@ function LoadPage(jsonData) {
         </div>
       </div>
     `;
-    accordion.appendChild(accordionItem);
-  });
-  document.getElementById('footerText').textContent = jsonData.footer.text;
+      accordion.appendChild(accordionItem);
+    });
+  }
+  let specsTitle = document.getElementById('specsTitle');
+  if (specsTitle) {
+    specsTitle.textContent = jsonData.specsTitle;
+  }
 }
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);

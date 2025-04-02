@@ -123,3 +123,41 @@ function Register($username, $password, $email)
         return false;
     }
 }
+
+function CercaSpecifiche($id): bool
+{
+    global $db;
+    $query = "SELECT * FROM specifiche WHERE prodotto = :id";
+    try {
+        $stm = $db->prepare($query);
+        $stm->bindValue(':id', $id);
+        $stm->execute();
+        $prodotto = $stm->fetch(PDO::FETCH_ASSOC);
+        $stm->closeCursor();
+        if ($prodotto) {
+            return true;
+        } else {
+            return false;
+        }
+    } catch (Exception $e) {
+        logError($e);
+        return false;
+    }
+}
+
+function OttieniSpecifiche($id): ?array
+{
+    global $db;
+    $query = "SELECT * FROM specifiche WHERE prodotto = :id";
+    try {
+        $stm = $db->prepare($query);
+        $stm->bindValue(':id', $id);
+        $stm->execute();
+        $spec = $stm->fetch(PDO::FETCH_ASSOC);
+        $stm->closeCursor();
+        return $spec;
+    } catch (Exception $e) {
+        logError($e);
+        return null;
+    }
+}

@@ -1,5 +1,5 @@
 <?php
-require 'header.php';
+require 'components/header.php';
 require 'connection.php';
 $prodotti = OttieniProdotti();
 if (session_status() === PHP_SESSION_NONE) {
@@ -34,4 +34,4 @@ if (!isset($_SESSION['cart'])) {
     <br>
 </main>
 <?php
-require 'footer.php';
+require 'components/footer.php';

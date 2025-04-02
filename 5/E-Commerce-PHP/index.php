@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include 'components/header.php';
 ?>
 <!-- Begin page content -->
 <main class="flex-shrink-0">
@@ -19,5 +19,5 @@ include 'header.php';
     <br>
 </main>
 <?php
-include 'footer.php';
+include 'components/footer.php';
 ?>

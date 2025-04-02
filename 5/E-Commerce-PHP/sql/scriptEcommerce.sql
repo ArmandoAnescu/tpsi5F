@@ -163,9 +163,9 @@ INSERT INTO ecommerce.configurazione_sito (chiave, valore)
 VALUES
 ('logo', '<img src=\'PixelHaven_Logo_Transparent.png\' id=\'logo\'>'),
 ('navbar', '[{"nav-link": "index.php", "nav-text": "Home"}, {"nav-link": "archivio.php", "nav-text": "Archivio"}, {"nav-link": "carrello.php", "nav-text": "Carrello"}]'),
-('title', '"PixalHaven"'),
-('pageTitle', '"PixalHaven"'),
-('introText', '"Benvenuti a PixalHaven!! Il paradiso per gli appassionati del retro gaming.Qui troverete una vasta gamma di giochi e console retro. Dalla famiglia Nintendo a quella della Sony e microsoft."'),
+('title', '"PixelHaven"'),
+('pageTitle', '"PixelHaven"'),
+('introText', '"Benvenuti a PixelHaven!! Il paradiso per gli appassionati del retro gaming.Qui troverete una vasta gamma di giochi e console retro. Dalla famiglia Nintendo a quella della Sony e microsoft."'),
 ('accordion_items', '{
   "accordion-item-1": [{"question": "Cosa posso trovare?", "definition": "Come suggerisce il nome e la nostra intro, noi siamo un sito e-commerce dove potete trovare giochi e console retro di ogni tipo!"}],
   "accordion-item-2": [{"question": "Siete affidabili?", "definition": "Certo! Il nostro obiettivo è offrire un servizio di alta qualità e garantire a tutti un ottima esperienza!"}],
@@ -201,8 +201,25 @@ VALUES
 ('buyNow','Compra Ora');
 
 INSERT INTO ecommerce.configurazione_sito (chiave, valore)
-values ('removeItem','Rimuovi dal carrello'),('seeProduct','Vedi prodotto'),('cartWarning','Il tuo carrello è vuoto');
+values ('removeItem','Rimuovi dal carrello'),('seeProduct','Vedi prodotto');
+INSERT INTO ecommerce.configurazione_sito (chiave, valore)
+values ('cartWarning','Il tuo carrello è vuoto');
 
+create table ecommerce.codici_sconto(
+id int primary key auto_increment,
+codice varchar(120) not null unique,
+value int
+);
 
+insert into ecommerce.codici_sconto (codice,value) values
+("ARMANDO",15),
+("WHEREISOMNIMAN",20);
+
+create table ecommerce.usare(
+codice_sconto int,
+user varchar(100),
+foreign key (codice_sconto) references ecommerce.codici_sconto(id),
+foreign key (user) references ecommerce.utenti(email)
+);
 
 

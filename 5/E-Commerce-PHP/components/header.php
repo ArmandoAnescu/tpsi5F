@@ -18,7 +18,7 @@ if (isset($_SESSION['id'])) {
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-    <title>HomePage</title>
+    <title><?= str_replace('.php', '', basename($_SERVER['PHP_SELF'])) ?></title>
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/sticky-footer-navbar/">
     <link rel="icon" type="image/jpg" href="PixelHaven_Logo.png">
     <link href="css/bootstrap.min.css" rel="stylesheet">

@@ -30,6 +30,10 @@ function LoadPage(jsonData) {
     listItem.appendChild(link);
     navbarLinks.appendChild(listItem);
   });
+  let specstable = document.getElementById('tabella_tecnica');
+  if (specstable) {
+    specstable.textContent = jsonData.specsTable;
+  }
   document.getElementById('return-arrow').innerHTML = jsonData.returnArrow;
   document.getElementById('addToCart').textContent = jsonData.addToCart;
   document.getElementById('buyNow').textContent = jsonData.buyNow;
@@ -73,15 +77,27 @@ function aggiungiAlCarrello() {
   })
     .then(response => response.text())
     .then(data => {
-      let alert = document.createElement('div');
-      alert.innerHTML =
-        `
-  <div class="alert alert-success" role="alert">
-    Prodotto aggiunto al carrello!
-  </div>`;
-      document.getElementById('container-prodotto').appendChild(alert);
-      // Rimuove il messaggio dopo 3 secondi
-      setTimeout(() => alert.remove(), 3000);
+      if (data) {
+        let alert = document.createElement('div');
+        alert.innerHTML =
+          `
+    <div class="alert alert-success" role="alert">
+      Prodotto aggiunto al carrello!
+    </div>`;
+        document.getElementById('container-prodotto').appendChild(alert);
+        // Rimuove il messaggio dopo 3 secondi
+        setTimeout(() => alert.remove(), 3000);
+      } else {
+        let alert = document.createElement('div');
+        alert.innerHTML =
+          `
+    <div class="alert alert-success" role="alert">
+      Impossibile aggiungere il prodotto al carrello! Registrati o effettua il login per continuare.
+    </div>`;
+        document.getElementById('container-prodotto').appendChild(alert);
+        // Rimuove il messaggio dopo 3 secondi
+        setTimeout(() => alert.remove(), 3000);
+      }
     });
 }
 

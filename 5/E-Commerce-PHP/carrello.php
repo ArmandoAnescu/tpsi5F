@@ -1,5 +1,5 @@
 <?php
-require 'header.php';
+require 'components/header.php';
 require 'connection.php';
 $carrello = isset($_SESSION['cart']) ? $_SESSION['cart'] : null; // Retrieve the cart from the session
 $prodotti = OttieniProdotti();
@@ -58,5 +58,5 @@ $prodotti = OttieniProdotti();
 </main>
 <?php
 //var_dump($_SESSION['cart']);
-include 'footer.php';
+include 'components/footer.php';
 ?>

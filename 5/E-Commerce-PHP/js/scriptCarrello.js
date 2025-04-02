@@ -34,9 +34,11 @@ function LoadPage(jsonData) {
   document.getElementById('empty-cart').textContent = jsonData.emptyCart;
   document.getElementById('acquista').textContent = jsonData.acquista;
   document.getElementById('footerText').textContent = jsonData.footer.text;
-  document.getElementById("remove-item").textContent = jsonData.removeItem;
+  let cartWarning = document.getElementById("cart-warning");
+  if (cartWarning) {
+    cartWarning.textContent = jsonData.cartWarning;
+  }
   document.getElementById("seeProduct").textContent = jsonData.seeProduct;
-  document.getElementById("cart-warning").textContent = jsonData.cartWarning;
 }
 
 

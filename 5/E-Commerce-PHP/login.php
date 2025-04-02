@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include 'components/header.php';
 ?>
 <main class="flex-shrink-0">
     <div class="container mt-5 pt-5">
@@ -20,4 +20,4 @@ include 'header.php';
     </div>
 </main>
 <?php
-include 'footer.php';
+include 'components/footer.php';

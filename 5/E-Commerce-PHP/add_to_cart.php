@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"])) {
+if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"]) && isset($_SESSION['id'])) {
     $id = $_POST['id'];
     $quantita = isset($_POST['quantita']) ? (int)$_POST['quantita'] : 1;
     $nome = isset($_POST['nome']) ? $_POST['nome'] : 'N/A';
@@ -29,4 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"])) {
             'prezzo' => $prezzo
         ];
     }
+    return 1;
+} else {
+    return null; // Nessun prodotto aggiunto
 }

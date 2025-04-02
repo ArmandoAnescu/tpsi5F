@@ -1,5 +1,5 @@
 <?php
-include 'header.php';
+include 'components/header.php';
 require 'connection.php';
 $id = $_REQUEST['id'] ?? '1';
 $prodotto = OttieniProdotto($id);
@@ -17,7 +17,11 @@ $immagini = OttieniImmaginiProdotto($id);
                 <br>
                 <h3 id="price" class="price"><?= $prodotto['prezzo'] ?></h3>
                 <!--<select id="colore" class="select-colore">-->
-                <a class="btn" id="tabella_tecnica" href=""></a>
+                <?php
+                if (CercaSpecifiche($id)) { ?>
+                    <a class="btn" id="tabella_tecnica" href="specifiche.php?id=<?= $id ?>"></a>
+                <?php }
+                ?>
                 <div id="colore-container">
                     <?php if (!empty($immagini) && !in_array(null, array_column($immagini, 'colore'), true)) { ?>
                         <select name="colori" class="select-colore" id="colore">
@@ -43,5 +47,5 @@ $immagini = OttieniImmaginiProdotto($id);
     </div>
 </main>
 <?php
-include 'footer.php';
+include 'components/footer.php';
 ?>
