@@ -1045,3 +1045,6 @@ input[type="number"]::-webkit-outer-spin-button {
         opacity: 1 !important;
     }
 }
+#remove-item{
+    transform: translateY(-10px); !important;
+}
