@@ -92,13 +92,20 @@ if ($carrello) {
             if (!isset($_SESSION['total'])) {
                 $_SESSION['total'] = number_format($somma, 2);
             }
-            echo "Totale: €" . number_format($somma, 2);
+            if (isset($_SESSION['old_total']) && $_SESSION['old_total'] != $_SESSION['total']) {
+                // Stampa il vecchio prezzo (tagliato) e il nuovo prezzo
+                echo "Totale: <span style='text-decoration: line-through;'>€" . number_format($somma, 2) . "</span> ";
+                echo "€" . number_format($_SESSION['total'], 2);
+            } else {
+                // Se non ci sono sconti, stampa solo il prezzo normale
+                echo "Totale: €" . number_format($somma, 2);
+            }
             ?>
         </p>
         <br>
         <form method="POST" action="action_page.php?action=coupon">
             <input type="text" name="coupon" id="coupon" placeholder="Codice sconto">
-            <button type="submit" name="apply_discount" class="btn btn-primary" id="apply_discount">Applica Sconto</button>
+            <button type="submit" name="apply_discount" class="btn btn-primary" id="apply_discount"></button>
         </form>
         <br>
         <button id="empty-cart" class="empty" onclick="window.location.href='action_page.php?action=empty'"></button>

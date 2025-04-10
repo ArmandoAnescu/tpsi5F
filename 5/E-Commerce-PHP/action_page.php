@@ -48,16 +48,21 @@ switch ($_REQUEST['action']) {
         $coupon = $_POST['coupon'];
         $user_email = $_SESSION['email']; // Supponendo che l'email dell'utente sia nella sessione
         $codice = CodiceSconto($coupon);
+        var_dump($codice);
         if ($codice) {
-            if (!ControllaCodice($coupon, $user_email)) {
+            if (!ControllaCodice(intval($codice['id']), $user_email)) {
                 header('Location: carrello.php?msg=Codice già usato');
             } else {
-                $sconto = $codice['value'];
+                // Salva il totale precedente prima di applicare lo sconto
+                $_SESSION['old_total'] = $_SESSION['total'];
+                $sconto = intval($codice['value']);
                 $_SESSION['total'] = $_SESSION['total'] - ($_SESSION['total'] * ($sconto / 100));
+                echo $_SESSION['total'];
                 RegistraCodice($codice['id'], $user_email);
+                header('Location: carrello.php');
             }
+        } else {
+            header('Location: carrello.php?msg=Codice non valido');
         }
-
-        header('Location: carrello.php');
         break;
 }

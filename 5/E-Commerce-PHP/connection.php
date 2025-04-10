@@ -165,7 +165,7 @@ function OttieniSpecifiche($id): ?array
 function SalvaCarrello()
 {
     global $db;
-    $query = "INSERT INTO carrelli (contenuto,utente) VALUES (:contenuto,:id)";
+    $query = "INSERT INTO carrelli (contenuto,utente,old_price,price) VALUES (:contenuto,:id)";
     if (PHP_SESSION_NONE === session_status()) {
         session_start();
     }
@@ -176,6 +176,8 @@ function SalvaCarrello()
         $stm = $db->prepare($query);
         $stm->bindValue(':id', $_SESSION['id']);
         $stm->bindValue(':contenuto', $cart_json);
+        $stm->bindValue(':old_price', isset($_SESSION['old_total']) ? $_SESSION['old_total'] : null);
+        $stm->bindValue(':price', $_SESSION['total']);
         $stm->execute();
         $stm->closeCursor();
     } catch (Exception $e) {
@@ -208,6 +210,10 @@ function CaricaCarrello()
 
         if ($result && !empty($result['contenuto'])) {
             $_SESSION['cart'] = json_decode($result['contenuto'], true);
+            $_SESSION['total'] = $result['price'];
+            if (!is_null($result['old_price'])) {
+                $_SESSION['old_total'] = $result['old_price'];
+            }
         }
 
         $stm->closeCursor();
@@ -262,7 +268,7 @@ function OttieniProdottiBundle($id): ?array
         WHERE a.bundle = :id";
     try {
         $stm = $db->prepare($query);
-        $stm->bindValue(':id', $id, PDO::PARAM_INT);
+        $stm->bindValue(':id', $id);
         $stm->execute();
         $prodotti = $stm->fetchAll(PDO::FETCH_ASSOC);
         $stm->closeCursor();
@@ -274,52 +280,57 @@ function OttieniProdottiBundle($id): ?array
     }
 }
 
-function CodiceSconto($codice): ?array
+function CodiceSconto($codice)
 {
     global $db;
-    $query = "SELECT * FROM codici_sconto WHERE codice = :codice ";
+    $query = "SELECT * FROM codici_sconto WHERE codice = :codice";
     try {
         $stm = $db->prepare($query);
         $stm->bindValue(':codice', $codice);
+        $stm->execute();
         $val = $stm->fetch(PDO::FETCH_ASSOC);
         $stm->closeCursor();
+        return $val;
     } catch (Exception $e) {
         logError($e);
         return null;
     }
-    return $val;
 }
 
-function ControllaCodice($codice, $id)
+function ControllaCodice($codice, $email)
 {
     global $db;
     $query = "SELECT * FROM usare WHERE codice_sconto = :codice_sconto AND user = :user";
     try {
         $stm = $db->prepare($query);
-        $stm->bindValue(':codice', $codice);
-        $stm->bindValue(':user', $id);
+        $stm->bindValue(':codice_sconto', $codice); // Forza il tipo intero per il codice sconto
+        $stm->bindValue(':user', $email); // Forza il tipo stringa per l'email
         $stm->execute();
-        if ($stm->rows() > 0) {
+        // Usa rowCount() per verificare se il codice è stato usato
+        if ($stm->rowCount() === 0) {
             $stm->closeCursor();
-            return true;
+            return true; // Codice non usato
         } else {
             $stm->closeCursor();
-            return false; // Codice non trovato
+            return false; // Codice già usato
         }
     } catch (Exception $e) {
         logError($e);
-        return false;
+        return false; // Errori nella query
     }
 }
 
 function RegistraCodice($codice, $email)
 {
     global $db;
-    $query = "INSERT INTO ecommerce.usare (codice_sconto, user) VALUES (:codice_sconto, :user)";
+    $query = "INSERT INTO usare (codice_sconto, user) VALUES (:codice_sconto, :user)";
     try {
         $stm = $db->prepare($query);
         $stm->bindValue(':codice_sconto', $codice);
-        $stmt->bindParam(':user', $email);
+        $stm->bindParam(':user', $email);
+        $stm->execute();
+        $stm->closeCursor();
     } catch (Exception $e) {
+        logError($e);
     }
 }

@@ -34,6 +34,7 @@ function LoadPage(jsonData) {
   document.getElementById('empty-cart').textContent = jsonData.emptyCart;
   document.getElementById('acquista').textContent = jsonData.acquista;
   document.getElementById('footerText').textContent = jsonData.footer.text;
+  document.getElementById('apply_discount').textContent = jsonData.applyDiscount;
   let cartWarning = document.getElementById("cart-warning");
   if (cartWarning) {
     cartWarning.textContent = jsonData.cartWarning;
