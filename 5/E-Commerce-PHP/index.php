@@ -19,5 +19,7 @@ include 'components/header.php';
     <br>
 </main>
 <?php
+var_dump($_SESSION["cart"]);
+//session_unset();
 include 'components/footer.php';
 ?>

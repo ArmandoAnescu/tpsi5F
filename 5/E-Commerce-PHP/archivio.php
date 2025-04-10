@@ -2,6 +2,7 @@
 require 'components/header.php';
 require 'connection.php';
 $prodotti = OttieniProdotti();
+$bundle = OttieniBundle();
 if (session_status() === PHP_SESSION_NONE) {
     session_start(); // Avvia la sessione solo se non è già attiva
 }
@@ -23,7 +24,19 @@ if (!isset($_SESSION['cart'])) {
                             <div class="card-body">
                                 <h5 class="card-title"><?= $prodotto['nome'] ?></h5>
                                 <p class="card-text price"><?= $prodotto['prezzo'] ?> €</p>
-                                <a href="prodotto.php?id=<?= $prodotto['id'] ?>" class="btn btn-primary">Vedi prodotto</a>
+                                <a href="prodotto.php?id=<?= $prodotto['id'] ?>&type=product" class="btn btn-primary">Vedi prodotto</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php } ?>
+                <?php foreach ($bundle as $singolo) { ?>
+                    <div class="col-md-4">
+                        <div class="card vert" style="width: 18rem;">
+                            <img src="<?= $singolo['immagine'] ?>" class="card-img-top" alt="<?= $singolo['nome'] ?>">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $singolo['nome'] ?></h5>
+                                <p class="card-text price"><?= $singolo['prezzo'] ?> €</p>
+                                <a href="prodotto.php?id=<?= $singolo['id'] ?>&type=bundle" class="btn btn-primary">Vedi prodotto</a>
                             </div>
                         </div>
                     </div>

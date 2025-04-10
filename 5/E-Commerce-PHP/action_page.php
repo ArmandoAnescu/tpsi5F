@@ -12,7 +12,7 @@ switch ($_REQUEST['action']) {
             $_SESSION['id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['email'] = $user['email'];
-
+            CaricaCarrello();
             header('Location: index.php'); // Reindirizza alla home page
             exit();
         } else {
@@ -38,10 +38,26 @@ switch ($_REQUEST['action']) {
         break;
     case 'remove':
         $id = $_REQUEST['id'];
-        var_dump($_SESSION['cart']);
+        //var_dump($_SESSION['cart']);
         if (isset($_SESSION['cart'][$id])) {
             unset($_SESSION['cart'][$id]); // Rimuove l'elemento specifico
         }
+        header('Location: carrello.php');
+        break;
+    case 'coupon':
+        $coupon = $_POST['coupon'];
+        $user_email = $_SESSION['email']; // Supponendo che l'email dell'utente sia nella sessione
+        $codice = CodiceSconto($coupon);
+        if ($codice) {
+            if (!ControllaCodice($coupon, $user_email)) {
+                header('Location: carrello.php?msg=Codice già usato');
+            } else {
+                $sconto = $codice['value'];
+                $_SESSION['total'] = $_SESSION['total'] - ($_SESSION['total'] * ($sconto / 100));
+                RegistraCodice($codice['id'], $user_email);
+            }
+        }
+
         header('Location: carrello.php');
         break;
 }

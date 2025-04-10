@@ -1,9 +1,16 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 include 'components/header.php';
 require 'connection.php';
 $id = $_REQUEST['id'] ?? '1';
-$prodotto = OttieniProdotto($id);
-$immagini = OttieniImmaginiProdotto($id);
+if ($_REQUEST['type'] === 'product') {
+    $prodotto = OttieniProdotto($id);
+    $immagini = OttieniImmaginiProdotto($id);
+} else {
+    $prodotto = OttieniBundleSpecifico($id);
+}
 ?>
 <main class="flex-shrink-0">
     <div class="container-prodotto" id="container-prodotto">
@@ -18,7 +25,7 @@ $immagini = OttieniImmaginiProdotto($id);
                 <h3 id="price" class="price"><?= $prodotto['prezzo'] ?></h3>
                 <!--<select id="colore" class="select-colore">-->
                 <?php
-                if (CercaSpecifiche($id)) { ?>
+                if (CercaSpecifiche($id) && $_REQUEST['type'] === 'product') { ?>
                     <a class="btn" id="tabella_tecnica" href="specifiche.php?id=<?= $id ?>"></a>
                 <?php }
                 ?>
@@ -38,7 +45,11 @@ $immagini = OttieniImmaginiProdotto($id);
                     ?>
                 </div>
                 <br>
-                <input type="number" id="quantita" min="1" max="<?= $prodotto['quantita'] ?>" value="1">
+                <?php
+                if (isset($prodotto['quantita'])) { ?>
+                    <input type="number" id="quantita" min="1" max="<?= $prodotto['quantita'] ?>" value="1">
+                <?php
+                } ?>
                 <br>
                 <button class="product-btn" id="addToCart"></button>
                 <button class="product-btn" id="buyNow" onclick="window.location.href='pagamento.php?id=<?= $prodotto['id'] ?>'"></button>

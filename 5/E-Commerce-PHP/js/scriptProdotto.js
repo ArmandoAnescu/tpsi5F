@@ -42,6 +42,7 @@ function LoadPage(jsonData) {
 function aggiungiAlCarrello() {
   // Recupera l'ID del prodotto dalla query string
   let Id = new URLSearchParams(window.location.search).get('id');
+  let type = new URLSearchParams(window.location.search).get('type');
   let nomeProdotto = document.getElementById('nome-prodotto').textContent;
   let percorsoImmagine;
   let nomeColore;
@@ -58,11 +59,9 @@ function aggiungiAlCarrello() {
   }
   // Recupera il prezzo del prodotto
   let prezzo = document.getElementById('price').textContent;
-
-  // Recupera la quantità selezionata
-  let quantita = parseInt(document.getElementById('quantita').value);
-  let maxQuantita = parseInt(document.getElementById('quantita').max);
-
+  //Recupera la quantita
+  let quantita = document.getElementById('quantita') ? parseInt(document.getElementById('quantita').value) : 1;
+  let maxQuantita = document.getElementById('quantita') ? parseInt(document.getElementById('quantita').max) : 1;
   // Verifica che la quantità selezionata non superi la quantità massima disponibile
   if (quantita > maxQuantita) {
     alert("La quantità selezionata non è disponibile");
@@ -73,10 +72,11 @@ function aggiungiAlCarrello() {
   fetch("add_to_cart.php", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: `nome=${nomeProdotto}&id=${Id}&colore=${nomeColore}&immagine=${percorsoImmagine}&quantita=${quantita}&maxQuantita=${maxQuantita}&prezzo=${prezzo}`
+    body: `nome=${nomeProdotto}&id=${Id}&type=${type}&colore=${nomeColore}&immagine=${percorsoImmagine}&quantita=${quantita}&maxQuantita=${maxQuantita}&prezzo=${prezzo}`
   })
     .then(response => response.text())
     .then(data => {
+      console.log("Risposta dal server:", data); // Aggiungi un log per vedere la risposta
       if (data.trim() === "1") {
         let alert = document.createElement('div');
         alert.innerHTML =
