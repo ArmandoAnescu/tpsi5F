@@ -34,13 +34,21 @@ switch ($_REQUEST['action']) {
         break;
     case 'empty':
         $_SESSION['cart'] = [];
+        $_SESSION['total'] = 0;
+        $_SESSION['old_total'] = 0;
         header('Location: carrello.php');
         break;
     case 'remove':
         $id = $_REQUEST['id'];
         //var_dump($_SESSION['cart']);
+        $_SESSION['total'] =$_SESSION['total'] - $_SESSION['cart'][$id]['prezzo'];
+        $_SESSION['old_total'] = $_SESSION['old_total'] - $_SESSION['cart'][$id]['prezzo'];
         if (isset($_SESSION['cart'][$id])) {
             unset($_SESSION['cart'][$id]); // Rimuove l'elemento specifico
+        }
+        if(empty($_SESSION['cart'])) {
+            unset($_SESSION['old_total']);
+            unset($_SESSION['total']);
         }
         header('Location: carrello.php');
         break;
@@ -50,19 +58,20 @@ switch ($_REQUEST['action']) {
         $codice = CodiceSconto($coupon);
         var_dump($codice);
         if ($codice) {
-            if (!ControllaCodice(intval($codice['id']), $user_email)) {
-                header('Location: carrello.php?msg=Codice già usato');
-            } else {
+            if (ControllaCodice(intval($codice['id']), $user_email)) {
+                var_dump($_SESSION['cart']);
                 // Salva il totale precedente prima di applicare lo sconto
                 $_SESSION['old_total'] = $_SESSION['total'];
                 $sconto = intval($codice['value']);
                 $_SESSION['total'] = $_SESSION['total'] - ($_SESSION['total'] * ($sconto / 100));
                 echo $_SESSION['total'];
                 RegistraCodice($codice['id'], $user_email);
-                header('Location: carrello.php');
+                //header('Location: carrello.php');
+            } else {
+                //header('Location: carrello.php?msg=Codice già usato');
             }
         } else {
-            header('Location: carrello.php?msg=Codice non valido');
+            //header('Location: carrello.php?msg=Codice non valido');
         }
         break;
 }
