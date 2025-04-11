@@ -89,9 +89,12 @@ if ($carrello) {
             foreach ($carrello as $item) {
                 $somma += (float)$item['prezzo'] * (int)$item['quantita'];
             }
-            if (!isset($_SESSION['total'])) {
+
+            // Solo se la somma è maggiore di 0, impostiamo il totale nella sessione
+            if ($somma > 0 && !isset($_SESSION['total'])) {
                 $_SESSION['total'] = number_format($somma, 2);
             }
+
             if (isset($_SESSION['old_total']) && $_SESSION['old_total'] != $_SESSION['total']) {
                 // Stampa il vecchio prezzo (tagliato) e il nuovo prezzo
                 echo "Totale: <span style='text-decoration: line-through;'>€" . number_format($somma, 2) . "</span> ";
@@ -102,6 +105,7 @@ if ($carrello) {
             }
             ?>
         </p>
+
         <br>
         <form method="POST" action="action_page.php?action=coupon">
             <input type="text" name="coupon" id="coupon" placeholder="Codice sconto">
