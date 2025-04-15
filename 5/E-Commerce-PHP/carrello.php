@@ -23,6 +23,7 @@ if ($carrello) {
                     // Se il prodotto non è ancora nel carrello, aggiungilo come singolo prodotto
                     $prodottiRaggruppati[$prodottoBundle['id']] = [
                         'id' => $prodottoBundle['id'],
+                        'bundleId' => $item['id'],
                         'nome' => $prodottoBundle['nome'],
                         'quantita' => $item['quantita'], // Imposta la quantità del prodotto del bundle
                         'prezzo' => $item['prezzo'], // Assegna il prezzo del bundle al prodotto
@@ -69,7 +70,7 @@ if ($carrello) {
                                                 <p class="card-text">Quantità: <?= $item['quantita'] ?></p>
                                                 <div class="btn-group">
                                                     <a href="prodotto.php?id=<?= $item['id'] ?>" id="seeProduct" class="btn btn-primary">Vedi Prodotto</a>
-                                                    <a id="remove-item" href="action_page.php?action=remove&id=<?= $item['id'] ?>" class="btn">Rimuovi dal Carrello</a>
+                                                    <a id="remove-item" href="action_page.php?<?= isset($item['bundleId']) ? 'action=remove&id=' . $item['id'] . '&bundleId=' . $item['bundleId'] : 'action=remove&id=' . $item['id'] ?>" class="btn">Rimuovi dal Carrello</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -78,7 +79,7 @@ if ($carrello) {
                             </div>
                         <?php }
                     } else { ?>
-                        <p id="cart-warning" class="cart-warning">Il tuo carrello è vuoto.</p>
+                        <p id="cart-warning" class="cart-warning"></p>
                     <?php } ?>
                 </div>
             </div>
@@ -91,29 +92,18 @@ if ($carrello) {
             }
 
             // Solo se la somma è maggiore di 0, impostiamo il totale nella sessione
-            if ($somma > 0 && !isset($_SESSION['total'])) {
+            if ($somma > 0) {
                 $_SESSION['total'] = number_format($somma, 2);
             }
-
-            if (isset($_SESSION['old_total']) && $_SESSION['old_total'] != $_SESSION['total']) {
-                // Stampa il vecchio prezzo (tagliato) e il nuovo prezzo
-                echo "Totale: <span style='text-decoration: line-through;'>€" . number_format($somma, 2) . "</span> ";
-                echo "€" . number_format($_SESSION['total'], 2);
-            } else {
-                // Se non ci sono sconti, stampa solo il prezzo normale
-                echo "Totale: €" . number_format($somma, 2);
-            }
+            // Se non ci sono sconti, stampa solo il prezzo normale
+            echo "Totale: €" . number_format($somma, 2);
             ?>
         </p>
 
         <br>
-        <form method="POST" action="action_page.php?action=coupon">
-            <input type="text" name="coupon" id="coupon" placeholder="Codice sconto">
-            <button type="submit" name="apply_discount" class="btn btn-primary" id="apply_discount"></button>
-        </form>
-        <br>
+
         <button id="empty-cart" class="empty" onclick="window.location.href='action_page.php?action=empty'"></button>
-        <button id="acquista" class="transaction"></button>
+        <button id="acquista" class="transaction" onclick="window.location.href='pagamento.php'"></button>
     </div>
     <br>
 </main>

@@ -21,6 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["id"]) && isset($_SESSI
             $nuovaQuantita = ($_SESSION["cart"][$id]['quantita'] + $quantita) > $maxQuantita ? $maxQuantita : $_SESSION["cart"][$id]['quantita'] + $quantita;
             echo "Quantità aggiornata a $nuovaQuantita.";
             $_SESSION["cart"][$id]["quantita"] = $nuovaQuantita;
+            unset($_SESSION['total']);
         }
     } else {
         if ($type !== 'bundle') {

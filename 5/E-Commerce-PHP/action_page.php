@@ -35,20 +35,15 @@ switch ($_REQUEST['action']) {
     case 'empty':
         $_SESSION['cart'] = [];
         $_SESSION['total'] = 0;
-        $_SESSION['old_total'] = 0;
         header('Location: carrello.php');
+        unset($_SESSION['total']);
         break;
     case 'remove':
-        $id = $_REQUEST['id'];
+        $id = $_REQUEST['bundleId'] ?? $_REQUEST['id'];
         //var_dump($_SESSION['cart']);
-        $_SESSION['total'] =$_SESSION['total'] - $_SESSION['cart'][$id]['prezzo'];
-        $_SESSION['old_total'] = $_SESSION['old_total'] - $_SESSION['cart'][$id]['prezzo'];
+        $_SESSION['total'] = $_SESSION['total'] - $_SESSION['cart'][$id]['prezzo'] * $_SESSION['cart'][$id]['quantita'];
         if (isset($_SESSION['cart'][$id])) {
             unset($_SESSION['cart'][$id]); // Rimuove l'elemento specifico
-        }
-        if(empty($_SESSION['cart'])) {
-            unset($_SESSION['old_total']);
-            unset($_SESSION['total']);
         }
         header('Location: carrello.php');
         break;
@@ -66,12 +61,12 @@ switch ($_REQUEST['action']) {
                 $_SESSION['total'] = $_SESSION['total'] - ($_SESSION['total'] * ($sconto / 100));
                 echo $_SESSION['total'];
                 RegistraCodice($codice['id'], $user_email);
-                //header('Location: carrello.php');
+                header('Location: pagamento.php');
             } else {
-                //header('Location: carrello.php?msg=Codice già usato');
+                header('Location: pagamento.php?msg=Codice già usato');
             }
         } else {
-            //header('Location: carrello.php?msg=Codice non valido');
+            header('Location: pagamento.php?msg=Codice non valido');
         }
         break;
 }

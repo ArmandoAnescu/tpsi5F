@@ -23,6 +23,9 @@ switch ($current_page) {
     case "archivio.php":
         echo '<script src="js/scriptArchivio.js"></script>';
         break;
+    case "pagamento.php":
+        echo '<script src="js/scriptPagamento.js"></script>';
+        break;
     default: // Default case per tutte le altre pagine
         echo '<script src="js/script.js"></script>';
         break;

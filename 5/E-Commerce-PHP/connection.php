@@ -165,25 +165,48 @@ function OttieniSpecifiche($id): ?array
 function SalvaCarrello()
 {
     global $db;
-    $query = "INSERT INTO carrelli (contenuto,utente,old_price,price) VALUES (:contenuto,:id)";
+
     if (PHP_SESSION_NONE === session_status()) {
         session_start();
     }
-    if (isset($_SESSION['cart'])) {
-        $cart_json = json_encode($_SESSION['cart']);
+
+    if (!isset($_SESSION['id']) || !isset($_SESSION['cart']) || !isset($_SESSION['total'])) {
+        return;
     }
+
+    $cart_json = json_encode($_SESSION['cart']);
+    $user_id = $_SESSION['id'];
+    $total_price = $_SESSION['total'];
+
     try {
-        $stm = $db->prepare($query);
-        $stm->bindValue(':id', $_SESSION['id']);
+        // Verifica se esiste già un carrello per l'utente
+        $checkQuery = "SELECT COUNT(*) FROM carrelli WHERE utente = :id";
+        $checkStm = $db->prepare($checkQuery);
+        $checkStm->bindValue(':id', $user_id);
+        $checkStm->execute();
+        $exists = $checkStm->fetchColumn();
+        $checkStm->closeCursor();
+
+        if ($exists) {
+            // Fa UPDATE se il carrello esiste
+            $updateQuery = "UPDATE carrelli SET contenuto = :contenuto, price = :price WHERE utente = :id";
+            $stm = $db->prepare($updateQuery);
+        } else {
+            // Fa INSERT se il carrello non esiste
+            $insertQuery = "INSERT INTO carrelli (contenuto, utente, price) VALUES (:contenuto, :id, :price)";
+            $stm = $db->prepare($insertQuery);
+        }
+
+        $stm->bindValue(':id', $user_id);
         $stm->bindValue(':contenuto', $cart_json);
-        $stm->bindValue(':old_price', isset($_SESSION['old_total']) ? $_SESSION['old_total'] : null);
-        $stm->bindValue(':price', $_SESSION['total']);
+        $stm->bindValue(':price', $total_price);
         $stm->execute();
         $stm->closeCursor();
     } catch (Exception $e) {
         logError($e);
     }
 }
+
 
 function CaricaCarrello()
 {
@@ -211,11 +234,7 @@ function CaricaCarrello()
         if ($result && !empty($result['contenuto'])) {
             $_SESSION['cart'] = json_decode($result['contenuto'], true);
             $_SESSION['total'] = $result['price'];
-            if (!is_null($result['old_price'])) {
-                $_SESSION['old_total'] = $result['old_price'];
-            }
         }
-
         $stm->closeCursor();
     } catch (Exception $e) {
         logError($e);

@@ -20,8 +20,14 @@ foreign key(prodotto) references ecommerce.prodotti(id)
 
 create table ecommerce.bundle(
 id int primary key auto_increment,
-descrizione varchar(240) not null
+nome varchar(40) not null,
+descrizione varchar(240) not null,
+prezzo decimal(8,2) not null,
+immagine varchar(120)
 );
+
+insert into ecommerce.bundle(nome,descrizione,prezzo,immagine) values(
+"Pokemon DS","Tutti i giochi pokemon del Nintendo Ds",250,"immagini_prodotti/bundle/bundle_1.jpg");
 
 create table ecommerce.appartenere(
 bundle int,
@@ -30,6 +36,9 @@ primary key (bundle, prodotto),
 foreign key(bundle) references ecommerce.bundle(id) on delete cascade,
 foreign key(prodotto) references ecommerce.prodotti(id) on delete cascade
 );
+
+insert into ecommerce.appartenere (bundle,prodotto) values 
+(1,14),(1,15),(1,16),(1,17),(1,18),(1,19),(1,22),(1,23),(1,24);
 
 create table ecommerce.specifiche(
 id int primary key auto_increment,
@@ -157,7 +166,6 @@ create table ecommerce.configurazione_sito(
     valore TEXT NOT NULL                   -- Il valore in formato JSON
 );
 
-drop table ecommerce.configurazione_sito;
 
 INSERT INTO ecommerce.configurazione_sito (chiave, valore)
 VALUES
@@ -188,7 +196,6 @@ VALUES
 ('transaction', '"Pagamento"'),
 ('discountText', '"Codice sconto"'),
 ('applyDiscount', '"Usa codice sconto"'),
-('discountCodes', '[{"code":"ARMANDO","discount":"15"},{"code":"ICHIGOAT","discount":"45"}]'),
 ('archiveTitle', '"Prodotti"'),
 ('cartTitle', '"Carrello"'),
 ('subTitle', '"Il nostro obbiettivo"'),
@@ -204,6 +211,12 @@ INSERT INTO ecommerce.configurazione_sito (chiave, valore)
 values ('removeItem','Rimuovi dal carrello'),('seeProduct','Vedi prodotto');
 INSERT INTO ecommerce.configurazione_sito (chiave, valore)
 values ('cartWarning','Il tuo carrello è vuoto');
+INSERT INTO ecommerce.configurazione_sito (chiave, valore)
+values ('specsTitle','Specifiche');
+INSERT INTO ecommerce.configurazione_sito (chiave, valore)
+VALUES
+('paymentmethods', '["Visa", "Mastercard", "PayPal"]');
+
 
 create table ecommerce.codici_sconto(
 id int primary key auto_increment,
@@ -218,8 +231,15 @@ insert into ecommerce.codici_sconto (codice,value) values
 create table ecommerce.usare(
 codice_sconto int,
 user varchar(100),
+primary key(codice_sconto,user),
 foreign key (codice_sconto) references ecommerce.codici_sconto(id),
 foreign key (user) references ecommerce.utenti(email)
 );
 
-
+create table ecommerce.carrelli(
+id int primary key auto_increment,
+contenuto JSON not null,
+utente int,
+price decimal(8,2) not null,
+foreign key (utente) references ecommerce.utenti(id)
+);
