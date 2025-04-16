@@ -26,7 +26,7 @@ if ($_REQUEST['type'] === 'product') {
                 <!--<select id="colore" class="select-colore">-->
                 <?php
                 if (CercaSpecifiche($id) && $_REQUEST['type'] === 'product') { ?>
-                    <a class="btn" id="tabella_tecnica" href="specifiche.php?id=<?= $id ?>"></a>
+                    <a class="btn btn-primary" id="tabella_tecnica" href="specifiche.php?id=<?= $id ?>"></a>
                 <?php }
                 ?>
                 <div id="colore-container">
