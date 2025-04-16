@@ -148,7 +148,7 @@ function CercaSpecifiche($id): bool
 function OttieniSpecifiche($id): ?array
 {
     global $db;
-    $query = "SELECT * FROM specifiche WHERE prodotto = :id";
+    $query = "SELECT CPU, RAM, Memoria, Schermo, Connettivita, Grafica FROM specifiche WHERE prodotto = :id";
     try {
         $stm = $db->prepare($query);
         $stm->bindValue(':id', $id);
