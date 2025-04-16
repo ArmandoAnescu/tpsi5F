@@ -82,6 +82,11 @@ function LoadPage(jsonData) {
   if (specsTitle) {
     specsTitle.textContent = jsonData.specsTitle;
   }
+  let returnArr= document.getElementById('return-arrow');
+  if(returnArr)
+  {
+    returnArr.innerHTML = jsonData.returnArrow;
+  }
 }
 // Carica i prodotti quando la pagina è pronta
 document.addEventListener("DOMContentLoaded", loadJSON);
