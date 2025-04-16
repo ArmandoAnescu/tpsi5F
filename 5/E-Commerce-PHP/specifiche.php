@@ -4,7 +4,7 @@ include 'connection.php';
 $id = $_REQUEST['id'];
 $specifiche = OttieniSpecifiche($id);
 ?>
-<div class="table-responsive container-prodotto">
+<div class="table-responsive">
     <h1 class="mt-3 pt-3" id="specsTitle"></h1>
     <a href="prodotto.php?id=<?= $id ?>&type=product" class="btn" id="return-arrow"></a>
     <table class="table table-dark table-striped table-hover table-bordered rounded" id="tabella-prodotti">
